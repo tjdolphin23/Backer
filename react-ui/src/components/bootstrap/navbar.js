@@ -1,45 +1,36 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Navbar extends Component {
-	render(props){
-		return(
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			  <a className="navbar-brand" href="#">{this.props.navName}</a>
-			  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			    <span className="navbar-toggler-icon"></span>
-			  </button>
-
-			  <div className="collapse navbar-collapse" id="navbarSupportedContent">
-			    <ul className="navbar-nav mr-auto">
-			      <li className="nav-item active">
-			        <a className="nav-link" href="#">{this.props.testNum}<span className="sr-only">(current)</span></a>
-			      </li>
-			      <li className="nav-item">
-			        <a className="nav-link" href="#">Link</a>
-			      </li>
-			      <li className="nav-item dropdown">
-			        <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Dropdown
-			        </a>
-			        <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a className="dropdown-item" href="#">Action</a>
-			          <a className="dropdown-item" href="#">Another action</a>
-			          <div className="dropdown-divider"></div>
-			          <a className="dropdown-item" href="#">Something else here</a>
-			        </div>
-			      </li>
-			      <li className="nav-item">
-			        <a className="nav-link disabled" href="#">Disabled</a>
-			      </li>
-			    </ul>
-			    <form className="form-inline my-2 my-lg-0">
-			      <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>
-			      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-			    </form>
-			  </div>
-			</nav>
-		)
-	}
-}
+const Navbar = ({navName}) =>
+	<div className="container">
+		<div className="row">
+			<div className="col-12">
+				<div className="row">
+					<div className="col-4">
+						<ul className="nav">
+						  <li className="nav-item mt-3 mx-auto">
+						    <a className="nav-link" href="#"><h4>Founders</h4></a>
+						  </li>
+						  <li className="nav-item mt-3 mx-auto">
+						    <a className="nav-link" href="#"><h4>Investors</h4></a>
+						  </li>
+						</ul>
+					</div>
+					<div className="col-4">
+					    <img src="assets/images/transpLogo.png" className="w-25 mt-1" alt="Go Fish Logo"></img>
+					</div>
+					<div className="col-4">
+						<ul className="nav">
+						  <li className="nav-item mt-3 mx-auto">
+						    <a className="nav-link" href="#"><h4>Sign In</h4></a>
+						  </li>
+						  <li className="nav-item mt-3 mx-auto">
+						    <a className="nav-link" href="#"><h4>Sign Up</h4></a>
+						  </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 export default Navbar;
