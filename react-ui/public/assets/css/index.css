@@ -1,20 +1,15 @@
-.HOW {
-	opacity: .8;
+.testimonial {
+	margin-top: 3%;
+	font-weight: bold;
 	color: white;
-	margin-top: 20%;
 }
 
-.HowCard {
+.testiCard {
 	background-color: #6b7A8F;
 }
 
 .testiColor {
-	color: #F7882F;
-	font-weight: bold;
-}
-
-.testiColor2 {
-	color: white;
+	color: #F7C331/*#F7882F*/;
 	font-weight: bold;
 }
 
@@ -22,11 +17,19 @@
 	color: black;
 }
 
+.navigate {
+/*	margin-top: 0px;
+	padding-top: 0px;*/
+}
+
 .GoFish {
-	margin-top:3%;
-	color: #6b7A8F;
+	color: #6b7A8F /* #6b7A8F */;
 	font-size: 80px;
-	font-weight: bold;
+	/* background-color: #DCC7AA;
+	border: solid 2px #F7882F; */
+}
+
+.jumbotron {
 	background-color: #DCC7AA;
-	border: solid 2px #F7882F;
+	height: 300px !important;
 }
