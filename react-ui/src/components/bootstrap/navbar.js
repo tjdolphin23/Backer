@@ -7,11 +7,11 @@ const Navbar = ({navName}) =>
 				<div className="row">
 					<div className="col-4">
 						<ul className="nav">
-						  <li className="nav-item mt-3 mx-auto">
-						    <a className="nav-link" href="#"><h4 className="text-dark">Founders</h4></a>
+						  <li className="nav-item mt-4 mx-auto">
+						    <a className="nav-link" href="#"><h4>Founders</h4></a>
 						  </li>
-						  <li className="nav-item mt-3 mx-auto">
-						    <a className="nav-link" href="#"><h4 className="text-dark">Investors</h4></a>
+						  <li className="nav-item mt-4 mx-auto">
+						    <a className="nav-link" href="#"><h4>Investors</h4></a>
 						  </li>
 						</ul>
 					</div>
@@ -20,11 +20,11 @@ const Navbar = ({navName}) =>
 					</div>
 					<div className="col-4">
 						<ul className="nav">
-						  <li className="nav-item mt-3 mx-auto">
-						    <a className="nav-link" href="#"><h4 className="text-dark">Sign In</h4></a>
+						  <li className="nav-item mt-4 mx-auto">
+						    <a className="nav-link" href="#"><h4>Sign In</h4></a>
 						  </li>
-						  <li className="nav-item mt-3 mx-auto">
-						    <a className="nav-link" href="#"><h4 className="text-dark">Sign Up</h4></a>
+						  <li className="nav-item mt-4 mx-auto">
+						    <a className="nav-link" href="#"><h4>Sign Up</h4></a>
 						  </li>
 						</ul>
 					</div>
