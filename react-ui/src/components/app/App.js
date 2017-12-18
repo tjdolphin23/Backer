@@ -1,28 +1,19 @@
-import React, { Component } from 'react';
-import NavBar from '../bootstrap/navbar.js';
-import Container from '../bootstrap/container.js';
-import Testimonials from '../bootstrap/testimonials.js';
-import GoFish from '../bootstrap/GoFish.js';
-import How from '../bootstrap/howItWorks.js';
+import React from 'react';
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch
+} from 'react-router-dom';
 import './App.css';
+import Home from '../../pages/home.js';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-      	<div className="jumbotron h-25">
-	      	<Container>
-		        <NavBar/>
-		        <GoFish/>
-		    </Container>
-	    </div>
-        <Container>
-        	<How/>
-        	<Testimonials/>
-        </Container>
-      </div>
-    );
-  }
-}
+const App = () =>
+	<Router>
+		<div>
+			<Switch>
+				<Route exact path="/" component={Home}/>
+			</Switch>
+		</div>
+	</Router>
 
 export default App;
