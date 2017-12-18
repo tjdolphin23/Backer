@@ -1,5 +1,5 @@
 .testimonial {
-	margin-top: 3%;
+	margin-top: 2%;
 	font-weight: bold;
 	color: white;
 }
@@ -9,7 +9,7 @@
 }
 
 .testiColor {
-	color: #F7C331/*#F7882F*/;
+	color: #F7C331;
 	font-weight: bold;
 }
 
@@ -17,21 +17,17 @@
 	color: black;
 }
 
-.navigate {
-/*	margin-top: 0px;
-	padding-top: 0px;*/
-}
-
 .GoFish {
-	color: #6b7A8F /* #6b7A8F */;
+	color: #6b7A8F;
 	font-weight: bold;
 	font-size: 60px;
-	margin: 0px;
-	/* background-color: #DCC7AA;
-	border: solid 2px #F7882F; */
+}
+
+.how {
+	margin-top:2%;
 }
 
 .jumbotron {
 	background-color: #DCC7AA;
-	height: 300px !important;
+	padding-bottom: 0;
 }
