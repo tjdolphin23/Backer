@@ -1,0 +1,13 @@
+{
+  "development": {
+    "username": "s4o6h6fg2ixdyxen",
+    "password": "aorynnkw0e9ps36k",
+    "database": "backer",
+    "host": "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
+  }
+}
