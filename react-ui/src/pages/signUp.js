@@ -16,7 +16,7 @@ const Home = () =>
 		    <GoFish/>
 	</Jumbotron>
 	<Container>
-		<How one="Create" two="Plan" three="Pitch" four="Build"/>
+		<How/>
 		<Testimonials/>
 	</Container>
 	<Foot/>

@@ -1,0 +1,73 @@
+.testimonial {
+	margin-top: 2%;
+	font-weight: bold;
+	color: white;
+}
+
+.testiCard {
+	background-color: #6b7A8F;
+}
+
+.testiColor {
+	color: #F7C331;
+	font-weight: bold;
+}
+
+.nav-link {
+	color: #6b7A8F;
+}
+
+.footLinks {
+	color: #DCC7AA;
+}
+
+.GoFish {
+	color: #6b7A8F;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+.howItWorks {
+	border-radius: 80px;
+	height: 160px;
+	width: 160px;
+	background-color: #6b7A8F;
+}
+
+.howText {
+	text-align: center;
+	font-size: 40px;
+	position: relative;
+	line-height: 3.5em;
+	color: white;
+}
+
+.arrow {
+	height: 20px;
+	width: 60px;
+	background-color: #F7C331;
+	position: relative;
+	top: 4em;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.head {
+	background-color: #DCC7AA;
+	padding-bottom: 0;
+}
+
+.foot {
+	background-color: #6b7A8F;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 120px; /* Set the fixed height of the footer here */
+	line-height: 120px; /* Vertically center the text there */
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}

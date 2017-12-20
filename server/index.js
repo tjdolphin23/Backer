@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const path = require('path');
 
@@ -15,9 +13,14 @@ app.get('/api', function (req, res) {
   res.send('{"message":"Hello from the custom server!"}');
 });
 
+app.get('/api/reactTest', function (req, res) {
+  res.set('Content-Type', 'application/json');
+  res.send('{"message":"Hello from the custom server!"}');
+});
+
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
+  response.sendFile(path.resolve(__dirname, '../react-ui', 'index.html'));
 });
 
 app.listen(PORT, function () {
