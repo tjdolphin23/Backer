@@ -13,9 +13,9 @@ app.get('/api', function (req, res) {
   res.send('{"message":"Hello from the custom server!"}');
 });
 
-app.get('/api/reactTest', function (req, res) {
+app.get('/api/about', function (req, res) {
   res.set('Content-Type', 'application/json');
-  res.send('{"message":"Hello from the custom server!"}');
+  res.json({ user: 'tobi' });
 });
 
 // All remaining requests return the React app, so it can handle routing.
