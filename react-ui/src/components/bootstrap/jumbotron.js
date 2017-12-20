@@ -2,7 +2,7 @@ import React from 'react';
 
 const Jumbo = ({children}) =>
 
-	<div className="jumbotron">
+	<div className="jumbotron head">
 		{children}
 	</div>
 

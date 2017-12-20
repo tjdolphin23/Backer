@@ -2,7 +2,7 @@ import React from 'react';
 
 const Foot = () =>
 
-<div className="jumbotron footer">
+<div className="foot">
 	<div className="row justify-content-center text-center">
 		<div className="col-6">
 			<div className="row">
