@@ -3,7 +3,7 @@ import React from 'react';
 const Foot = () =>
 
 <div className="foot">
-	<div className="row justify-content-center text-center">
+	<div className="row justify-content-center text-center mt-4">
 		<div className="col-lg-6">
 			<div className="row">
 				<div className="col-lg-2">
