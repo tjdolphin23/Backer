@@ -7,13 +7,14 @@ import GoFish from '../components/bootstrap/GoFish.js';
 import Jumbotron from '../components/bootstrap/jumbotron.js';
 import How from '../components/bootstrap/howItWorks.js';
 import Foot from '../components/bootstrap/foototron.js';
+import Axios from 'axios';
 
 class Home extends Component {
 	
 	componentDidMount () {
-		fetch('/api/about')
-		      .then(res => console.log(res.body))
-	}
+		Axios.get('/api/about')
+		      .then(res => console.log(res.data));
+	};
 
 	render () {
 		return (

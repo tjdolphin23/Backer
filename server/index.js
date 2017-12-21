@@ -15,12 +15,12 @@ app.get('/api', function (req, res) {
 
 app.get('/api/about', function (req, res) {
   res.set('Content-Type', 'application/json');
-  res.json({ user: 'tobi' });
+  res.status(200).json({ "name": 'Tobi' });
 });
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../react-ui', 'index.html'));
+  response.sendFile(path.resolve(__dirname, '../Build/react-ui', 'index.html'));
 });
 
 app.listen(PORT, function () {
