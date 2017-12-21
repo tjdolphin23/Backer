@@ -1,4 +1,10 @@
 body {
-	margin-bottom: 120px;
+	margin-bottom: 140px;
 	background-color: #F7882F;
+}
+
+@media (max-width:500px) {
+  body {
+	margin-bottom: 160px;
+  }
 }
