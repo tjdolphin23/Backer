@@ -2,8 +2,6 @@ import React from 'react';
 
 const HowCircle = ({text}) =>
 
-	<div className="howCircle">
-		<p className="howText">{text}</p>
-	</div>
+	<div className="howObject mt-4">{text}</div>
 
 export default HowCircle;
