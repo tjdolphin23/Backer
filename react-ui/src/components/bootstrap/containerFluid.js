@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ContainerFluid = ({children}) =>
-	<div className="container-fluid">
+const ContainerFluid = ({children, css}) =>
+	<div className={`container-fluid ${css}`}>
 		{children}
 	</div>
 

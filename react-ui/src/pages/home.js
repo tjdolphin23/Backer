@@ -26,11 +26,9 @@ const Home = () =>
 		</div>
 		<Testimonials/>
 	</Container>
-	<JumbotronFluid css="foot">
-		<ContainerFluid>
-			<Foot/>
-		</ContainerFluid>
-	</JumbotronFluid>
+	<ContainerFluid css="foot">
+		<Foot/>
+	</ContainerFluid>
 </div>
 
 export default Home;
