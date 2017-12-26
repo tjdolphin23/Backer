@@ -15,7 +15,7 @@ const Navbar = () =>
 					</ul>
 				</div>
 				<div className="col-xs-12 col-lg-4 text-center">
-				    <img src="assets/images/angelFish.png" className="w-25" alt="Go Fish Logo"></img>
+				    <img src="assets/images/angelFish.png" className="w-25" alt="Angel Fish Logo"></img>
 				</div>
 				<div className="col-xs-12 col-lg-4">
 					<ul className="nav">
