@@ -62,6 +62,8 @@
 .foot {
 	background-color: #6b7A8F;
 	color: white;
+	position: relative;
+	bottom: 0;
 }
 
 /*Media Queries*/

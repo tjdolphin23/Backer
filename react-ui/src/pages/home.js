@@ -26,7 +26,7 @@ const Home = () =>
 		</div>
 		<Testimonials/>
 	</Container>
-	<JumbotronFluid>
+	<JumbotronFluid css="foot">
 		<ContainerFluid>
 			<Foot/>
 		</ContainerFluid>

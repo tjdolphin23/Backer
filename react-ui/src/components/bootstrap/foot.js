@@ -2,7 +2,7 @@ import React from 'react';
 
 const Foot = () =>
 
-<div className="foot">
+<div>
 	<div className="row justify-content-center text-center mt-3">
 		<div className="col-xs-8 col-md-6">
 			<div className="row">

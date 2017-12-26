@@ -2,7 +2,7 @@ import React from 'react';
 
 const Jumbo = ({children, css}) =>
 
-	<div className="jumbtron-fluid">
+	<div className={`jumbotron-fluid ${css}`}>
 		{children}
 	</div>
 
