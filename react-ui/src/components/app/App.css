@@ -27,29 +27,31 @@
 	font-size: 60px;
 }
 
-.howItWorks {
-	border-radius: 80px;
-	height: 160px;
-	width: 160px;
+.howCircle {
+	height: 100%;
+	width: 100%;
 	background-color: #6b7A8F;
+	margin: 0px;
+	padding: 0px;
+	border-radius: 50%;
 }
 
 .howText {
 	text-align: center;
-	font-size: 40px;
+	/*font-size: 2.5em;*/
 	position: relative;
-	line-height: 3.5em;
+	/*line-height: 3.5em;*/
 	color: white;
 }
 
-.arrow {
-	height: 20px;
-	width: 60px;
+.dash {
+/*	height: 60px;
+	width: 40px;*/
 	background-color: #F7C331;
 	position: relative;
 	top: 4em;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin: 0px 5px 0px 5px;
+	padding: 0px;
 }
 
 .head {
@@ -60,19 +62,12 @@
 .foot {
 	background-color: #6b7A8F;
 	color: white;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 120px; /* Set the fixed height of the footer here */
 }
+
+/*Media Queries*/
 
 @media (max-width: 500px) {
   .foot {
 	height: 140px;
   }
-}
-
-html {
-  position: relative;
-  min-height: 100%;
 }

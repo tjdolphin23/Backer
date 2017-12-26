@@ -4,9 +4,8 @@ import Container from '../components/bootstrap/container.js';
 import ContainerFluid from '../components/bootstrap/containerFluid.js';
 import Testimonials from '../components/bootstrap/testimonials.js';
 import GoFish from '../components/bootstrap/GoFish.js';
-import Jumbotron from '../components/bootstrap/jumbotron.js';
-import How from '../components/bootstrap/howItWorks.js';
-import Foot from '../components/bootstrap/foototron.js';
+import Jumbotron from '../components/bootstrap/jumbotronFluid.js';
+import Foot from '../components/bootstrap/foot.js';
 
 const Home = () =>
 
@@ -16,7 +15,6 @@ const Home = () =>
 		    <GoFish/>
 	</Jumbotron>
 	<Container>
-		<How/>
 		<Testimonials/>
 	</Container>
 	<Foot/>

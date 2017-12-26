@@ -4,22 +4,33 @@ import Container from '../components/bootstrap/container.js';
 import ContainerFluid from '../components/bootstrap/containerFluid.js';
 import Testimonials from '../components/bootstrap/testimonials.js';
 import GoFish from '../components/bootstrap/GoFish.js';
-import Jumbotron from '../components/bootstrap/jumbotron.js';
-import How from '../components/bootstrap/howItWorks.js';
-import Foot from '../components/bootstrap/foototron.js';
+import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
+import HowCircle from '../components/bootstrap/howCircle.js';
+import Dash from '../components/bootstrap/dash.js';
+import Foot from '../components/bootstrap/foot.js';
 
 const Home = () =>
 
-<div className="App">
-	<Jumbotron>
-		    <NavBar/>
-		    <GoFish/>
-	</Jumbotron>
+<div>
+	<JumbotronFluid css="head">
+		<ContainerFluid>
+			    <NavBar/>
+			    <GoFish/>
+		</ContainerFluid>
+	</JumbotronFluid>
 	<Container>
-		<How one="Create" two="Plan" three="Pitch" four="Build"/>
+		<div className="row">
+			<div className="col-2">
+				<HowCircle text="Create"/>
+			</div>
+		</div>
 		<Testimonials/>
 	</Container>
-	<Foot/>
+	<JumbotronFluid>
+		<ContainerFluid>
+			<Foot/>
+		</ContainerFluid>
+	</JumbotronFluid>
 </div>
 
 export default Home;

@@ -15,16 +15,14 @@ import SignUp from '../../pages/signUp.js';
 
 const App = () =>
 	<Router>
-		<div>
-			<Switch>
-				<Route exact path="/" component={Home}/>
-				<Route exact path="/founders" component={Founders}/>
-				<Route exact path="/investors" component={Investors}/>
-				<Route exact path="/about" component={About}/>
-				<Route exact path="/signin" component={SignIn}/>
-				<Route exact path="/signup" component={SignUp}/>
-			</Switch>
-		</div>
+		<Switch>
+			<Route exact path="/" component={Home}/>
+			<Route exact path="/founders" component={Founders}/>
+			<Route exact path="/investors" component={Investors}/>
+			<Route exact path="/about" component={About}/>
+			<Route exact path="/signin" component={SignIn}/>
+			<Route exact path="/signup" component={SignUp}/>
+		</Switch>
 	</Router>
 
 export default App;
