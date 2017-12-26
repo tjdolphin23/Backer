@@ -18,15 +18,15 @@ const Foot = () =>
 				<div className="mx-auto">
 					<a href="#" alt="About"><h5 className="footLinks">About</h5></a>
 				</div>
-				<div className="mx-auto">
-					<a href="#" alt="API"><h5 className="footLinks">API</h5></a>
-				</div>
 			</div>
 		</div>
 	</div>
 	<div className="row justify-content-center text-center">
 		<div className="col-xs-6 col-md-4">
 			<div className="row">
+				<div className="mx-auto">
+					<a href="#" alt="API"><h5 className="footLinks">API</h5></a>
+				</div>
 				<div className="mx-auto">
 					<a href="#" alt="Careers"><h5 className="footLinks">Careers</h5></a>
 				</div>
