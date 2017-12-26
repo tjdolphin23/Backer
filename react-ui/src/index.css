@@ -3,11 +3,11 @@ body {
 	background-color: #F7882F;
 }
 
-@media (max-width: 500px) {
+/*@media (max-width: 500px) {
   body {
 	margin-bottom: 160px;
   }
-}
+}*/
 
 html {
   position: relative;

@@ -40,7 +40,7 @@ const Foot = () =>
 		</div>
 	</div>
 	<div className="row justify-content-center">
-		<div className="col-6 text-center">
+		<div className="col-xs-8 col-md-6 text-center">
 			<h5>&#169; 2017 BSCTD Industries</h5>
 		</div>
 	</div>

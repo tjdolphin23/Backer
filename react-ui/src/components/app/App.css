@@ -64,13 +64,6 @@
 	color: white;
 	position: absolute;
 	bottom: 0;
-	/*width: 100%;*/
 }
 
 /*Media Queries*/
-
-@media (max-width: 500px) {
-  .foot {
-	height: 140px;
-  }
-}
