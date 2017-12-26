@@ -32,7 +32,7 @@ var User = sequelize.define("backer", {
   module.exports = User;
 
 
-  // Creates a "investor" model that matches up with DB
+// Creates a "investor" model that matches up with DB
 var Investor = sequelize.define("backer", {
     // id of investor (int)
     id: Sequelize.INTEGER,
@@ -67,7 +67,7 @@ var Investor = sequelize.define("backer", {
   module.exports = Investor;
 
 
-    // Creates a "founder" model that matches up with DB
+// Creates a "founder" model that matches up with DB
 var Founder = sequelize.define("backer", {
     // id of founder (int)
     id: Sequelize.INTEGER,
