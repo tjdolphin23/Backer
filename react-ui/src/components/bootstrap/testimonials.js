@@ -6,7 +6,7 @@ const Testimonials = () =>
 			<div className="card mb-3 testiCard">
 			  <div className="card-header testiColor"><h5>Darcy</h5></div>	
 			  <div className="card-body">
-			    <p className="card-text">"I can't believe how helpful Go Fish was in connecting me with intelligent business professionals"</p>
+			    <p className="card-text">"I can't believe how helpful Angel Fish was in connecting me with intelligent business professionals"</p>
 			    <a href="#" alt="testimonial" className="testiColor">Learn More about Darcy's Experience</a>
 			  </div>
 			</div>
@@ -24,7 +24,7 @@ const Testimonials = () =>
 			<div className="card mb-3 testiCard">
 			  <div className="card-header testiColor"><h5>Carson</h5></div>	
 			  <div className="card-body">
-			    <p className="card-text" >"Go Fish has been so much more than funding - the mentorship I've gained is invaluable"</p>
+			    <p className="card-text" >"Angel Fish has been so much more than funding - the mentorship I've gained is invaluable"</p>
 			    <a href="#" alt="testimonial" className="testiColor">Learn More about Carson's Experience</a>
 			  </div>
 			</div>
