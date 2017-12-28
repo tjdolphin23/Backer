@@ -1,17 +1,17 @@
 import React from 'react';
 
-const AngelFish = () =>
+const Title = ({text1, text2}) =>
 	<div>
 		<div className="row justify-content-center">
 			<div className="text-center col-xs-12 col-lg-6">
-				<p className="GoFish">ANGEL FISH</p>
+				<p className="title">{text1}</p>
 			</div>
 		</div>
 		<div className="row justify-content-center">
 			<div className="text-center col-12">
-				<h4>Where Entrepeneurs Come to Cast Their Lines</h4>
+				<h4>{text2}</h4>
 			</div>
 		</div>
 	</div>
 
-export default AngelFish;
+export default Title;
