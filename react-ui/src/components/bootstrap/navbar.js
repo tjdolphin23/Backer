@@ -3,7 +3,7 @@ import React from 'react';
 const Navbar = ({t1, l1, t2, l2, t3, l3, t4, l4}) =>
 	<div className="row justify-content-center">
 		<div className="col-10">
-			<div className="row">
+			<div className="row justify-content-center">
 				<div className="col-xs-12 col-lg-4 mt-4">
 					<ul className="nav">
 					  <li className="nav-item mx-auto">
@@ -14,8 +14,8 @@ const Navbar = ({t1, l1, t2, l2, t3, l3, t4, l4}) =>
 					  </li>
 					</ul>
 				</div>
-				<div className="col-xs-12 col-lg-4 text-center">
-				    <img src="assets/images/angelFish.png" className="w-25" alt="Angel Fish Logo"></img>
+				<div className="col-xs-12 col-lg-3 text-center">
+				    <img src="assets/images/angelFish.png" className="w-25 mt-1" alt="Angel Fish Logo"></img>
 				</div>
 				<div className="col-xs-12 col-lg-4 mt-4">
 					<ul className="nav">
