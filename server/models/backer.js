@@ -6,7 +6,7 @@ var Sequelize = require("sequelize");
 var sequelize = require("../controllers/connection.js");
 
 // Creates a "user" model that matches up with DB
-var User = sequelize.define("backer", {
+var User = sequelize.define("users", {
     // id of user (int)
     id: Sequelize.INTEGER,
     // name of users (a string)
@@ -32,8 +32,8 @@ var User = sequelize.define("backer", {
   module.exports = User;
 
 
-// Creates a "investor" model that matches up with DB
-var Investor = sequelize.define("backer", {
+/*// Creates a "investor" model that matches up with DB
+var Investor = sequelize.define("investor", {
     // id of investor (int)
     id: Sequelize.INTEGER,
     // username of investor (a string)
@@ -68,7 +68,7 @@ var Investor = sequelize.define("backer", {
 
 
 // Creates a "founder" model that matches up with DB
-var Founder = sequelize.define("backer", {
+var Founder = sequelize.define("founder", {
     // id of founder (int)
     id: Sequelize.INTEGER,
     // username of investor (a string)
@@ -122,6 +122,6 @@ var Founder = sequelize.define("backer", {
   // Syncs with DB
   Founder.sync();
   // Makes the user Model available for other files (will also create a table)
-  module.exports = Founder;
+  module.exports = Founder;*/
 
 
