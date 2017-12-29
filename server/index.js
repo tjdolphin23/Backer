@@ -3,6 +3,7 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 // bring in the models
 const db = require(path.resolve(__dirname, "./models"));
 // API routes

@@ -2,8 +2,6 @@ const Sequelize = require('sequelize');
 module.exports = function (sequelize, DataTypes) {
 	// Creates a "founder" model that matches up with DB
 	const Projects = sequelize.define("projects", {
-	    // id of founder (int)
-	    id: Sequelize.INTEGER,
 	    // username of investor (a string)
 	    username: Sequelize.STRING,
 	    // founder's country location (a string)
