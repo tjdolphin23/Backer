@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "zV0zNQ15Mu26",
-    "database": "angel_fishDB",
+    "database": "angel_fishdb",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

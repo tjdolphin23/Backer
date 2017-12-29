@@ -1,3 +1,4 @@
+const Sequelize = require('sequelize');
 module.exports=function(sequelize, Datatypes) {
   // Creates a "user" model that matches up with DB
   const Users = sequelize.define("users", {

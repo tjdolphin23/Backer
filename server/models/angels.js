@@ -1,3 +1,4 @@
+const Sequelize = require('sequelize');
 module.exports = function (sequelize, DataTypes) {
   // Creates a "investor" model that matches up with DB
   const Angels = sequelize.define("angels", {
