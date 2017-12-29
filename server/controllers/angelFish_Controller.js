@@ -12,8 +12,8 @@ const db = require(path.resolve(__dirname, "../models"));
 // get route -> test for about
 router.get('/about', function (req, res) {
   res.set('Content-Type', 'application/json');
-  res.status(200).json({ "Server Source Name": 'Tobi' });
-  db.Users.findAll({}).then(function(users){
+  // res.status(200).json({ "Server Source Name": 'Tobi' });
+  db.users.findAll({}).then(function(users){
     return res.json({"users": users});
   })
 });

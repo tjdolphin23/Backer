@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 module.exports=function(sequelize, Datatypes) {
   // Creates a "user" model that matches up with DB
-  const Users = sequelize.define("users", {
+  var Users = sequelize.define("users", {
       // name of users (a string)
       name: Sequelize.STRING,
       // the user's username (a string)
