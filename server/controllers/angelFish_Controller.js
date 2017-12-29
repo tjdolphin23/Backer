@@ -5,8 +5,8 @@
 const path = require('path');
 const express = require("express");
 const app = express();
-
 const router = express.Router();
+
 // grabbing our models
 const db = require(path.resolve(__dirname, "../models"));
 

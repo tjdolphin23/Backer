@@ -6,15 +6,14 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 // bring in the models
 const db = require(path.resolve(__dirname, "./models"));
-// API routes
-const routes = require(path.resolve(__dirname, "./controllers/angelFish_Controller"));
 // Priority serve any static files.
 app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 // override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
 /*-----------------------------------API Routes--------------------------------------*/
-app.use("/api/about", routes);
+const routes = require(path.resolve(__dirname, "./controllers/angelFish_Controller.js"));
+app.use("/api", routes);
 
 /*-----------------------------------React Routes--------------------------------------*/
 // All remaining requests return the React app, so it can handle routing.
