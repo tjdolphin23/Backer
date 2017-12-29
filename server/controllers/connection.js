@@ -20,15 +20,6 @@ else{
   	sequelize = new Sequelize('example-app-db', 'root', null);
 };
 
-// Make connection.
-connection.connect(function(err) {
-  if (err) {
-    console.error("error connecting: " + err.stack);
-    return;
-  }
-  console.log("connected To Database as id " + connection.threadId);
-});
-
 // Exports the connection for other files to use
 module.exports = sequelize;
 
