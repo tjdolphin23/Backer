@@ -3,9 +3,9 @@
 // *********************************************************************************
 // Dependencies
 // =============================================================
-var User = require("../models/backer.js");
-var Investor = require("../models/backer.js");
-var Founder = require("../models/backer.js");
+var User = require("../models/user.js");
+var Investor = require("../models/investor.js");
+var Founder = require("../models/founder.js");
 
 // Routes
 // =============================================================
