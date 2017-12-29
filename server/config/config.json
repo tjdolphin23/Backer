@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "zV0zNQ15Mu26", //This is your localhost root mysql password, replace mine with yours when you want this to run on your pc
+    "password": "zV0zNQ15Mu26",
     "database": "angel_fishDB",
     "host": "127.0.0.1",
     "dialect": "mysql"
