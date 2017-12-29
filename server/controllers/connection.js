@@ -4,7 +4,7 @@
 // Dependencies
 var Sequelize = require("sequelize");
 // Creates mySQL connection using Sequelize
-var sequelize = new Sequelize("backer", "s4o6h6fg2ixdyxen", "aorynnkw0e9ps36k", {
+var sequelize = new Sequelize("s4o6h6fg2ixdyxen", "aorynnkw0e9ps36k", {
   host: "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
   dialect: "mysql",
   pool: {
