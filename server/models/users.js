@@ -17,7 +17,7 @@ module.exports=function(sequelize, Datatypes) {
       // is a investor (a boolean)
       investor: Sequelize.BOOLEAN,
       // user's country location (a string)
-      country: Sequelize.STRING,
+      country: Sequelize.STRING
     });
   return Users;
 };
