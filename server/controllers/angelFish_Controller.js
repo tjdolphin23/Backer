@@ -12,7 +12,10 @@ const db = require(path.resolve(__dirname, "../models"));
 // get route -> test for about
 router.get('/about', function (req, res) {
   res.set('Content-Type', 'application/json');
-  res.status(200).json({ "name": 'Tobi' });
+  res.status(200).json({ "Server Source Name": 'Tobi' });
+  db.Users.findAll({}).then(function(users){
+    return res.json({"users": users});
+  })
 });
 
 module.exports = router;
