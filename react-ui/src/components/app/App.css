@@ -31,21 +31,20 @@
 	background-color: #6b7A8F;
 	text-align: center;
 	color: white;
-	height: 200px;
-	width: 200px;
-	border-radius: 100px;
 	font-size: 2.5em;
-	line-height: 4.5em;
+	line-height: 5em;
+	height: 200px;	
+	width: 200px;
 }
 
-.dash {
+/*.dash {
 	height: 20px;
 	width: 40px;
 	background-color: #F7C331;
-/*	position: relative;
+	position: relative;
 	top: 110px;
-	left: 32px;*/
-}
+	left: 32px;
+}*/
 
 .head {
 	background-color: #DCC7AA;
