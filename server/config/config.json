@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "s4o6h6fg2ixdyxen",
-    "password": "aorynnkw0e9ps36k",
-    "database": "backer",
-    "host": "tk3mehkfmmrhjg0b.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "zV0zNQ15Mu26",
+    "database": "angel_fishdb",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
