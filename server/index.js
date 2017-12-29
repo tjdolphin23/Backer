@@ -19,13 +19,13 @@ app.get('/api/about', function (req, res) {
   res.status(200).json({ "name": 'Tobi' });
 });
 
-app.get('/api/about', function (req, res) {
+/*app.get('/api/about', function (req, res) {
   res.set('Content-Type', 'application/json');
   res.status(200);
   Users.findAll({}).then(function(results) {
     res.json(results);
   });
-});
+});*/
 
 /*------------React Routes-----------------------------*/
 // All remaining requests return the React app, so it can handle routing.
