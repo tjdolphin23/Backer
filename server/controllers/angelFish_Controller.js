@@ -4,14 +4,13 @@
 // for all apropos http requests.
 const path = require('path');
 const express = require("express");
-const app = express();
 const router = express.Router();
 
 // grabbing our models
 const db = require(path.resolve(__dirname, "../models"));
 
 // get route -> test for about
-app.get('/api/about', function (req, res) {
+router.get('/about', function (req, res) {
   res.set('Content-Type', 'application/json');
   res.status(200).json({ "name": 'Tobi' });
 });
