@@ -1,23 +1,25 @@
-// Our Burger controller
+// Our angel fish controller
 // =====================
 // This file uses Sequelize to manage data manipulation
 // for all apropos http requests.
-// NOTE: This is the same file from last week's homework,
-// but with each route gutted and replaced with sequelize queries
-// where references to our outmoded ORM file once sat.
-var express = require("express");
+const path = require('path');
+const express = require("express");
 
-var router = express.Router();
+const router = express.Router();
 // grabbing our models
-var db = require("../models");
+const db = require(path.resolve(__dirname, "../models"));
 
-// get route -> index
-router.get("/", function(req, res) {
-  // send us to the next get function instead.
-  res.redirect("/burgers");
+// get route -> test for about
+app.get('/api/about', function (req, res) {
+  res.set('Content-Type', 'application/json');
+  res.status(200).json({ "name": 'Tobi' });
 });
 
-// get route, edited to match sequelize
+module.exports = router;
+
+/*-------------------------------------------The below code is for guidance--------------------------------------------------*/
+
+/*// get route, edited to match sequelize
 router.get("/burgers", function(req, res) {
   // replace old function with sequelize function
   db.Burger.findAll({
@@ -86,6 +88,4 @@ router.put("/burgers/update", function(req, res) {
       res.redirect("/");
     });
   }
-});
-
-module.exports = router;
+});*/

@@ -12,6 +12,9 @@ app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
 // override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
+/*-----------------------------------API Routes--------------------------------------*/
+app.use("/api/about", routes);
+
 /*-----------------------------------React Routes--------------------------------------*/
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function(request, response) {
@@ -38,12 +41,6 @@ app.get('/api/about', function (req, res) {
   res.status(200).json({ "name": 'Tobi' });
 });
 
-app.get('/api/about', function (req, res) {
-  res.set('Content-Type', 'application/json');
-  res.status(200);
-  Users.findAll({}).then(function(results) {
-    res.json(results);
-  });
 });*/
 //------------------------------------------------------------------------------------------------------------
 /*// parse application/x-www-form-urlencoded
