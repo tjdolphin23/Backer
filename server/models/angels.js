@@ -25,7 +25,7 @@ module.exports = function (sequelize, DataTypes) {
       // the investor's looking in company (a string)
       qualities_of_company: Sequelize.STRING,
       // the investor's other information (a string)
-      other: Sequelize.STRING,
+      other: Sequelize.STRING
     });
   return Angels;
 };
