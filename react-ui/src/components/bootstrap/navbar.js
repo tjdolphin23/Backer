@@ -14,7 +14,7 @@ const Navbar = ({t1, l1, t2, l2, t3, l3, t4, l4}) =>
 					  </li>
 					</ul>
 				</div>
-				<div className="col-xs-4 col-md-3 text-center">
+				<div className="col-xs-4 col-md-2 text-center">
 				    <img src="assets/images/angelFish.png" className="img-fluid mt-1 w-25" alt="Angel Fish Logo"></img>
 				</div>
 				<div className="col-xs-12 col-md-4 mt-4">

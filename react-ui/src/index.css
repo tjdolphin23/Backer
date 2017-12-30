@@ -1,6 +1,7 @@
 body {
 	margin-bottom: 140px;
-	background-color: #F7882F;
+	background-color: #F7882F;/*#DCC7AA;#F7882F;*/
+	font-family: 'Istok Web', sans-serif;
 }
 
 /*@media (max-width: 500px) {
