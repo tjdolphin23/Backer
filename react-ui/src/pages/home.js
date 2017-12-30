@@ -6,7 +6,6 @@ import Testimonials from '../components/bootstrap/testimonials.js';
 import Title from '../components/bootstrap/title.js';
 import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
 import HowCircle from '../components/bootstrap/howCircle.js';
-import Dash from '../components/bootstrap/dash.js';
 import Foot from '../components/bootstrap/foot.js';
 
 const Home = () =>
