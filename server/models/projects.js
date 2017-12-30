@@ -47,7 +47,7 @@ module.exports = function (sequelize, DataTypes) {
 	    // the product's features  (a string)
 	    features: Sequelize.STRING,
 	    // the product's patent (a boolean)
-	    product_patent: Sequelize.BOOLEAN,
+	    product_patent: Sequelize.BOOLEAN
 	  });
 	return Projects;
 };
