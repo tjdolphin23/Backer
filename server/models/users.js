@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize');
 module.exports=function(sequelize, Datatypes) {
   // Creates a "user" model that matches up with DB
-  const Users = sequelize.define("users", {
+  var Users = sequelize.define("users", {
       // name of users (a string)
       name: Sequelize.STRING,
       // the user's username (a string)
@@ -17,7 +17,7 @@ module.exports=function(sequelize, Datatypes) {
       // is a investor (a boolean)
       investor: Sequelize.BOOLEAN,
       // user's country location (a string)
-      country: Sequelize.STRING,
+      country: Sequelize.STRING
     });
   return Users;
 };
