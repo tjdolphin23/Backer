@@ -1,7 +1,7 @@
 .testimonial {
 	margin-top: 2%;
 	font-weight: bold;
-	color: white;
+	color: #FFFDF7;
 }
 
 .testiCard {
@@ -33,7 +33,7 @@
 .howObject {
 	background-color: #6b7A8F;
 	text-align: center;
-	color: white;
+	color: #FFFDF7;
 	font-size: 2.5em;
 	line-height: 5em;
 	height: 200px;	
@@ -51,9 +51,13 @@
 .foot {
 	background-color: #6b7A8F;
 	border-top: solid black 1px;
-	color: white;
+	color: #FFFDF7;
 	position: absolute;
 	bottom: 0;
+}
+
+.btn {
+	background-color: #6b7A8F;
 }
 
 /*Media Queries*/
