@@ -1,16 +1,17 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
 
 class Register extends Component {
 	// Setting the component's initial state
 	state = {
-	  firstName: "",
-	  lastName: "",
-	  userName: "",
-	  email: "",
-	  password: "",
-	  country: "",
-	  founder: false,
-	  angel: false
+		firstName: "",
+		lastName: "",
+		userName: "",
+		email: "",
+		password: "",
+		country: "",
+		founder: false,
+		angel: false
 	};
 
 	handleInputChange = event => {
@@ -43,6 +44,10 @@ class Register extends Component {
 	    country: "",
 	    role: ""
 	  });
+
+	  // //Axios Request
+	  // Axios.post('/api/createUser')
+	  // 		      .then(res => console.log(res.data));
 	};
 	//RenderTime
 	render () {
