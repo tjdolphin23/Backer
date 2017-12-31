@@ -32,7 +32,7 @@ class Register extends Component {
 						</div>
 						<div className="form-group">
 						  <label for="country">Country</label>
-						  <select class="form-control" id="countrySelect">
+						  <select className="form-control" id="countrySelect">
 						  	<option>Australia</option>
 						  	<option>Canada</option>
 						  	<option>Netherlands</option>
