@@ -4,6 +4,11 @@
 	color: #FFFDF7;
 }
 
+.start {
+	background-color: #6b7A8F;
+	color: #FFFDF7;
+}
+
 .testiCard {
 	background-color: #6b7A8F;
 	border: solid black 1px;
@@ -57,7 +62,7 @@
 }
 
 .btn {
-	background-color: #6b7A8F;
+	background-color: /*#6b7A8F;*/
 }
 
 /*Media Queries*/
