@@ -9,7 +9,7 @@ import Home from '../../pages/home.js';
 import Founders from '../../pages/founders.js';
 import Angels from '../../pages/angels.js';
 import About from '../../pages/about.js';
-import GetIn from '../../pages/getIn.js';
+import Start from '../../pages/start.js';
 
 
 const App = () =>
@@ -19,7 +19,7 @@ const App = () =>
 			<Route exact path="/founders" component={Founders}/>
 			<Route exact path="/angels" component={Angels}/>
 			<Route exact path="/about" component={About}/>
-			<Route exact path="/getIn" component={GetIn}/>
+			<Route exact path="/start" component={Start}/>
 		</Switch>
 	</Router>
 

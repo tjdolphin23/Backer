@@ -8,12 +8,12 @@ import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
 import HowCircle from '../components/bootstrap/howCircle.js';
 import Foot from '../components/bootstrap/foot.js';
 
-const Home = () =>
+const Start = () =>
 
 <div>
 	<JumbotronFluid css="head">
 		<ContainerFluid>
-			    <NavBar t1="Founders" l1="/founders" t2="Angels" l2="/angels" t3="About" l3="/about" t4="Start Now" l4="/start"/>
+			    <NavBar t1="Founders" l1="/founders" t2="Angels" l2="/angels" t3="About" l3="/about" t4="Start Now" l4="/getIn"/>
 			    <Title text1="angel fish" text2="Where Entrepenuers Go To Cast Their Lines"/>
 		</ContainerFluid>
 	</JumbotronFluid>
@@ -39,4 +39,4 @@ const Home = () =>
 	</ContainerFluid>
 </div>
 
-export default Home;
+export default Start;
