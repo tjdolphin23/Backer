@@ -73,12 +73,12 @@ class SignUp extends Component {
 							<div className="form-group">
 							  <label htmlFor="userName">User Name</label>
 							  <textarea className="form-control" id="userName" value={this.state.userName} onChange={this.handleInputChange} rows="1"></textarea>
-							  <small id="userHelp" className="form-text text-muted">This is the name others will see</small>
+							  <small id="userHelp" className="form-text">This is the name others will see</small>
 							</div>
 							<div className="form-group">
 								<label htmlFor="registerEmail">Email address</label>
 								<input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleInputChange}></input>
-								<small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+								<small id="emailHelp" className="form-text">We'll never share your email with anyone else.</small>
 							</div>
 							<div className="form-group">
 								<label htmlFor="registerPassword">Password</label>

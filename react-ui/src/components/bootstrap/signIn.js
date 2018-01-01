@@ -41,7 +41,7 @@ class SignIn extends Component {
 						  <div className="form-group">
 						    <label htmlFor="signInEmail">Email address</label>
 						    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleInputChange}></input>
-						    <small id="emailHelp" className="form-text text-muted">Sign in using your email address</small>
+						    <small id="emailHelp" className="form-text">Sign in using your email address</small>
 						  </div>
 						  <div className="form-group">
 						    <label htmlFor="signInPassword">Password</label>
