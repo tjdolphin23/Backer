@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
 
-class Register extends Component {
+class SignUp extends Component {
 	// Setting the component's initial state
 	state = {
 		firstName: "",
@@ -55,7 +55,7 @@ class Register extends Component {
 			<div>
 				<div className="row mt-2">
 					<div className="col-12">
-						<h2>Register</h2>
+						<h2>Sign Up</h2>
 						<hr></hr>
 					</div>
 				</div>
@@ -104,7 +104,7 @@ class Register extends Component {
 							  	<option>Both</option>	    
 							  </select>
 							</div>
-							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Register</button>
+							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Sign Up</button>
 						</form>
 					</div>
 				</div>
@@ -113,4 +113,4 @@ class Register extends Component {
 	};
 };
 
-export default Register;
+export default SignUp;

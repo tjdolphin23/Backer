@@ -35,7 +35,7 @@ class SignIn extends Component {
 						<hr></hr>
 					</div>
 				</div>
-				<div className="row">
+				<div className="row mb-2">
 					<div className="col-12">
 						<form>
 						  <div className="form-group">

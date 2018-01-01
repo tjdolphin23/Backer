@@ -4,7 +4,7 @@ import Container from '../components/bootstrap/container.js';
 import ContainerFluid from '../components/bootstrap/containerFluid.js';
 import Title from '../components/bootstrap/title.js';
 import SignIn from '../components/bootstrap/signIn.js';
-import Register from '../components/bootstrap/register.js';
+import SignUp from '../components/bootstrap/signUp.js';
 import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
 import Foot from '../components/bootstrap/foot.js';
 
@@ -23,7 +23,7 @@ const Start = () =>
 				<SignIn/>
 			</div>
 			<div className="col-xs-12 col-md-5 mt-3 border border-dark start">
-				<Register/>
+				<SignUp/>
 			</div>
 		</div>
 	</Container>
