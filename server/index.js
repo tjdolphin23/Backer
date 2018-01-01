@@ -18,7 +18,7 @@ app.use("/api", routes);
 /*-----------------------------------React Routes--------------------------------------*/
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function(request, response) {
-  response.sendFile(path.resolve(__dirname, '../Build/react-ui', 'index.html'));
+  response.sendFile(path.resolve(__dirname, '../react-ui', 'index.html'));
 });
 /*------------------------Sync DB and Start Express Server-----------------------------*/
 db.sequelize.sync().then(function() {
