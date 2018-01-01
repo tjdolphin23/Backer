@@ -1,23 +1,28 @@
 import React from 'react';
-import NavBar from '../components/bootstrap/navbar.js';
+import DashNav from '../components/bootstrap/dashNav.js';
 import Container from '../components/bootstrap/container.js';
 import ContainerFluid from '../components/bootstrap/containerFluid.js';
-import Testimonials from '../components/bootstrap/testimonials.js';
-import GoFish from '../components/bootstrap/title.js';
-import Jumbotron from '../components/bootstrap/jumbotronFluid.js';
+import Title from '../components/bootstrap/title.js';
+import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
 import Foot from '../components/bootstrap/foot.js';
 
-const Home = () =>
+const Dashboard = () =>
 
-<div className="App">
-	<Jumbotron>
-		    <NavBar/>
-		    <GoFish/>
-	</Jumbotron>
+<div>
+	<DashNav/>
 	<Container>
-		<Testimonials/>
+		<div className="row">
+			<div className="col-6 border border-left-0 border-top-0 border-bottom-0 border-success text-center">
+				<p>Some Text</p>
+			</div>
+			<div className="col-6 border border-right-0 border-top-0 border-bottom-0 border-success text-center">
+				<p>Some Text</p>
+			</div>
+		</div>
 	</Container>
-	<Foot/>
+	<ContainerFluid css="foot">
+		<Foot/>
+	</ContainerFluid>
 </div>
 
-export default Home;
+export default Dashboard;

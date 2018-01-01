@@ -4,6 +4,11 @@
 	color: #FFFDF7;
 }
 
+.navbar {
+	background-color: /*#F7882F;*/#DCC7AA !important;
+	font-family: 'Lobster', cursive;
+}
+
 .start {
 	background-color: #6b7A8F;
 	color: #FFFDF7;
