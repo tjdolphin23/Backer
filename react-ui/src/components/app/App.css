@@ -79,6 +79,10 @@
      justify-content: center;
 }
 
+.fullHeight {
+	min-height: 100% !important;
+}
+
 /*Media Queries*/
 /*// Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575px) {
