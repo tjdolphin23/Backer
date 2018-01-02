@@ -1,3 +1,4 @@
+
 // Our angel fish controller
 // =====================
 // This file uses Sequelize to manage data manipulation
@@ -17,6 +18,33 @@ router.get('/about', function (req, res) {
     return res.json({"users": users});
   })
 });
+
+
+// post route to create user
+router.post("/start", function(req, res) {
+  // edited sign up to add user credentials
+  db.user.create({
+    firstName: 'first',
+    lastName: 'last',
+    username: 'username',
+    email: 'email',
+    password: 'password',
+    country: 'country',
+    founder: true,
+    investor: false
+  })
+  // pass the result of our call
+  .then(function(user) {
+    // log the result to our terminal/bash window
+    console.log(user);
+    // redirect
+    res.redirect("/");
+  });
+});
+
+
+
+
 
 module.exports = router;
 
