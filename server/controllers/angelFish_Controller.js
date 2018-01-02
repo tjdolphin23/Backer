@@ -35,6 +35,9 @@ router.post("/start", function(req, res) {
   })
   // pass the result of our call
   .then(function(user) {
+    if(isUser === true) {
+      alert("Already a user please log in.");
+    }
     // log the result to our terminal/bash window
     console.log(user);
     // redirect
@@ -42,7 +45,34 @@ router.post("/start", function(req, res) {
   });
 });
 
-
+//route to create a project
+router.post("/project", function (req, res) {
+  //creating new project to database
+  db.projects.create({
+    username: 'username',
+    country: 'country',
+    investment_needed: amount,
+    percent_giving: giving,
+    product: 'product',
+    product_summary: 'summary',
+    problem_solution: 'problem and solution',
+    industry: 'industry',
+    competition: 'competition',
+    market_size: 'market size',
+    market_trends: 'market trends',
+    differentiators: 'differentiators',
+    gross_sales: sales,
+    gross_costs: costs,
+    net_profits: profit,
+    other_investors: 'other investors',
+    number_of_employees: 'employees',
+    target_market: 'target market',
+    sale_price: price,
+    cost_pric: cost,
+    features: 'features',
+    product_patent: true,
+  })
+})
 
 
 
