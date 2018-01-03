@@ -42,15 +42,15 @@ class SignIn extends Component {
 
 	render () {
 		return (
-			<div>
-				<div className="row mt-2">
-					<div className="col-12">
-						<h2>Sign In</h2>
+			<div className="startBox">
+				<div className="row justify-content-center mt-2">
+					<div className="col-10">
+						<p>Sign In</p>
 						<hr></hr>
 					</div>
 				</div>
-				<div className="row mb-2">
-					<div className="col-12">
+				<div className="row justify-content-center mb-2">
+					<div className="col-10">
 						<form>
 						  <div className="form-group">
 						    <label htmlFor="signInEmail">Email address</label>

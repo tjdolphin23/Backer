@@ -15,25 +15,21 @@
 .ourNavLinks:hover {
 	color: #FFFDF7;
 }
-.start {
+.startBox {
 	background-color: #6b7A8F;
 	color: #FFFDF7;
 }
-
 .testiCard {
 	background-color: #6b7A8F;
 	border: solid black 1px;
 }
-
 .testiColor {
 	color: #F7C331;
 	font-weight: bold;
 }
-
 .footLinks {
 	color: #DCC7AA;
 }
-
 .title {
 	color: /*white;*/#6b7A8F;
 	font-weight: bold;
