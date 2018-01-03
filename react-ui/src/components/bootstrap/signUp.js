@@ -87,7 +87,7 @@ class SignUp extends Component {
 		  }
 		}).then(function (response) {
 		    console.log(response);
-		    sessionStorage.setItem('userId', response.data.user.userId);
+		    sessionStorage.setItem('userId', response.data.user.id);
 		    sessionStorage.setItem('userName', response.data.user.userName);
 		  })
 		  .catch(function (error) {

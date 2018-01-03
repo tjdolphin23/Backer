@@ -25,7 +25,7 @@ router.post("/start/signup", function(req, res) {
   db.users.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
-    username: req.body.userName,
+    userName: req.body.userName,
     email: req.body.email,
     password: req.body.password,
     country: req.body.country,
@@ -35,7 +35,7 @@ router.post("/start/signup", function(req, res) {
   // pass the result of our call
   .then(function(user) {
     // log the result to our terminal/bash window
-    console.log(user);
+    console.log("User Created");
     //set packet header for http
     res.set('Content-Type', 'application/json');
     //return user
@@ -50,6 +50,7 @@ router.post("/start/signin", function(req, res) {
   db.users.findOne({where: {email: req.body.email, password: req.body.password}})
   // pass the result of our call
   .then(function(user) {
+    console.log("User Logged In");
     //set packet header for http
     res.set('Content-Type', 'application/json');
     //return userId and userName
@@ -61,32 +62,32 @@ router.post("/start/signin", function(req, res) {
 router.post("/project", function (req, res) {
   //creating new project to database
   db.projects.create({
-    username: req.body.userName,
+    userName: req.body.userName,
     country: req.body.country,
-    investment_needed: req.body.amount,
-    percent_giving: req.body.giving,
+    investmentNeeded: req.body.amount,
+    percentGiving: req.body.giving,
     product: req.body.product,
-    product_summary: req.body.summary,
-    problem_solution: req.body.problem_solution,
+    productSummary: req.body.summary,
+    problemSolution: req.body.problem_solution,
     industry: req.body.industy,
     competition: req.body.competition,
-    market_size: req.body.market_size,
-    market_trends: req.body.market_trends,
+    marketSize: req.body.market_size,
+    marketTrends: req.body.market_trends,
     differentiators: req.body.differentiators,
-    gross_sales: req.body.gross_sales,
-    gross_costs: req.body.costs,
-    net_profits: req.body.profit,
-    other_investors: req.body.other_investors,
-    number_of_employees: req.body.employees,
-    target_market: req.body.target_market,
-    sale_price: req.body.price,
-    cost_pric: req.body.cost,
+    grossSales: req.body.gross_sales,
+    grossCosts: req.body.costs,
+    netProfits: req.body.profit,
+    otherInvestors: req.body.other_investors,
+    employeeCount: req.body.employees,
+    targetMarket: req.body.target_market,
+    salePrice: req.body.price,
+    costPrice: req.body.cost,
     features: req.body.features,
-    product_patent: req.body.patent
+    productPatent: req.body.patent
   })
   .then(function(projects) {
     // log the result to our terminal/bash window
-    console.log(projects);
+    console.log("Project Created");
   });
 });
 
@@ -96,7 +97,7 @@ router.post("/founder/dashboard", function(req, res) {
   db.projects.findAll({
     where: {
       industry: '',
-      investment_needed: '',
+      investmentNeeded: '',
 
     }
   })
