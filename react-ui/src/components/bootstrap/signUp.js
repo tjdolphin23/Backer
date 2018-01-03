@@ -28,13 +28,13 @@ class SignUp extends Component {
 	  // Preventing the default behavior of the form submit (which is to refresh the page)
 	  event.preventDefault();
 
-	  // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
+/*	  // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
 	  alert(`Hello ${this.state.firstName} ${this.state.lastName} here are your stats:
 	  	${this.state.userName}
 	  	${this.state.email}
 	  	${this.state.password}
 	  	${this.state.country}
-	  	${this.state.role}`);
+	  	${this.state.role}`);*/
 	  this.setState({
 	    firstName: "",
 	    lastName: "",

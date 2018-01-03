@@ -16,24 +16,22 @@ class SignIn extends Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
-		const email = this.state.signInEmail;
-		const password = this.state.signInPassword;
-		console.log(email+" "+password);
+		const {signInEmail, signInPassword} = this.state;
+		/*console.log(email+" "+password);*/
 		this.setState ({
 			signInEmail: "",
 			signInPassword: ""
 		});
-		// alert(`This is your email ${this.state.email} and this is your password ${this.state.password}`);
 		//Axios Request
 	  	Axios({
 	  	  method: 'post',
 	  	  url: '/api/start/signin',
 	  	  data: {
-	  	    "email": email,
-	  	    "password": password
+	  	    "email": signInEmail,
+	  	    "password": signInPassword
 	  	  }
 	  	}).then(function (response) {
-	  	    console.log(response);
+	  	    /*console.log(response);*/
 	  	    sessionStorage.setItem('userId', response.data.userId);
 	  	    sessionStorage.setItem('userName', response.data.userName);
 	  	  })
