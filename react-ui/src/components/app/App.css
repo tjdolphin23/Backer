@@ -65,6 +65,23 @@
 	position: absolute;
 	bottom: 0;
 }
+.colTitle{
+	color:#FFFDF7;
+	font-family: 'Lobster', cursive;
+	margin-top: 25px;
+}
+.Para1{
+	color:#FFFDF7;
+	margin-left: 17px;
+	margin-top: 5px;
+}
+.Para2{
+	color:#FFFDF7;
+}
+.register{
+	margin-top: 20px;
+	margin-left: 390px;
+}
 
 .box {
     display: -webkit-box;
