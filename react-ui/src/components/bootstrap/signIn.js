@@ -43,15 +43,15 @@ class SignIn extends Component {
 	render () {
 		return (
 			<div className="startBox">
-				<div className="row justify-content-center mt-2">
-					<div className="col-10">
+				<div className="row justify-content-center">
+					<div className="col-10 mt-2">
 						<p>Sign In</p>
 						<hr></hr>
 					</div>
 				</div>
-				<div className="row justify-content-center mb-2">
+				<div className="row justify-content-center">
 					<div className="col-10">
-						<form>
+						<form className="mb-3">
 						  <div className="form-group">
 						    <label htmlFor="signInEmail">Email address</label>
 						    <input type="email" className="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.signInEmail} onChange={this.handleInputChange}></input>
