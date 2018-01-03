@@ -30,14 +30,14 @@ class SignIn extends Component {
 	  	  }
 	  	}).then(function (response) {
 	  	    console.log(response);
+	  	    this.setState ({
+	  	    	signInEmail: "",
+	  	    	signInPassword: ""
+	  	    });
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);
 	  	  });
-	  	this.setState ({
-	  		signInEmail: "",
-	  		signInPassword: ""
-	  	});
 	};
 
 	render () {
