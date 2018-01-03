@@ -23,7 +23,7 @@ router.get('/about', function (req, res) {
 // post route to create user
 router.post("/start", function(req, res) {
   // edited sign up to add user credentials
-  db.user.create({
+  db.users.create({
     firstName: 'first',
     lastName: 'last',
     username: 'username',
@@ -35,13 +35,12 @@ router.post("/start", function(req, res) {
   })
   // pass the result of our call
   .then(function(user) {
-    if(isUser === true) {
-      alert("Already a user please log in.");
-    }
     // log the result to our terminal/bash window
     console.log(user);
-    // redirect
-    res.redirect("/");
+    //set packet header for http
+    res.set('Content-Type', 'application/json');
+    //return user
+    return res.json({"user": user});
   });
 });
 
@@ -72,8 +71,28 @@ router.post("/project", function (req, res) {
     features: 'features',
     product_patent: true,
   })
-})
+  .then(function(projects) {
+    // log the result to our terminal/bash window
+    console.log(projects);
+    // redirect
+    res.redirect("founder/dashboard");
+  });
+});
 
+
+//get angel info to display on dashboard
+router.post("/founder/dashboard", function(req, res) {
+  db.projects.findAll({
+    where: {
+      industry: '',
+      investment_needed: '',
+
+    }
+  })
+  .then(function(products) {
+   
+  })
+})
 
 
 module.exports = router;
