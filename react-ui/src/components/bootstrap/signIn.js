@@ -3,8 +3,8 @@ import Axios from 'axios';
 
 class SignIn extends Component {
 	state = {
-		email: "",
-		password: ""
+		signInEmail: "",
+		signInPassword: ""
 	};
 
 	handleInputChange = event => {
@@ -16,14 +16,28 @@ class SignIn extends Component {
 
 	handleFormSubmit = event => {
 		event.preventDefault();
-		alert(`This is your email ${this.state.email} and this is your password ${this.state.password}`);
-		this.setState ({
-			email: "",
-			password: ""
-		});
-		// //Axios Request
-	  	// Axios.post('/api/createUser')
-	  	// 		      .then(res => console.log(res.data));
+		const email = this.state.signInEmail;
+		const password = this.state.signInPassword;
+		console.log(email+" "+password);
+		// alert(`This is your email ${this.state.email} and this is your password ${this.state.password}`);
+		//Axios Request
+	  	Axios({
+	  	  method: 'post',
+	  	  url: '/api/start/signin',
+	  	  data: {
+	  	    "email": email,
+	  	    "password": password
+	  	  }
+	  	}).then(function (response) {
+	  	    console.log(response);
+	  	  })
+	  	  .catch(function (error) {
+	  	    console.log(error);
+	  	  });
+	  	this.setState ({
+	  		signInEmail: "",
+	  		signInPassword: ""
+	  	});
 	};
 
 	render () {
@@ -40,12 +54,12 @@ class SignIn extends Component {
 						<form>
 						  <div className="form-group">
 						    <label htmlFor="signInEmail">Email address</label>
-						    <input type="email" className="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleInputChange}></input>
+						    <input type="email" className="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleInputChange}></input>
 						    <small id="emailHelp" className="form-text">Sign in using your email address</small>
 						  </div>
 						  <div className="form-group">
 						    <label htmlFor="signInPassword">Password</label>
-						    <input type="password" className="form-control" id="password" placeholder="Enter Password" value={this.state.password} onChange={this.handleInputChange}></input>
+						    <input type="password" className="form-control" id="signInPassword" placeholder="Enter Password" value={this.state.password} onChange={this.handleInputChange}></input>
 						  </div>
 						  <button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Sign In</button>
 						</form>
