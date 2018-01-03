@@ -50,12 +50,10 @@ router.post("/start/signin", function(req, res) {
   db.users.findOne({where: {email: req.body.email, password: req.body.password}})
   // pass the result of our call
   .then(function(user) {
-    // log the result to our terminal/bash window
-    console.log(user);
     //set packet header for http
     res.set('Content-Type', 'application/json');
-    //return user
-    return res.json({"username": user.username, "userid": user.id});
+    //return userId and userName
+    return res.json({"userId": user.id, "userName": user.username});
   });
 });
 

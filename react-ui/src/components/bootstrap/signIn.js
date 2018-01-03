@@ -19,6 +19,10 @@ class SignIn extends Component {
 		const email = this.state.signInEmail;
 		const password = this.state.signInPassword;
 		console.log(email+" "+password);
+		this.setState ({
+			signInEmail: "",
+			signInPassword: ""
+		});
 		// alert(`This is your email ${this.state.email} and this is your password ${this.state.password}`);
 		//Axios Request
 	  	Axios({
@@ -30,10 +34,8 @@ class SignIn extends Component {
 	  	  }
 	  	}).then(function (response) {
 	  	    console.log(response);
-	  	    this.setState ({
-	  	    	signInEmail: "",
-	  	    	signInPassword: ""
-	  	    });
+	  	    sessionStorage.setItem('userId', response.data.userId);
+	  	    sessionStorage.setItem('userName', response.data.userName);
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);
@@ -54,12 +56,12 @@ class SignIn extends Component {
 						<form>
 						  <div className="form-group">
 						    <label htmlFor="signInEmail">Email address</label>
-						    <input type="email" className="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.email} onChange={this.handleInputChange}></input>
+						    <input type="email" className="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" value={this.state.signInEmail} onChange={this.handleInputChange}></input>
 						    <small id="emailHelp" className="form-text">Sign in using your email address</small>
 						  </div>
 						  <div className="form-group">
 						    <label htmlFor="signInPassword">Password</label>
-						    <input type="password" className="form-control" id="signInPassword" placeholder="Enter Password" value={this.state.password} onChange={this.handleInputChange}></input>
+						    <input type="password" className="form-control" id="signInPassword" placeholder="Enter Password" value={this.state.signInPassword} onChange={this.handleInputChange}></input>
 						  </div>
 						  <button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Sign In</button>
 						</form>
