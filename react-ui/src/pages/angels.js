@@ -14,7 +14,7 @@ const Home = () =>
 <div className="App">
 	<JumbotronFluid css="head">
 		<ContainerFluid>
-			    <NavBar/>
+			    <NavBar t1="Founders" l1="/founders" t2="Angels" l2="/angels" t3="About" l3="/about" t4="Start Now" l4="/start"/>
 			    <Title text1="angels" text2=""/>
 		</ContainerFluid>
 	</JumbotronFluid>
