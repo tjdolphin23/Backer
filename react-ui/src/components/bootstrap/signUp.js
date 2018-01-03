@@ -10,6 +10,7 @@ class SignUp extends Component {
 		email: "",
 		password: "",
 		country: "",
+		role: "",
 		founder: false,
 		angel: false
 	};
@@ -17,38 +18,81 @@ class SignUp extends Component {
 	handleInputChange = event => {
 	  // Getting the value and name of the input which triggered the change
 	  const { id, value } = event.target;
-
-	  // Updating the input's state
-	  this.setState({
-	    [id]: value
-	  });
+	  // Determining if the person is a founder, angel, or both before setting the state that will be used to send data to our backend
+	  switch(id) {
+	  	case "role":
+	  		switch(value){
+	  			case "Founder":
+	  				// Updating the founders state
+	  				this.setState({
+						founder: true,
+						role: value
+	  				});
+	  			break;
+	  			case "Angel":
+	  				// Updating the angels state
+	  				this.setState({
+						angel: true,
+						role: value
+	  				});
+	  			break;
+	  			case "Both":
+	  				// Updating the angels state
+	  				this.setState({
+						founder: true,
+						angel: true,
+						role: value
+	  				});
+	  			break;
+	  		}
+	  		break;
+	  	default:
+	  		// Updating the input's state
+	  		this.setState({
+	  		  [id]: value
+	  		});
+	  }
 	};
 
 	handleFormSubmit = event => {
-	  // Preventing the default behavior of the form submit (which is to refresh the page)
-	  event.preventDefault();
-
-/*	  // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-	  alert(`Hello ${this.state.firstName} ${this.state.lastName} here are your stats:
-	  	${this.state.userName}
-	  	${this.state.email}
-	  	${this.state.password}
-	  	${this.state.country}
-	  	${this.state.role}`);*/
-	  this.setState({
-	    firstName: "",
-	    lastName: "",
-	    userName: "",
-	    email: "",
-	    password: "",
-	    country: "",
-	    role: ""
-	  });
-
-	  // //Axios Request
-	  // Axios.post('/api/createUser')
-	  // 		      .then(res => console.log(res.data));
+		// Preventing the default behavior of the form submit (which is to refresh the page)
+		event.preventDefault();
+		const {firstName, lastName, userName, email, password, country, founder, angel} = this.state;
+		this.setState({
+			firstName: "",
+			lastName: "",
+			userName: "",
+			email: "",
+			password: "",
+			country: "",
+			role: "",
+			founder: false,
+			angel: false
+		});
+		//Axios Request
+		Axios({
+		  method: 'post',
+		  url: '/api/start/signup',
+		  data: {
+		  	firstName: firstName,
+		  	lastName: lastName,
+		  	userName: userName,
+		    email: email,
+		    password: password,
+		    country: country,
+		    founder: founder,
+		    angel: angel
+		  }
+		}).then(function (response) {
+		    console.log(response);
+		    sessionStorage.setItem('userId', response.data.userId);
+		    sessionStorage.setItem('userName', response.data.userName);
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
 	};
+
 	//RenderTime
 	render () {
 		return (
