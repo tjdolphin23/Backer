@@ -1,34 +1,19 @@
 import React from 'react';
 
 const Navbar = ({t1, l1, t2, l2, t3, l3, t4, l4}) =>
+
 	<div className="row justify-content-center">
-		<div className="col-10">
-			<div className="row justify-content-center">
-				<div className="col-xs-12 col-md-4 mt-4">
-					<ul className="nav">
-					  <li className="nav-item mx-auto">
-					    <a className="nav-link" href={l1}><h4>{t1}</h4></a>
-					  </li>
-					  <li className="nav-item mx-auto">
-					    <a className="nav-link" href={l2}><h4>{t2}</h4></a>
-					  </li>
-					</ul>
-				</div>
-				<div className="col-xs-4 col-md-2 text-center">
-				    <img src="assets/images/angelFish.png" className="img-fluid mt-1 w-25" alt="Angel Fish Logo"></img>
-				</div>
-				<div className="col-xs-12 col-md-4 mt-4">
-					<ul className="nav">
-					  <li className="nav-item mx-auto">
-					    <a className="nav-link" href={l3}><h4>{t3}</h4></a>
-					  </li>
-					  <li className="nav-item mx-auto">
-					    <a className="nav-link" href={l4}><h4>{t4}</h4></a>
-					  </li>
-					</ul>
-				</div>
-			</div>
+		<div className="col-4 mx-auto text-center">
+			<a className="ourNavLinks" href={l1}><p>{t1}</p></a>
+			<a className="ourNavLinks" href={l2}><p>{t2}</p></a>
 		</div>
+		<div className="col-3 mx-auto">
+			<a href="/"><img src="/assets/images/angelfish.png" className="img-fluid text-center" alt="logo"></img></a>
+		</div>
+		<div className="col-4 mx-auto text-center">
+		    <a className="ourNavLinks" href={l3}><p>{t3}</p></a>
+		    <a className="ourNavLinks" href={l4}><p>{t4}</p></a>
+	    </div>
 	</div>
 		
 export default Navbar;

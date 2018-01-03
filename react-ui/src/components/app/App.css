@@ -1,14 +1,20 @@
 .testimonial {
-	margin-top: 2%;
+/*	margin-top: 2%;*/
 	font-weight: bold;
 	color: #FFFDF7;
 }
-
 .navbar {
 	background-color: /*#F7882F;*/#DCC7AA !important;
 	font-family: 'Lobster', cursive;
 }
-
+.ourNavLinks {
+	color: #6b7A8F;
+	font-family: 'Lobster', cursive;
+	font-size: 17px;
+}
+.ourNavLinks:hover {
+	color: #FFFDF7;
+}
 .start {
 	background-color: #6b7A8F;
 	color: #FFFDF7;
@@ -24,11 +30,6 @@
 	font-weight: bold;
 }
 
-.nav-link {
-	color: /*white;*/#6b7A8F;
-	font-family: 'Lobster', cursive;
-}
-
 .footLinks {
 	color: #DCC7AA;
 }
@@ -36,26 +37,31 @@
 .title {
 	color: /*white;*/#6b7A8F;
 	font-weight: bold;
-	font-size: 80px;
+	font-size: 30px;
 	font-family: 'Lobster', cursive;
+}
+
+.title2 {
+	font-size: 18px;
 }
 
 .howObject {
 	background-color: #6b7A8F;
 	text-align: center;
 	color: #FFFDF7;
-	font-size: 2.5em;
-	line-height: 5em;
-	height: 200px;	
-	width: 200px;
+	height: 100px;	
+	width: 100px;
+	border-radius: 50%;
 	border: solid black 1px;
+	line-height: 5.8rem;
 	font-family: 'Lobster', cursive;
+	font-size: 20px;
 }
 
 .head {
 	background-color: /*#F7882F;*/#DCC7AA;
-	padding-bottom: 0;
-	border-bottom: solid black 1px;
+/*	padding-bottom: 0;
+	border-bottom: solid black 1px;*/
 }
 
 .foot {
@@ -82,7 +88,6 @@
 	margin-top: 20px;
 	margin-left: 390px;
 }
-
 .box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -96,43 +101,32 @@
      justify-content: center;
 }
 
-.fullHeight {
-	min-height: 100% !important;
-}
-
-/*Media Queries*/
-/*// Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575px) {
-	#logo {
-		width: 50px !important;
-		height: 100px !important;
-	}
-}
+/*Media Queries - Standard Design assumes below 576px in width*/
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-	#logo {
+/*	#logo {
 		width: 25% !important;
-	}
+	}*/
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	#logo {
+/*	#logo {
 		width: 25% !important;
-	}
+	}*/
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-	#logo {
+/*	#logo {
 		width: 25% !important;
-	}
+	}*/
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-	#logo {
+/*	#logo {
 		width: 25% !important;
-	}
-}*/
+	}*/
+}
