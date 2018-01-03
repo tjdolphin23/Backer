@@ -69,24 +69,26 @@ class SignUp extends Component {
 			founder: false,
 			angel: false
 		});
+
+		console.log(firstName+" "+lastName+" "+userName+" "+email+" "+password+" "+country+" "+founder+" "+angel);
 		//Axios Request
 		Axios({
 		  method: 'post',
 		  url: '/api/start/signup',
 		  data: {
-		  	firstName: firstName,
-		  	lastName: lastName,
-		  	userName: userName,
-		    email: email,
-		    password: password,
-		    country: country,
-		    founder: founder,
-		    angel: angel
+		  	"firstName": firstName,
+		  	"lastName": lastName,
+		  	"userName": userName,
+		    "email": email,
+		    "password": password,
+		    "country": country,
+		    "founder": founder,
+		    "angel": angel
 		  }
 		}).then(function (response) {
 		    console.log(response);
-		    sessionStorage.setItem('userId', response.data.userId);
-		    sessionStorage.setItem('userName', response.data.userName);
+		    sessionStorage.setItem('userId', response.data.user.userId);
+		    sessionStorage.setItem('userName', response.data.user.userName);
 		  })
 		  .catch(function (error) {
 		    console.log(error);

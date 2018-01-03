@@ -7,7 +7,7 @@ module.exports=function(sequelize, Datatypes) {
       // last name of users (a string)
       lastName: Sequelize.STRING,
       // the user's username (a string)
-      username: Sequelize.STRING,
+      userName: Sequelize.STRING,
       // user's email address (a string)
       email: Sequelize.STRING,
       // user's password (a string)
@@ -17,7 +17,7 @@ module.exports=function(sequelize, Datatypes) {
       // is a isUser (a boolean)
       isUser: Sequelize.BOOLEAN,
       // is a investor (a boolean)
-      investor: Sequelize.BOOLEAN,
+      angel: Sequelize.BOOLEAN,
       // user's country location (a string)
       country: Sequelize.STRING
     });

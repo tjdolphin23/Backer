@@ -23,14 +23,14 @@ router.get('/about', function (req, res) {
 router.post("/start/signup", function(req, res) {
   // edited sign up to add user credentials
   db.users.create({
-    firstName: 'first',
-    lastName: 'last',
-    username: 'username',
-    email: 'email',
-    password: 'password',
-    country: 'country',
-    founder: true,
-    investor: false
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    username: req.body.userName,
+    email: req.body.email,
+    password: req.body.password,
+    country: req.body.country,
+    founder: req.body.founder,
+    angel: req.body.angel
   })
   // pass the result of our call
   .then(function(user) {
@@ -61,34 +61,32 @@ router.post("/start/signin", function(req, res) {
 router.post("/project", function (req, res) {
   //creating new project to database
   db.projects.create({
-    username: 'username',
-    country: 'country',
-    investment_needed: amount,
-    percent_giving: giving,
-    product: 'product',
-    product_summary: 'summary',
-    problem_solution: 'problem and solution',
-    industry: 'industry',
-    competition: 'competition',
-    market_size: 'market size',
-    market_trends: 'market trends',
-    differentiators: 'differentiators',
-    gross_sales: sales,
-    gross_costs: costs,
-    net_profits: profit,
-    other_investors: 'other investors',
-    number_of_employees: 'employees',
-    target_market: 'target market',
-    sale_price: price,
-    cost_pric: cost,
-    features: 'features',
-    product_patent: true,
+    username: req.body.userName,
+    country: req.body.country,
+    investment_needed: req.body.amount,
+    percent_giving: req.body.giving,
+    product: req.body.product,
+    product_summary: req.body.summary,
+    problem_solution: req.body.problem_solution,
+    industry: req.body.industy,
+    competition: req.body.competition,
+    market_size: req.body.market_size,
+    market_trends: req.body.market_trends,
+    differentiators: req.body.differentiators,
+    gross_sales: req.body.gross_sales,
+    gross_costs: req.body.costs,
+    net_profits: req.body.profit,
+    other_investors: req.body.other_investors,
+    number_of_employees: req.body.employees,
+    target_market: req.body.target_market,
+    sale_price: req.body.price,
+    cost_pric: req.body.cost,
+    features: req.body.features,
+    product_patent: req.body.patent
   })
   .then(function(projects) {
     // log the result to our terminal/bash window
     console.log(projects);
-    // redirect
-    res.redirect("founder/dashboard");
   });
 });
 

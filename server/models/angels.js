@@ -3,27 +3,27 @@ module.exports = function (sequelize, DataTypes) {
   // Creates a "investor" model that matches up with DB
   const Angels = sequelize.define("angels", {
       // username of investor (a string)
-      username: Sequelize.STRING,
+      userName: Sequelize.STRING,
       // investor's country location (a string)
       country: Sequelize.STRING,
       // the investor's company name (a string)
-      company_name: Sequelize.STRING,
+      companyName: Sequelize.STRING,
       // investor's amount to invest(int)
-      amount_investing: Sequelize.INTEGER,
+      amountInvesting: Sequelize.INTEGER,
       // the investor's business background (a string)
-      business_background: Sequelize.STRING,
+      businessBackground: Sequelize.STRING,
       // the investor's investment experience (a string)
-      investing_experience: Sequelize.STRING,
+      investingExperience: Sequelize.STRING,
       // is investor going to be silent partner (boolean)
-      silent_investor: Sequelize.BOOLEAN,
+      silentInvestor: Sequelize.BOOLEAN,
       // the investor's industry of interest (a string)
-      industry_interest: Sequelize.STRING,
+      industryInterest: Sequelize.STRING,
       // investor's net worth (int)
-      net_worth: Sequelize.INTEGER,
+      netWorth: Sequelize.INTEGER,
       // is investor accredited (boolean)
-      accredited_investor: Sequelize.BOOLEAN,
+      accreditedInvestor: Sequelize.BOOLEAN,
       // the investor's looking in company (a string)
-      qualities_of_company: Sequelize.STRING,
+      companyQualities: Sequelize.STRING,
       // the investor's other information (a string)
       other: Sequelize.STRING
     });
