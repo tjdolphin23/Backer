@@ -21,7 +21,7 @@ router.get('/about', function (req, res) {
 
 
 // post route to create user
-router.post("/start", function(req, res) {
+router.post("/start/signup", function(req, res) {
   // edited sign up to add user credentials
   db.users.create({
     firstName: 'first',
@@ -43,6 +43,29 @@ router.post("/start", function(req, res) {
     return res.json({"user": user});
   });
 });
+
+// post route to find existing user
+router.post("/start/signin", function(req, res) {
+  // edited sign up to find user credentials
+  db.users.findOne({
+    where: {
+    email: 'email',
+    password: 'password'
+    }
+  })
+  // pass the result of our call
+  .then(function(user) {
+    if ()
+    // log the result to our terminal/bash window
+    console.log(user);
+    //set packet header for http
+    res.set('Content-Type', 'application/json');
+    //return user
+    return res.json({"username": user.username, "userid": user.id});
+  });
+});
+
+
 
 //route to create a project
 router.post("/project", function (req, res) {
