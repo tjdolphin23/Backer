@@ -4,6 +4,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
 // bring in the models
 const db = require(path.resolve(__dirname, "./models"));
 // Priority serve any static files.
