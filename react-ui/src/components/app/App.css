@@ -137,23 +137,31 @@
 		line-height: 8.5rem;
 		font-size: 30px; 
 	}
-	.ourNavLinks {
-		font-size: 25px;
-	}
 	.title {
 		font-size: 50px;
 	}
 	.title2 {
 		font-size: 25px;
 	}
-	#logo {
-/*		height: 75%;
-		width: 75%;*/
-	}
 }
 
 /*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
+	.howObject {
+		height: 200px;	
+		width: 200px;
+		line-height: 11.5rem;
+		font-size: 40px; 
+	}
+	.ourNavLinks {
+		font-size: 30px;
+	}
+	.title {
+		font-size: 60px;
+	}
+	.title2 {
+		font-size: 30px;
+	}
 
 }
 

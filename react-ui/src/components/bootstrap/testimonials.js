@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () =>
 	<div className="row justify-content-center testimonial">
-		<div className="col-12 col-md-4 mt-2">
+		<div className="col-12 col-md-8 col-lg-4 mt-2">
 			<div className="card testiCard">
 			  <div className="card-header testiColor">
 					<div className="row">
@@ -25,7 +25,7 @@ const Testimonials = () =>
 			  </div>
 			</div>
 		</div>
-		<div className="col-12 col-md-4 mt-2">
+		<div className="col-12 col-md-8 col-lg-4 mt-2">
 			<div className="card testiCard">
 			  <div className="card-header testiColor">
 					<div className="row">
@@ -48,7 +48,7 @@ const Testimonials = () =>
 			  </div>
 			</div>
 		</div>
-		<div className="col-12 col-md-4 mt-2">
+		<div className="col-12 col-md-8 col-lg-4 mt-2">
 			<div className="card testiCard">
 			  <div className="card-header testiColor">
 					<div className="row">
