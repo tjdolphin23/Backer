@@ -101,11 +101,14 @@
 }
 
 .img-thumbnail {
-	width: 100px;
-	height: 100px;
+	width: 75px;
+	height: 75px;
 	float: right;
 }
 
+.testTitle {
+	transform: translateY(20%);
+}
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {

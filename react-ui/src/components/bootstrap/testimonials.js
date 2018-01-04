@@ -5,11 +5,12 @@ const Testimonials = () =>
 		<div className="col-12 col-md-4 mt-2">
 			<div className="card testiCard">
 			  <div className="card-header testiColor">
-					<span>
-							<img src="./assets/images/darcy.jpeg" alt="darcy" className="img-thumbnail"></img>
-					</span>
-					<span class="testTitle"><h4>Darcy P.</h4><p>Gilbert, AZ</p>
-					</span>
+					<div className="row justify-content-center">
+						<div className="col-5 mx-auto testTitle">Darcy P. Gilbert, AZ</div>
+						<div className="col-5 mx-auto">
+						<img src="./assets/images/darcy.jpeg" alt="darcy" className="img-thumbnail"></img>
+					</div>
+				</div>
 				</div>	
 			  <div className="card-body">
 			    <p className="card-text">"I can't believe how helpful Angel Fish was in connecting me with intelligent business professionals"</p>
@@ -20,10 +21,12 @@ const Testimonials = () =>
 		<div className="col-12 col-md-4 mt-2">
 			<div className="card testiCard">
 			  <div className="card-header testiColor">
-					<span>
-							<img src="./assets/images/alex.jpeg" alt="alex" className="img-thumbnail"></img>
-					</span>
-						<span class="testTitle"><h4>Alex A.</h4><p>Phoenix, AZ</p></span>
+					<div className="row justify-content-center">
+						<div className="col-5 mx-auto testTitle">Alex A. Phoenix, AZ</div>
+						<div className="col-5 mx-auto">
+								<img src="./assets/images/alex.jpeg" alt="alex" className="img-thumbnail"></img>
+						</div>
+					</div>
 				</div>	
 			  <div className="card-body">
 			    <p className="card-text">"Knowing you are not alone in the pursuit of your dreams makes them so much more attainable"</p>
@@ -34,10 +37,12 @@ const Testimonials = () =>
 		<div className="col-12 col-md-4 mt-2">
 			<div className="card testiCard">
 			  <div className="card-header testiColor">
-					<span>
+					<div className="row justify-content-center">
+						<div className="col-5 mx-auto testTitle">Carson H. Scottsdale, AZ</div>
+						<div className="col-5 mx-auto">
 								<img src="./assets/images/carson.jpeg" alt="carson" className="img-thumbnail"></img>
-						</span>
-							<span class="testTitle"><h4>Carson H.</h4><p>Scottsdale, AZ</p></span>
+						</div>
+					</div>
 				</div>	
 			  <div className="card-body">
 			    <p className="card-text" >"Angel Fish has been so much more than funding - the mentorship I've gained is invaluable"</p>
