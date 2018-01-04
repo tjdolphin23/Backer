@@ -20,16 +20,16 @@ const Home = () =>
 	</JumbotronFluid>
 	<Container>
 		<div className="row justify-content-center mt-2 mb-2">
-			<div className="col-5 d-flex justify-content-center">
+			<div className="col-5 col-md-3 d-flex justify-content-center">
 				<HowCircle text="Create"/>
 			</div>
-			<div className="col-5 d-flex justify-content-center mb-1">
+			<div className="col-5 col-md-3 d-flex justify-content-center mb-1">
 				<HowCircle text="Plan"/>
 			</div>
-			<div className="col-5 d-flex justify-content-center mt-1">
+			<div className="col-5 col-md-3 d-flex justify-content-center mt-1">
 				<HowCircle text="Pitch"/>
 			</div>
-			<div className="col-5 d-flex justify-content-center">
+			<div className="col-5 col-md-3 d-flex justify-content-center">
 				<HowCircle text="Build"/>
 			</div>
 		</div>

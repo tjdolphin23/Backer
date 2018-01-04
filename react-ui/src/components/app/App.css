@@ -1,3 +1,5 @@
+/*Media Queries with SASS - Standard Design assumes below 576px in width*/
+
 .testimonial {
 /*	margin-top: 2%;*/
 	font-weight: bold;
@@ -52,8 +54,8 @@
 	border: solid black 1px;
 	line-height: 5.8rem;
 	font-family: 'Lobster', cursive;
-	font-size: 20px;
-}
+	font-size: 20px; 
+	}
 
 .head {
 	background-color: /*#F7882F;*/#DCC7AA;
@@ -98,32 +100,50 @@
      justify-content: center;
 }
 
-/*Media Queries - Standard Design assumes below 576px in width*/
-
-// Small devices (landscape phones, 576px and up)
+/*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-/*	#logo {
-		width: 25% !important;
-	}*/
+	.howObject {
+		height: 150px;	
+		width: 150px;
+		line-height: 8.5rem;
+		font-size: 30px; 
+	}
+	.ourNavLinks {
+		font-size: 30px;
+	}
+	.title {
+		font-size: 50px;
+	}
+	.title2 {
+		font-size: 25px;
+	}
 }
 
-// Medium devices (tablets, 768px and up)
+/*// Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-/*	#logo {
-		width: 25% !important;
-	}*/
+	.howObject {
+		height: 150px;	
+		width: 150px;
+		line-height: 8.5rem;
+		font-size: 30px; 
+	}
+	.ourNavLinks {
+		font-size: 30px;
+	}
+	.title {
+		font-size: 50px;
+	}
+	.title2 {
+		font-size: 25px;
+	}
 }
 
-// Large devices (desktops, 992px and up)
+/*// Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
-/*	#logo {
-		width: 25% !important;
-	}*/
+
 }
 
-// Extra large devices (large desktops, 1200px and up)
+/*// Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
-/*	#logo {
-		width: 25% !important;
-	}*/
+	
 }

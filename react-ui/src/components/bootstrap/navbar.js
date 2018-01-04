@@ -7,7 +7,7 @@ const Navbar = ({t1, l1, t2, l2, t3, l3, t4, l4}) =>
 			<a className="ourNavLinks" href={l1}><p>{t1}</p></a>
 			<a className="ourNavLinks" href={l2}><p>{t2}</p></a>
 		</div>
-		<div className="col-3 mx-auto">
+		<div className="col-3 col-sm-2 mx-auto">
 			<a href="/"><img src="/assets/images/angelfish.png" className="img-fluid text-center" alt="logo"></img></a>
 		</div>
 		<div className="col-4 mx-auto text-center">
