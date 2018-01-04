@@ -93,7 +93,7 @@ router.post("/project", function (req, res) {
 
 
 //get angel info to display on dashboard
-router.post("/founder/dashboard", function(req, res) {
+router.post("/dashboard", function(req, res) {
   db.projects.findAll({
     where: {
       industry: '',
