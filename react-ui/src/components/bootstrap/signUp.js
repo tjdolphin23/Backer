@@ -98,15 +98,15 @@ class SignUp extends Component {
 	//RenderTime
 	render () {
 		return (
-			<div className="startBox">
+			<div className="startBox col-10 col-lg-5">
 				<div className="row justify-content-center">
-					<div className="col-10 mt-2">
+					<div className="col-12 mt-2">
 						<p>Sign Up</p>
 						<hr></hr>
 					</div>
 				</div>
 				<div className="row justify-content-center">
-					<div className="col-10">
+					<div className="col-12">
 						<form className="mb-3">
 							<div className="form-group">
 							  <label htmlFor="firstName">First Name</label>

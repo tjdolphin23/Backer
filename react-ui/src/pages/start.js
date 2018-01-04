@@ -18,8 +18,10 @@ const Start = () =>
 		</ContainerFluid>
 	</JumbotronFluid>
 	<Container>
-		<SignIn/>
-		<SignUp/>
+		<div className="row justify-content-center">
+			<SignIn/>
+			<SignUp/>
+		</div>
 	</Container>
 	<ContainerFluid css="foot">
 		<Foot/>

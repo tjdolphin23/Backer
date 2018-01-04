@@ -39,11 +39,9 @@
 	font-size: 30px;
 	font-family: 'Lobster', cursive;
 }
-
 .title2 {
 	font-size: 18px;
 }
-
 .howObject {
 	background-color: #6b7A8F;
 	text-align: center;
@@ -56,13 +54,11 @@
 	font-family: 'Lobster', cursive;
 	font-size: 20px; 
 	}
-
 .head {
 	background-color: /*#F7882F;*/#DCC7AA;
 /*	padding-bottom: 0;
 	border-bottom: solid black 1px;*/
 }
-
 .foot {
 	background-color: #6b7A8F;
 	border-top: solid black 1px;
@@ -106,6 +102,8 @@
 	border: 1px solid black;
 }
 
+/*-------------------Media Queries---------------------*/
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
 	.howObject {
@@ -143,6 +141,9 @@
 	.title2 {
 		font-size: 25px;
 	}
+	.startBox {
+		margin-top: 3%;
+	}
 }
 
 /*// Large devices (desktops, 992px and up)*/
@@ -161,6 +162,9 @@
 	}
 	.title2 {
 		font-size: 30px;
+	}
+	.startBox {
+		margin-top: 2%;
 	}
 
 }
