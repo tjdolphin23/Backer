@@ -8,10 +8,10 @@ const Testimonials = () =>
 					<div className="row">
 						<div className="col-7 text-center">
 							<div className="row">
-								<div className="col-12 testiTitle">Speak It</div>
+								<div className="col-12">Speak It</div>
 							</div>
 							<div className="row">
-								<div className="col-12 testiTitle">Darcy P. Gilbert, AZ</div>
+								<div className="col-12">Darcy P. Gilbert, AZ</div>
 							</div>
 						</div>
 						<div className="col-5 text-center">
@@ -31,10 +31,10 @@ const Testimonials = () =>
 					<div className="row">
 						<div className="col-7 text-center">
 							<div className="row">
-								<div className="col-12 testiTitle">BroGainz</div>
+								<div className="col-12">BroGainz</div>
 							</div>
 							<div className="row">
-								<div className="col-12 testiTitle">Alex A. Phoenix, AZ</div>
+								<div className="col-12">Alex A. Phoenix, AZ</div>
 							</div>
 						</div>
 						<div className="col-5 text-center">
@@ -54,10 +54,10 @@ const Testimonials = () =>
 					<div className="row">
 						<div className="col-7 text-center">
 							<div className="row">
-								<div className="col-12 testiTitle">Codopoly</div>
+								<div className="col-12">Codopoly</div>
 							</div>
 							<div className="row">
-								<div className="col-12 testiTitle">Carson H. Scottsdale, AZ</div>
+								<div className="col-12">Carson H. Scottsdale, AZ</div>
 							</div>
 						</div>
 						<div className="col-5 text-center">
