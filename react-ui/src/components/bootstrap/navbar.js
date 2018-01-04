@@ -14,7 +14,7 @@ const Navbar = ({t1, l1, t2, l2, t3, l3, t4, l4}) =>
 			</div>
 		</div>
 		<div className="col-3 mx-auto text-center">
-			<a href="/"><img src="/assets/images/angelfish.png" className="img-fluid text-center" id="logo" alt="logo"></img></a>
+			<a href="/"><img src="/assets/images/angelFish.png" className="img-fluid text-center" id="logo" alt="logo"></img></a>
 		</div>
 		<div className="col-4 mx-auto">
 			<div className="row">
