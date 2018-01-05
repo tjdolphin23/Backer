@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 
 class DashNav extends Component {
 
-	handleSignOut = (props) => {
+	handleSignOut = () => {
 		sessionStorage.removeItem("userName");
 		sessionStorage.removeItem("userId");
 	}
 
-	render (props) {
+	render () {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<span className="navbar-brand">
@@ -18,6 +18,9 @@ class DashNav extends Component {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNavDropdown">
 				  <ul className="navbar-nav ml-auto mr-4">
+				  	<li className="nav-item">
+				  		<img src="/open-iconic/svg/icon-name.svg" alt="icon name">
+				  	</li>
 				    <li className="nav-item dropdown">
 				      <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				        Welcome, {sessionStorage.getItem("userName")}
