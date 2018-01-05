@@ -94,23 +94,42 @@ router.post("/project", function (req, res) {
 
 //search/view project route
 router.post("/dashboard", function(req, res) {
-  //search agnels database in find all
+  //search angels database in find all
   db.angels.FindAll({
+    //search parameters
     where: {
+      //keyword of product summary
       keyword: "%" + keyword + "%",
+      //amount founders need for project
       amount: "gte" + amount,
+      //product industry
       industry: "%" + industry + "%"
     }
   })
   .then(function(angels) {
+    //log search results
     console.log("Return search");
   })
 });
 
-//pull information for dashboard
-
-
-
+//search for angels 
+router.post("/dashboard", function(req, res) {
+//search angels in dashboard with findAll
+db.founders.findAll({
+  //search parameters
+  where: {
+    //amount angel is willing to invest
+    amountInvesting: "gte" + amount,
+    //keyword search angel's investing experience
+    experience:m"%" + experience + "%",
+    //keyword search industry experience/business background
+    industry: "%" + industry + "%"
+  }
+}).the(function(founders){
+  //log search results
+  console.log("Results found");
+})
+});
 
 
 
