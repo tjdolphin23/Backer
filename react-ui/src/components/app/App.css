@@ -99,6 +99,12 @@
 .sides {
 	border: 2px solid red;
 }
+.rightBorder {
+	border-right: 2px solid black;
+}
+.leftBorder {
+	border-left: 2px solid black;
+}
 .img-thumbnail {
 	width: 65px;
 	height: 65px;

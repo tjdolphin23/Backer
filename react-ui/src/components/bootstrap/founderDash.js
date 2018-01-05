@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FounderDash = ({css}) =>
+const FounderDash = () =>
 	
 	<div className="innerDashBox">
 		<div className="card">
