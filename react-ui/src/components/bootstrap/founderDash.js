@@ -2,7 +2,7 @@ import React from 'react';
 
 const FounderDash = ({css}) =>
 	
-	<div className="box">
+	<div className="innerDashBox">
 		<div className="card">
 		  <div className="card-body">
 		    <h5 className="card-title">My Projects</h5>

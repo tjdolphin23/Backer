@@ -12,12 +12,12 @@ const Dashboard = (props) =>
 
 <div>
 	<DashNav/>
-	<ContainerFluid>
+	<ContainerFluid css="dashBox sides">
 		<div className="row">
-			<div className="col-6 border border-left-0 border-top-0 border-bottom-0 border-warning text-center">
+			<div className="col-6 text-center">
 				<FounderDash/>
 			</div>
-			<div className="col-6 border border-right-0 border-top-0 border-bottom-0 border-warning text-center">
+			<div className="col-6 text-center">
 				<AngelDash/>
 			</div>
 		</div>

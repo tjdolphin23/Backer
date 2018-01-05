@@ -3,13 +3,8 @@ body {
 	background-color: #F7882F;/*#DCC7AA;#F7882F;*/
 	font-family: 'Istok Web', sans-serif;
 	color: #2a2d2c;
+	/*border: 2px solid green;*/
 }
-
-/*@media (max-width: 500px) {
-  body {
-	margin-bottom: 160px;
-  }
-}*/
 
 html {
   position: relative;
