@@ -14,10 +14,9 @@ class SignIn extends Component {
 		});
 	};
 
-	handleFormSubmit = event => {
+	handleFormSubmit = (event) => {
 		event.preventDefault();
 		const {signInEmail, signInPassword} = this.state;
-		/*console.log(email+" "+password);*/
 		this.setState ({
 			signInEmail: "",
 			signInPassword: ""
@@ -31,10 +30,9 @@ class SignIn extends Component {
 	  	    "password": signInPassword
 	  	  }
 	  	}).then(function (response) {
-	  	    /*console.log(response);*/
 	  	    sessionStorage.setItem('userId', response.data.userId);
 	  	    sessionStorage.setItem('userName', response.data.userName);
-	  	    window.location = ("/dashboard");
+	  	    this.props.history.push('/dashboard');
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);
@@ -42,7 +40,7 @@ class SignIn extends Component {
 	  	  });
 	};
 
-	render () {
+	render (props) {
 		return (
 			<div className="startBox col-10 col-lg-5">
 				<div className="row justify-content-center">

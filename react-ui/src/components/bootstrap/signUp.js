@@ -98,7 +98,7 @@ class SignUp extends Component {
 	};
 
 	//RenderTime
-	render () {
+	render (props) {
 		return (
 			<div className="startBox col-10 col-lg-5">
 				<div className="row justify-content-center">

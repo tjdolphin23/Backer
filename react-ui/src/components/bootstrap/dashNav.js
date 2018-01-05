@@ -2,12 +2,12 @@ import React, {Component} from 'react';
 
 class DashNav extends Component {
 
-	handleSignOut = () => {
+	handleSignOut = (props) => {
 		sessionStorage.removeItem("userName");
 		sessionStorage.removeItem("userId");
 	}
 
-	render () {
+	render (props) {
 		return (
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<span className="navbar-brand">

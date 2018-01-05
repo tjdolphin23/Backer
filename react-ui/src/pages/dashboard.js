@@ -8,7 +8,7 @@ import Title from '../components/bootstrap/title.js';
 import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
 import Foot from '../components/bootstrap/foot.js';
 
-const Dashboard = () =>
+const Dashboard = (props) =>
 
 <div>
 	<DashNav/>
