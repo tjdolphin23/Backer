@@ -19,17 +19,36 @@ class Dashboard extends Component {
 	}
 
 	handleCollapseLeft = () => {
-	    this.setState ({
-	    	leftDisplay: "d-none",
-	    	columns: "col-12"
-	    })
+		if(this.state.columns === "col-6"){
+			this.setState ({
+				leftDisplay: "d-none",
+				columns: "col-12"
+			})
+		}
+		else{
+			this.setState ({
+				leftDisplay: "d-block",
+				rightDisplay: "d-block",
+				columns: "col-6"
+
+			})
+		}
 	}
 
 	handleCollapseRight = () => {
-		this.setState ({
-			rightDisplay: "d-none",
-			columns: "col-12"
-		})
+		if(this.state.columns === "col-6"){
+			this.setState ({
+				rightDisplay: "d-none",
+				columns: "col-12"
+			})
+		}
+		else{
+			this.setState ({
+				rightDisplay: "d-block",
+				leftDisplay: "d-block",
+				columns: "col-6"
+			})
+		}
 	}
 
 	render(){
