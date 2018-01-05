@@ -68,18 +68,18 @@ router.post("/project", function (req, res) {
     percentGiving: req.body.giving,
     product: req.body.product,
     productSummary: req.body.summary,
-    problemSolution: req.body.problem_solution,
+    problemSolution: req.body.problemSolution,
     industry: req.body.industy,
     competition: req.body.competition,
-    marketSize: req.body.market_size,
-    marketTrends: req.body.market_trends,
+    marketSize: req.body.marketSize,
+    marketTrends: req.body.marketTrends,
     differentiators: req.body.differentiators,
-    grossSales: req.body.gross_sales,
+    grossSales: req.body.grossSales,
     grossCosts: req.body.costs,
     netProfits: req.body.profit,
-    otherInvestors: req.body.other_investors,
+    otherInvestors: req.body.otherInvestors,
     employeeCount: req.body.employees,
-    targetMarket: req.body.target_market,
+    targetMarket: req.body.targetMarket,
     salePrice: req.body.price,
     costPrice: req.body.cost,
     features: req.body.features,
@@ -92,92 +92,26 @@ router.post("/project", function (req, res) {
 });
 
 
-//get angel info to display on dashboard
+//search/view project route
 router.post("/dashboard", function(req, res) {
-  db.projects.findAll({
+  //search agnels database in find all
+  db.angels.FindAll({
     where: {
-      industry: '',
-      investmentNeeded: '',
-
+      keyword: "%" + keyword + "%",
+      amount: "gte" + amount,
+      industry: "%" + industry + "%"
     }
   })
-  .then(function(products) {
-   
+  .then(function(angels) {
+    console.log("Return search");
   })
-})
+});
+
+//pull information for dashboard
+
+
+
+
 
 
 module.exports = router;
-
-/*-------------------------------------------The below code is for guidance--------------------------------------------------*/
-
-/*// get route, edited to match sequelize
-router.get("/burgers", function(req, res) {
-  // replace old function with sequelize function
-  db.Burger.findAll({
-    include: [db.Customer],
-    // Here we specify we want to return our burgers in ordered by ascending burger_name
-    order: [
-      ["burger_name", "ASC"]
-    ]
-  })
-  // use promise method to pass the burgers...
-  .then(function(dbBurger) {
-    // into the main index, updating the page
-    var hbsObject = {
-      burger: dbBurger
-    };
-    return res.render("index", hbsObject);
-  });
-});
-
-// post route to create burgers
-router.post("/burgers/create", function(req, res) {
-  // edited burger create to add in a burger_name
-  db.Burger.create({
-    burger_name: req.body.burger_name
-  })
-  // pass the result of our call
-  .then(function(dbBurger) {
-    // log the result to our terminal/bash window
-    console.log(dbBurger);
-    // redirect
-    res.redirect("/");
-  });
-});
-
-// put route to devour a burger
-router.put("/burgers/update", function(req, res) {
-  // If we are given a customer, create the customer and give them this devoured burger
-  if (req.body.customer) {
-    db.Customer.create({
-      customer: req.body.customer,
-      BurgerId: req.body.burger_id
-    })
-    .then(function(dbCustomer) {
-      return db.Burger.update({
-        devoured: true
-      }, {
-        where: {
-          id: req.body.burger_id
-        }
-      });
-    })
-    .then(function(dbBurger) {
-      res.redirect("/");
-    });
-  }
-  // If we aren't given a customer, just update the burger to be devoured
-  else {
-    db.Burger.update({
-      devoured: true
-    }, {
-      where: {
-        id: req.body.burger_id
-      }
-    })
-    .then(function(dbBurger) {
-      res.redirect("/");
-    });
-  }
-});*/
