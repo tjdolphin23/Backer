@@ -121,7 +121,7 @@ db.founders.findAll({
     //amount angel is willing to invest
     amountInvesting: "gte" + amount,
     //keyword search angel's investing experience
-    experience:m"%" + experience + "%",
+    experience: "%" + experience + "%",
     //keyword search industry experience/business background
     industry: "%" + industry + "%"
   }
