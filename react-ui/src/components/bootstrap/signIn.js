@@ -34,9 +34,11 @@ class SignIn extends Component {
 	  	    /*console.log(response);*/
 	  	    sessionStorage.setItem('userId', response.data.userId);
 	  	    sessionStorage.setItem('userName', response.data.userName);
+	  	    window.location = ("/dashboard");
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);
+	  	    alert("There seems to be a problem. Please try again.");
 	  	  });
 	};
 

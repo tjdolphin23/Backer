@@ -54,7 +54,7 @@ router.post("/start/signin", function(req, res) {
     //set packet header for http
     res.set('Content-Type', 'application/json');
     //return userId and userName
-    return res.json({"userId": user.id, "userName": user.username});
+    return res.json({"userId": user.id, "userName": user.userName});
   });
 });
 

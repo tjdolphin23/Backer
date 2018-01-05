@@ -86,13 +86,14 @@ class SignUp extends Component {
 		    "angel": angel
 		  }
 		}).then(function (response) {
-		    console.log(response);
+		    /*console.log(response);*/
 		    sessionStorage.setItem('userId', response.data.user.id);
 		    sessionStorage.setItem('userName', response.data.user.userName);
 		    window.location = ("/dashboard");
 		  })
 		  .catch(function (error) {
 		    console.log(error);
+		    alert("There seems to be a problem. Please try again.");
 		  });
 	};
 
