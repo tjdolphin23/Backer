@@ -13,7 +13,7 @@ class Start extends Component {
 	componentWillMount () {
 		console.log();
 		if(sessionStorage.getItem("userName") && sessionStorage.getItem("userId")){
-			window.location("/dashboard");
+			window.location = ("/dashboard");
 		}
 	}
 

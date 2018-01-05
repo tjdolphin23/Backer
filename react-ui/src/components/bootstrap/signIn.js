@@ -32,7 +32,7 @@ class SignIn extends Component {
 	  	}).then(function (response) {
 	  	    sessionStorage.setItem('userId', response.data.userId);
 	  	    sessionStorage.setItem('userName', response.data.userName);
-	  	    this.props.history.push('/dashboard');
+	  	    window.location = ('/dashboard');
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);
@@ -40,7 +40,7 @@ class SignIn extends Component {
 	  	  });
 	};
 
-	render (props) {
+	render () {
 		return (
 			<div className="startBox col-10 col-lg-5">
 				<div className="row justify-content-center">
