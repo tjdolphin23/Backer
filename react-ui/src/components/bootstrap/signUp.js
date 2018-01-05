@@ -89,6 +89,7 @@ class SignUp extends Component {
 		    console.log(response);
 		    sessionStorage.setItem('userId', response.data.user.id);
 		    sessionStorage.setItem('userName', response.data.user.userName);
+		    window.location = ("/dashboard");
 		  })
 		  .catch(function (error) {
 		    console.log(error);
