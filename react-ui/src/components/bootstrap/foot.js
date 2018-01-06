@@ -16,7 +16,7 @@ const Foot = () =>
 					<a href="/angels" alt="Investors"><h5 className="footLinks">Angels</h5></a>
 				</div>
 				<div className="mx-auto">
-					<a href="/aboutUs" alt="About"><h5 className="footLinks">About Us</h5></a>
+					<a href="/wip" alt="About"><h5 className="footLinks">About Us</h5></a>
 				</div>
 			</div>
 		</div>
@@ -25,16 +25,16 @@ const Foot = () =>
 		<div className="col-xs-6 col-md-4">
 			<div className="row">
 				<div className="mx-auto">
-					<a href="/api" alt="API"><h5 className="footLinks">API</h5></a>
+					<a href="/wip" alt="API"><h5 className="footLinks">API</h5></a>
 				</div>
 				<div className="mx-auto">
-					<a href="/careers" alt="Careers"><h5 className="footLinks">Careers</h5></a>
+					<a href="/wip" alt="Careers"><h5 className="footLinks">Careers</h5></a>
 				</div>
 				<div className="mx-auto">
-					<a href="/contact" alt="Contact"><h5 className="footLinks">Contact</h5></a>
+					<a href="/wip" alt="Contact"><h5 className="footLinks">Contact</h5></a>
 				</div>
 				<div className="mx-auto">
-					<a href="/legal" alt="Legal"><h5 className="footLinks">Legal</h5></a>
+					<a href="/wip" alt="Legal"><h5 className="footLinks">Legal</h5></a>
 				</div>
 			</div>
 		</div>

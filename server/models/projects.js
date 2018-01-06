@@ -49,7 +49,11 @@ module.exports = function (sequelize, DataTypes) {
 	    // the product's patent (a boolean)
 		productPatent: Sequelize.BOOLEAN,
 		// the investor's other information (a string)
-      other: Sequelize.STRING
+		productPatent: Sequelize.BOOLEAN,
+		// the investor's other information (a string)
+		other: Sequelize.STRING,
+		//image of product
+		image: Sequelize.LONGBLOB
 	  });
 	return Projects;
 };

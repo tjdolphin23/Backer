@@ -26,13 +26,14 @@ class ProjectForm extends Component {
         costPrice: "",
         features: "",
         productPatent: "",
-        other: ""
+        other: "",
+        image: ""
     };
 
 	handleFormSubmit = event => {
 		// Preventing the default behavior of the form submit (which is to refresh the page)
 		event.preventDefault();
-		const {username, product, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, market_size, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other} = this.state;
+		const {username, product, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, market_size, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other, image} = this.state;
 		this.setState({
 			username: "",
             product: "",
@@ -56,10 +57,11 @@ class ProjectForm extends Component {
             costPrice: "",
             features: "",
             productPatent: "",
-            other: ""
+            other: "",
+            image: ""
 		});
 
-		console.log(username+" "+product+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other);
+		console.log(username+" "+product+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
 		//Axios Request
 		Axios({
 		  method: 'post',
@@ -87,7 +89,8 @@ class ProjectForm extends Component {
             "costPrice": costPrice,
             "features": features,
             "productPatent": productPatent,
-            "other": other
+            "other": other,
+            "image": image
 		  }
 		}).then(function (response) {
 		    /*console.log(response);*/
@@ -265,6 +268,11 @@ class ProjectForm extends Component {
                             <label htmlFor="other">Other Pertinent Information</label>
                             <textarea className="form-control" id="other" value={this.state.other} onChange={this.handleInputChange} rows="1"></textarea>
                             </div>
+                             //image
+                             <div className="form-group">
+                             <label htmlFor="image">Add Image</label>
+                             <textarea className="form-control" id="image" value={this.state.image} onChange={this.handleInputChange} rows="1"></textarea>
+                             </div>
 							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Complete Project</button>
 						</form>
 					</div>

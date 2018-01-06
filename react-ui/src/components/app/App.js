@@ -11,6 +11,7 @@ import Angels from '../../pages/angels.js';
 import About from '../../pages/about.js';
 import Start from '../../pages/start.js';
 import Dashboard from '../../pages/dashboard.js';
+import WIP from '../../pages/wip.js';
 
 
 const App = () =>
@@ -22,6 +23,7 @@ const App = () =>
 			<Route exact path="/about" component={About}/>
 			<Route exact path="/start" component={Start}/>
 			<Route exact path="/dashboard" component={Dashboard}/>
+			<Route exact path="/wip" component={WIP}/>
 		</Switch>
 	</Router>
 
