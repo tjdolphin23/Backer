@@ -40,6 +40,27 @@
 .title2 {
 	font-size: 18px;
 }
+.pic1{
+	width: 166px;
+	height:131px;
+	border-radius: 20%;
+	margin-top: 45px;
+	margin-left:275px;
+}
+.pic2{
+	width: 166px;
+	height:131px;
+	border-radius: 20%;
+	margin-top: 45px;
+	margin-left:40px;
+}
+.pic3{
+	width: 166px;
+	height:131px;
+	border-radius: 20%;
+	margin-top: 45px;
+	margin-left:40px;
+}
 .howObject {
 	background-color: #6b7A8F;
 	text-align: center;

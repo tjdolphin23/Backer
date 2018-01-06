@@ -18,6 +18,11 @@ const Founders = () =>
 	</JumbotronFluid>
 	<Container>
 		<div className="row">
+			<img src="./assets/images/business.jpg" alt="business" className="img-thumbnail" className="pic1"></img>
+			<img src="./assets/images/investors.jpg" alt="business" className="img-thumbnail" className="pic2"></img>
+			<img src="./assets/images/hands.jpg" alt="business" className="img-thumbnail" className="pic3"></img>
+		</div>
+		<div className="row">
 			<div className="col-12" className="colTitle">
 				<h1></h1>
 				<h2> How it works </h2>
@@ -25,7 +30,7 @@ const Founders = () =>
 		</div>
 			<div className="row">
 			  <div className="Para1 col-8">
-					<p> By signing up with a free account you have access to thousands of investors that are looking to help you succeed in your business. 
+			  		<p> By signing up with a free account you have access to thousands of investors that are looking to help you succeed in your business. 
 					When signing up you will be asked questions about the project you are on working to get you connected with the right 
 				     type of investor. From there, your project will have its own dashboard that you can connect with your investor and update your progress in real time.</p>
 			  </div>
