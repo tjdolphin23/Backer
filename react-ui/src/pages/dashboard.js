@@ -11,42 +11,48 @@ import Foot from '../components/bootstrap/foot.js';
 class Dashboard extends Component {
 
 	state = {
-		leftDisplay: "d-block",
-		rightDisplay: "d-block",
-		columns: "col-6",
-		colexLeft: "collapse-left",
-		colexRight: "collapse-right"
+		angelDisplay: "d-block",
+		founderDisplay: "d-block",
+		columnsFounder: "col-6",
+		columnsAngel: "col-6",
+		colexFounder: "collapse-left",
+		colexAngel: "collapse-right",
+		angelNavLabel: " Hide My Investments",
+		founderNavLabel: " Hide My Projects"
 	}
 
-	handleCollapseLeft = () => {
-		if(this.state.columns === "col-6"){
+	handleCollapseFounder = () => {
+		if(this.state.columnsFounder === "col-6"){
 			this.setState ({
-				leftDisplay: "d-none",
-				columns: "col-12"
+				founderDisplay: "d-none",
+				columnsAngel: "col-12",
+				angelNavLabel: " View My Projects"
 			})
 		}
 		else{
 			this.setState ({
-				leftDisplay: "d-block",
-				rightDisplay: "d-block",
-				columns: "col-6"
-
+				founderDisplay: "d-block",
+				angelDisplay: "d-block",
+				columnsFounder: "col-6",
+				founderNavLabel: " Hide My Projects"
 			})
 		}
 	}
 
-	handleCollapseRight = () => {
-		if(this.state.columns === "col-6"){
+	handleCollapseAngel = () => {
+		if(this.state.columnsAngel === "col-6"){
 			this.setState ({
-				rightDisplay: "d-none",
-				columns: "col-12"
+				angelDisplay: "d-none",
+				columnsFounder: "col-12",
+				founderNavLabel: " View My Investments"
 			})
 		}
 		else{
 			this.setState ({
-				rightDisplay: "d-block",
-				leftDisplay: "d-block",
-				columns: "col-6"
+				angelDisplay: "d-block",
+				founderDisplay: "d-block",
+				columnsAngel: "col-6",
+				angelNavLabel: " Hide My Investments"
 			})
 		}
 	}
@@ -57,13 +63,13 @@ class Dashboard extends Component {
 				<DashNav/>
 				<ContainerFluid css="dashBox">
 					<div className="row">
-						<div className={`${this.state.columns} rightBorder text-center ${this.state.leftDisplay}`} id="fSection">
+						<div className={`${this.state.columnsFounder} rightBorder text-center ${this.state.founderDisplay}`} id="fSection">
 							<FounderDash/>
-							<span className={`oi oi-${this.state.colexLeft} nav-link`} onClick={this.handleCollapseLeft} title="colex left" aria-hidden="true"></span>
+							<span className={`oi oi-${this.state.colexFounder} nav-link`} onClick={this.handleCollapseFounder} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}
 						</div>
-						<div className={`${this.state.columns} lefttBorder text-center ${this.state.rightDisplay}`} id="aSection">
+						<div className={`${this.state.columnsAngel} leftBorder text-center ${this.state.angelDisplay}`} id="aSection">
 							<AngelDash/>
-							<span className={`oi oi-${this.state.colexRight} nav-link`} onClick={this.handleCollapseRight} title="colex right" aria-hidden="true"> Collapse/Expand </span>
+							{this.state.angelNavLabel}<span className={`oi oi-${this.state.colexAngel} nav-link`} onClick={this.handleCollapseAngel} title="colex right" aria-hidden="true"></span>
 						</div>
 					</div>
 				</ContainerFluid>
