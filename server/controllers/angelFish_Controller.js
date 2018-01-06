@@ -125,12 +125,10 @@ db.founders.findAll({
     //keyword search industry experience/business background
     industry: "%" + industry + "%"
   }
-}).the(function(founders){
+}).then(function(founders){
   //log search results
   console.log("Results found");
 })
 });
-
-
 
 module.exports = router;
