@@ -166,7 +166,8 @@ class ProjectForm extends Component {
 							  	<option>Sports</option>
 							  	<option>Technology</option>
                                 <option>Transportation</option>		
-                                <option>Web Services</option>				    
+                                <option>Web Services</option>	
+                                <option>Other</option>			    
 							  </select>
                             </div>
                             //competition
