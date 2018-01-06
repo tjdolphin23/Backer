@@ -63,7 +63,7 @@ class Dashboard extends Component {
 						</div>
 						<div className={`${this.state.columns} lefttBorder text-center ${this.state.rightDisplay}`} id="aSection">
 							<AngelDash/>
-							<span className={`oi oi-${this.state.colexRight} nav-link`} onClick={this.handleCollapseRight} title="colex right" aria-hidden="true"></span>
+							<span className={`oi oi-${this.state.colexRight} nav-link`} onClick={this.handleCollapseRight} title="colex right" aria-hidden="true"> Collapse/Expand </span>
 						</div>
 					</div>
 				</ContainerFluid>
