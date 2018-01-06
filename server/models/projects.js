@@ -47,8 +47,8 @@ module.exports = function (sequelize, DataTypes) {
 	    // the product's features  (a string)
 	    features: Sequelize.STRING,
 	    // the product's patent (a boolean)
-			productPatent: Sequelize.BOOLEAN
-			// the investor's other information (a string)
+		productPatent: Sequelize.BOOLEAN,
+		// the investor's other information (a string)
       other: Sequelize.STRING
 	  });
 	return Projects;
