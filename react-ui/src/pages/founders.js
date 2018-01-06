@@ -50,7 +50,9 @@ const Founders = () =>
 				<button type="button" className="btn btn-default"> Register Now </button>
 			</div>
 	</Container>
-	<Foot/>
+	<ContainerFluid css="foot">
+		<Foot/>
+	</ContainerFluid>
 </div>
 
 export default Founders;
