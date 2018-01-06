@@ -15,7 +15,7 @@ const Testimonials = () =>
 							</div>
 						</div>
 						<div className="col-5 text-center">
-							<img src="./assets/images/darcy.jpeg" alt="darcy" className="img-thumbnail"></img>
+							<img src="/assets/images/darcy.jpeg" alt="darcy" className="img-thumbnail"></img>
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@ const Testimonials = () =>
 							</div>
 						</div>
 						<div className="col-5 text-center">
-							<img src="./assets/images/alex.jpeg" alt="Alex" className="img-thumbnail"></img>
+							<img src="/assets/images/alex.jpeg" alt="Alex" className="img-thumbnail"></img>
 						</div>
 					</div>
 				</div>	
@@ -61,7 +61,7 @@ const Testimonials = () =>
 							</div>
 						</div>
 						<div className="col-5 text-center">
-							<img src="./assets/images/carson.jpeg" alt="Carson" className="img-thumbnail"></img>
+							<img src="/assets/images/carson.jpeg" alt="Carson" className="img-thumbnail"></img>
 						</div>
 					</div>
 				</div>	
