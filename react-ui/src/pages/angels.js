@@ -20,6 +20,11 @@ const Home = () =>
 	</JumbotronFluid>
 	<Container>
 		<div className="row">
+			<img src="./assets/images/chic.jpg" alt="business" className="img-thumbnail" className="pic1"></img>
+			<img src="./assets/images/boxes.jpg" alt="business" className="img-thumbnail" className="pic2"></img>
+			<img src="./assets/images/ladder.jpg" alt="business" className="img-thumbnail" className="pic3"></img>
+		</div>
+		<div className="row">
 			<div className="col-12" className="colTitle">
 				<h1></h1>
 				<h1></h1>
