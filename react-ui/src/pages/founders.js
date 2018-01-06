@@ -46,8 +46,8 @@ const Founders = () =>
 						</ul>
 				</div>
 				</div>
-			<div className="register">	
-				<button type="button" className="btn btn-default"> Register Now </button>
+			<div className="row justify-content-center">	
+				<a href="/start"><button type="button" className="btn btn-default"> Register Now </button></a>
 			</div>
 	</Container>
 	<ContainerFluid css="foot">
