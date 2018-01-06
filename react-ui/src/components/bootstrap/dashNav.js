@@ -36,8 +36,8 @@ class DashNav extends Component {
 						    <button className="dropdown-item">
 						    	<span className="oi oi-cog nav-link" title="settings" aria-hidden="true"></span> Settings
 						    </button>
-						    <button className="dropdown-item">
-						    	<span className="oi oi-account-logout nav-link" onClick={this.handleSignOut} title="sign out" aria-hidden="true"></span> Sign Out
+						    <button className="dropdown-item" onClick={this.handleSignOut}>
+						    	<span className="oi oi-account-logout nav-link" title="sign out" aria-hidden="true"></span> Sign Out
 						    </button>
 						  </div>
 						</li>
