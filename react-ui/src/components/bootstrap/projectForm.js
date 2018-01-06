@@ -25,13 +25,14 @@ class ProjectForm extends Component {
         salePrice: "",
         costPrice: "",
         features: "",
-        productPatent: ""
+        productPatent: "",
+        other: ""
     };
 
 	handleFormSubmit = event => {
 		// Preventing the default behavior of the form submit (which is to refresh the page)
 		event.preventDefault();
-		const {username, product, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, market_size, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent} = this.state;
+		const {username, product, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, market_size, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other} = this.state;
 		this.setState({
 			username: "",
             product: "",
@@ -54,10 +55,11 @@ class ProjectForm extends Component {
             salePrice: "",
             costPrice: "",
             features: "",
-            productPatent: ""
+            productPatent: "",
+            other: ""
 		});
 
-		console.log(username+" "+product+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent);
+		console.log(username+" "+product+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other);
 		//Axios Request
 		Axios({
 		  method: 'post',
@@ -84,7 +86,8 @@ class ProjectForm extends Component {
             "salePrice": salePrice,
             "costPrice": costPrice,
             "features": features,
-            "productPatent": productPatent
+            "productPatent": productPatent,
+            "other": other
 		  }
 		}).then(function (response) {
 		    /*console.log(response);*/
@@ -257,7 +260,12 @@ class ProjectForm extends Component {
                                     <option>No</option>			    
                                 </select>
                              </div>
-							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Create Project</button>
+                             //other
+                            <div className="form-group">
+                            <label htmlFor="other">Other Pertinent Information</label>
+                            <textarea className="form-control" id="other" value={this.state.other} onChange={this.handleInputChange} rows="1"></textarea>
+                            </div>
+							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Complete Project</button>
 						</form>
 					</div>
 				</div>
