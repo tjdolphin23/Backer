@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
 
-class Project extends Component {
+class ProjectForm extends Component {
 	// Setting the component's initial state
 	state = {
 		username: "",
@@ -256,7 +256,7 @@ class Project extends Component {
                                     <option>No</option>			    
                                 </select>
                              </div>
-							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Sign Up</button>
+							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Create Project</button>
 						</form>
 					</div>
 				</div>
@@ -265,5 +265,4 @@ class Project extends Component {
 	};
 };
 
-export default Project;
-     
+export default ProjectForm;
