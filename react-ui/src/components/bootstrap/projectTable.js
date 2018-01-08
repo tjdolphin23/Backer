@@ -1,7 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 
-const ProjectTable = (props) =>
+const ProjectTable = ({product}) =>
     <div>
         <table className="table table-dark">
           <thead>
@@ -15,9 +15,7 @@ const ProjectTable = (props) =>
           <tbody>
             <tr>
               <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
+              <td>{product}</td>
             </tr>
           </tbody>
         </table>

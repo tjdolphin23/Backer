@@ -47,7 +47,7 @@ class FounderDash extends Component {
 					<ProjectForm/>
 				</div>
 				<div className={this.state.projectTableVisibility}>
-					<ProjectTable/>
+					<ProjectTable product="poopoo"/>
 				</div>
 			</div>
 		)
