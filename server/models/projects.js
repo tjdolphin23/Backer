@@ -4,16 +4,14 @@ module.exports = function (sequelize, DataTypes) {
 	const Projects = sequelize.define("projects", {
 	    // username of investor (a string)
 	    userName: Sequelize.STRING,
-	    // founder's country location (a string)
-	    country: Sequelize.STRING,
 	    // the founder's company name (a string)
 	    companyName: Sequelize.STRING,
 	    // founder's amount of money needed (int)
 	    investmentNeeded: Sequelize.INTEGER,
 	    // the percentage founder is willing to give up (a int)
 	    percentGiving: Sequelize.INTEGER,
-	    // the founder's product (a string)
-	    product: Sequelize.STRING,
+	    // the founder's product name (a string)
+	    productName: Sequelize.STRING,
 	    // the product summary (a string)
 	    productSummary: Sequelize.STRING,
 	    // the product solution to problem (a string)
@@ -47,8 +45,6 @@ module.exports = function (sequelize, DataTypes) {
 	    // the product's features  (a string)
 	    features: Sequelize.STRING,
 	    // the product's patent (a boolean)
-		productPatent: Sequelize.BOOLEAN,
-		// the investor's other information (a string)
 		productPatent: Sequelize.BOOLEAN,
 		// the investor's other information (a string)
 		other: Sequelize.STRING

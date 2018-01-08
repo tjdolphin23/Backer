@@ -59,14 +59,14 @@ router.post("/start/signin", function(req, res) {
 });
 
 //route to create a project
-router.post("/project", function (req, res) {
+router.post("/founderDash/create", function (req, res) {
   //creating new project to database
   db.projects.create({
     userName: req.body.userName,
-    country: req.body.country,
+    companyName: req.body.companyName,
     investmentNeeded: req.body.amount,
     percentGiving: req.body.giving,
-    product: req.body.product,
+    productName: req.body.productName,
     productSummary: req.body.summary,
     problemSolution: req.body.problemSolution,
     industry: req.body.industy,
@@ -83,11 +83,17 @@ router.post("/project", function (req, res) {
     salePrice: req.body.price,
     costPrice: req.body.cost,
     features: req.body.features,
-    productPatent: req.body.patent
+    productPatent: req.body.patent,
+    other: req.body.other
   })
-  .then(function(projects) {
+  .then(function(project) {
     // log the result to our terminal/bash window
     console.log("Project Created");
+    //set packet header for http
+    res.set('Content-Type', 'application/json');
+    //return userId and userName
+    return res.json({"project": project});
+
   });
 });
 

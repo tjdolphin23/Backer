@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
-import ProjectForm from './projectForm.js'
+import ProjectForm from './projectForm.js';
+import ProjectTable from './projectTable.js';
 
 class FounderDash extends Component {
 
 	state = {
 		boxVisibility: "",
-		projectFormVisibility: "d-none"
+		projectFormVisibility: "d-none",
+		projectTableVisibility: "d-none"
 	}
 
 	handleProjectsClick = e => {
 		e.preventDefault();
 		this.setState({
 			boxVisibility: "d-none",
-			projectFormVisibility: ""
+			projectTableVisibility: ""
 		})
 	}
 
@@ -43,6 +45,9 @@ class FounderDash extends Component {
 				</div>
 				<div className={this.state.projectFormVisibility}>
 					<ProjectForm/>
+				</div>
+				<div className={this.state.projectTableVisibility}>
+					<ProjectTable/>
 				</div>
 			</div>
 		)
