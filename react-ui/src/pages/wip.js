@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
-import NavBar from '../components/bootstrap/navbar.js';
-import Container from '../components/bootstrap/container.js';
-import ContainerFluid from '../components/bootstrap/containerFluid.js';
-import Title from '../components/bootstrap/title.js';
-import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
-import Foot from '../components/bootstrap/foot.js';
+import NavBar from '../components/navbars/navbar.js';
+import Container from '../components/containers/container.js';
+import ContainerFluid from '../components/containers/containerFluid.js';
+import Title from '../components/title/title.js';
+import JumbotronFluid from '../components/containers/jumbotronFluid.js';
+import Foot from '../components/footer/foot.js';
 
 class Start extends Component {
 

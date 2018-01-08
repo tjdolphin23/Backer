@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import ProjectForm from './projectForm.js';
-import ProjectTable from './projectTable.js';
+import ProjectForm from '../forms/projectForm.js';
+import ProjectTable from '../tables/projectTable.js';
 
 class FounderDash extends Component {
 

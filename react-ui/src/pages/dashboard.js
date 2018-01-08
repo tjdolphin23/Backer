@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import DashNav from '../components/bootstrap/dashNav.js';
-import FounderDash from '../components/bootstrap/founderDash.js';
-import AngelDash from '../components/bootstrap/angelDash.js';
-import Container from '../components/bootstrap/container.js';
-import ContainerFluid from '../components/bootstrap/containerFluid.js';
-import Title from '../components/bootstrap/title.js';
-import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
-import Foot from '../components/bootstrap/foot.js';
+import DashNav from '../components/navbars/dashNav.js';
+import FounderDash from '../components/dashboards/founderDash.js';
+import AngelDash from '../components/dashboards/angelDash.js';
+import Container from '../components/containers/container.js';
+import ContainerFluid from '../components/containers/containerFluid.js';
+import Title from '../components/title/title.js';
+import JumbotronFluid from '../components/containers/jumbotronFluid.js';
+import Foot from '../components/footer/foot.js';
 
 class Dashboard extends Component {
 

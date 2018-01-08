@@ -1,14 +1,12 @@
 import React, {Component} from 'react';
-import NavBar from '../components/bootstrap/navbar.js';
-import Container from '../components/bootstrap/container.js';
-import ContainerFluid from '../components/bootstrap/containerFluid.js';
-import Testimonials from '../components/bootstrap/testimonials.js';
-import GoFish from '../components/bootstrap/title.js';
-import Jumbotron from '../components/bootstrap/jumbotronFluid.js';
-import Foot from '../components/bootstrap/foot.js';
+import NavBar from '../components/navbars/navbar.js';
+import Container from '../components/containers/container.js';
+import ContainerFluid from '../components/containers/containerFluid.js';
+import Jumbotron from '../components/containers/jumbotronFluid.js';
+import Foot from '../components/footer/foot.js';
 import Axios from 'axios';
-import JumbotronFluid from '../components/bootstrap/jumbotronFluid.js';
-import Title from '../components/bootstrap/title.js';
+import JumbotronFluid from '../components/containers/jumbotronFluid.js';
+import Title from '../components/title/title.js';
 
 class Home extends Component {
 	
