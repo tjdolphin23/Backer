@@ -62,15 +62,15 @@ router.post("/start/signin", function(req, res) {
 router.post("/founderDash/create", function (req, res) {
   let productPatent = req.body.productPatent
     if (productPatent === "yes") {
-      productPatent = true
+      productPatent = true;
     } else {
-      productPatent = false
+      productPatent = false;
   };
   let otherInvestors = req.body.otherInvestors
     if(otherInvestors === "yes") {
-      otherInvestors = true
+      otherInvestors = true;
     } else {
-      otherInvestors =false
+      otherInvestors = false;
     };
   //creating new product to database
   db.products.create({
