@@ -60,12 +60,18 @@ router.post("/start/signin", function(req, res) {
 
 //route to create a product
 router.post("/founderDash/create", function (req, res) {
-  const productPatent = req.body.productPatent
-  if (productPatent === "yes") {
-    req.body.productPatent = true
-  } else {
-    productPatent = false
+  let productPatent = req.body.productPatent
+    if (productPatent === "yes") {
+      productPatent = true
+    } else {
+      productPatent = false
   };
+  let otherInvestors = req.body.otherInvestors
+    if(otherInvestors === "yes") {
+      otherInvestors = true
+    } else {
+      otherInvestors =false
+    };
   //creating new product to database
   db.products.create({
     userName: req.body.userName,
