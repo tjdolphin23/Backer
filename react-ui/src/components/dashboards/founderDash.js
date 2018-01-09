@@ -9,7 +9,8 @@ class FounderDash extends Component {
 		boxVisibility: "",
 		productFormVisibility: "d-none",
 		productTableVisibility: "d-none",
-		productTable: ""
+		productTable: "",
+		productForm: ""
 	}
 
 	handleProductsClick = e => {
@@ -41,7 +42,8 @@ class FounderDash extends Component {
 		e.preventDefault();
 		this.setState({
 			boxVisibility: "d-none",
-			productFormVisibility: ""
+			productFormVisibility: "",
+			productForm: <ProductStart/>
 		})
 	}
 
@@ -63,7 +65,7 @@ class FounderDash extends Component {
 					</div>
 				</div>
 				<div className={this.state.productFormVisibility}>
-					<ProductStart/>
+					{this.state.productForm}
 				</div>
 				<div className={this.state.productTableVisibility}>
 					{this.state.productTable}

@@ -97,7 +97,7 @@ class ProductStart extends Component {
             "other": other
 		  }
 		}).then(function (response) {
-		    console.log(response);
+		    window.load=("/dashboard");
 		  })
 	};
 	//RenderTime

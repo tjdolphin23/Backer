@@ -4,7 +4,6 @@ import Axios from 'axios';
 class TableRow extends Component {
   constructor (props){
     super(props);
-    console.log(props);
     this.state = {
       products: props.products
     };
@@ -14,7 +13,7 @@ class TableRow extends Component {
     return(
       <tbody>
         {this.state.products.map((product) =>
-          <tr>
+          <tr key={product.productTitle}>
             <th scope="row">{product.productTitle}</th>
             <td>{product.investmentNeeded}</td>
             <td>{product.percentGiving}</td>
