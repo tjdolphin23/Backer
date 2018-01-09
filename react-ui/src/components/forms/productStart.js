@@ -39,6 +39,7 @@ class ProductStart extends Component {
 	handleFormSubmit = event => {
 		// Preventing the default behavior of the form submit (which is to refresh the page)
 		event.preventDefault();
+        const userName = sessionStorage.getItem("userName");
 		const {productTitle, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, marketSize, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other, image} = this.state;
 		this.setState({
             productTitle: "",
@@ -72,7 +73,7 @@ class ProductStart extends Component {
 		  method: 'post',
 		  url: '/api/founderDash/create',
 		  data: {
-            "username": sessionStorage.getItem("userName"),
+            "username": userName,
             "companyName": companyName,
             "investmentNeeded": investmentNeeded,
             "percentGiving": percentGiving,
@@ -117,7 +118,7 @@ class ProductStart extends Component {
                                 <div className="col-6">
         							<div className="form-group">
         							  <label htmlFor="product">Product Title</label>
-        							  <textarea className="form-control" id="product" value={this.state.productName} onChange={this.handleInputChange} rows="1"></textarea>
+        							  <textarea className="form-control" id="product" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="companyName">Company Name</label>
@@ -183,7 +184,7 @@ class ProductStart extends Component {
                                 </div>
                                 <div className="col-6">
         							<div className="form-group">
-                                    <label htmlFor="differentiators">Product Defferentiators</label>
+                                    <label htmlFor="differentiators">Product Differentiators</label>
                                     <textarea className="form-control" id="differentiators" value={this.state.differentiators} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
