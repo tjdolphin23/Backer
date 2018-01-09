@@ -1,5 +1,5 @@
 import React from 'react';
-import Axios from 'axios';
+import TableRow from './tableRow.js'
 
 const ProductTable = ({product}) =>
     <div>
@@ -13,10 +13,7 @@ const ProductTable = ({product}) =>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>{product}</td>
-            </tr>
+            <TableRow product={["poopyDiaper", "sloppy"]}/>
           </tbody>
         </table>
     </div>
