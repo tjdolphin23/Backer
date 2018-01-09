@@ -78,7 +78,7 @@ router.post("/founderDash/create", function (req, res) {
     grossSales: req.body.grossSales,
     grossCosts: req.body.grossCosts,
     netProfits: req.body.netProfits,
-    otherInvestors: req.body.otherInvestors,
+    otherInvestors: otherInvestors,
     employeeCount: req.body.employeeCount,
     targetMarket: req.body.targetMarket,
     salePrice: req.body.salePrice,

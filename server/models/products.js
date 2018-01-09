@@ -11,7 +11,7 @@ module.exports = function (sequelize, DataTypes) {
 	    // the percentage founder is willing to give up (a int)
 	    percentGiving: Sequelize.INTEGER,
 	    // the founder's product name (a string)
-	    productName: Sequelize.STRING,
+	    productTitle: Sequelize.STRING,
 	    // the product summary (a string)
 	    productSummary: Sequelize.STRING,
 	    // the product solution to problem (a string)
