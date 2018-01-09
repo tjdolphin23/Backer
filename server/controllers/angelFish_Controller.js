@@ -60,7 +60,12 @@ router.post("/start/signin", function(req, res) {
 
 //route to create a product
 router.post("/founderDash/create", function (req, res) {
-  console.log(req.body);
+  const productPatent = req.body.productPatent
+  if (productPatent === "yes") {
+    req.body.productPatent = true
+  } else {
+    productPatent = false
+  };
   //creating new product to database
   db.products.create({
     userName: req.body.userName,
@@ -84,7 +89,7 @@ router.post("/founderDash/create", function (req, res) {
     salePrice: req.body.salePrice,
     costPrice: req.body.costPrice,
     features: req.body.features,
-    productPatent: req.body.productPatent,
+    productPatent: productPatent,
     other: req.body.other
   })
   .then(function(product) {
