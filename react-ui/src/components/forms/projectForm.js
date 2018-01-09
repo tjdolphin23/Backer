@@ -116,7 +116,7 @@ class ProjectForm extends Component {
                             <div className="row">
                                 <div className="col-6">
         							<div className="form-group">
-        							  <label htmlFor="product">Product</label>
+        							  <label htmlFor="product">Product Title</label>
         							  <textarea className="form-control" id="product" value={this.state.product} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
