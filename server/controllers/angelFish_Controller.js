@@ -60,6 +60,7 @@ router.post("/start/signin", function(req, res) {
 
 //route to create a product
 router.post("/founderDash/create", function (req, res) {
+  console.log(req.body);
   //creating new product to database
   db.products.create({
     userName: req.body.userName,

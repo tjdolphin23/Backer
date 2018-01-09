@@ -118,7 +118,7 @@ class ProductStart extends Component {
                                 <div className="col-6">
         							<div className="form-group">
         							  <label htmlFor="product">Product Title</label>
-        							  <textarea className="form-control" id="product" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></textarea>
+        							  <textarea className="form-control" id="productTitle" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="companyName">Company Name</label>
