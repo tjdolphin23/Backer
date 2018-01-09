@@ -35,7 +35,7 @@ module.exports = function (sequelize, DataTypes) {
 	    // the product's other investors (a string)
 	    otherInvestors: Sequelize.STRING,
 	    // the number of employees (an int)
-	    employeeCount: Sequelize.INTEGER,
+	    employeeCount: Sequelize.STRING,
 	    // the product's target market (a string)
 	    targetMarket: Sequelize.STRING,
 	    // the product sale price (an int)
