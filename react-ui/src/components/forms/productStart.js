@@ -117,27 +117,27 @@ class ProductStart extends Component {
                                 <div className="col-6">
         							<div className="form-group">
         							  <label htmlFor="product">Product Title</label>
-        							  <textarea className="form-control" id="productTitle" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></textarea>
+        							  <input className="form-control" id="productTitle" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="companyName">Company Name</label>
-        							  <textarea className="form-control" id="companyName" value={this.state.companyName} onChange={this.handleInputChange} rows="1"></textarea>
+        							  <input className="form-control" id="companyName" value={this.state.companyName} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="investmentNeeded">Investment Amount Needed</label>
-        							  <textarea className="form-control" id="investmentNeeded" value={this.state.investmentNeeded} onChange={this.handleInputChange} rows="1"></textarea>
+        							  <input className="form-control" id="investmentNeeded" value={this.state.investmentNeeded} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="percentGiving">Percentage of Company Giving Up</label>
-                                    <textarea className="form-control" id="percentGiving" value={this.state.percentGiving} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="percentGiving" value={this.state.percentGiving} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="productSummary">Summary of Product</label>
-                                    <textarea className="form-control" id="productSummary" value={this.state.productSummary} onChange={this.handleInputChange} rows="5"></textarea>
+                                    <input className="form-control" id="productSummary" value={this.state.productSummary} onChange={this.handleInputChange} rows="5"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="problemSolution">What Problem Does Your Product Solve</label>
-                                    <textarea className="form-control" id="problemSolution" value={this.state.problemSolution} onChange={this.handleInputChange} rows="5"></textarea>
+                                    <input className="form-control" id="problemSolution" value={this.state.problemSolution} onChange={this.handleInputChange} rows="5"></input>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="industry">Industry</label>
@@ -170,33 +170,33 @@ class ProductStart extends Component {
                                     </div>
                                     <div className="form-group">
                                     <label htmlFor="competition">Top Competitors</label>
-                                    <textarea className="form-control" id="competition" value={this.state.competition} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="competition" value={this.state.competition} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
                                     <div className="form-group">
                                     <label htmlFor="marketSize">Market Size</label>
-                                    <textarea className="form-control" id="marketSize" value={this.state.marketSize} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="marketSize" value={this.state.marketSize} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="marketTrends">Market Trends</label>
-                                    <textarea className="form-control" id="marketTrends" value={this.state.marketTrends} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="marketTrends" value={this.state.marketTrends} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
                                 </div>
                                 <div className="col-6">
         							<div className="form-group">
                                     <label htmlFor="differentiators">Product Differentiators</label>
-                                    <textarea className="form-control" id="differentiators" value={this.state.differentiators} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="differentiators" value={this.state.differentiators} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="grossSales">$ Current Gross Sales</label>
-                                    <textarea className="form-control" id="grossSales" type="number" value={this.state.grossSales} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="grossSales" type="number" value={this.state.grossSales} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="grossCosts">$ Gross Cost of Product</label>
-                                    <textarea className="form-control" id="grossCosts" type="number" value={this.state.grossCosts} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="grossCosts" type="number" value={this.state.grossCosts} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="netProfits">$ Current Net Profit</label>
-                                    <textarea className="form-control" id="netProfits" type="number" value={this.state.netProfits} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="netProfits" type="number" value={this.state.netProfits} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="otherInvestors">Other Investors</label>
@@ -221,19 +221,19 @@ class ProductStart extends Component {
                                      </div>
         							<div className="form-group">
                                     <label htmlFor="targetMarket">Target Market For Your Product</label>
-                                    <textarea className="form-control" id="targetMarket" value={this.state.targetMarket} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="targetMarket" value={this.state.targetMarket} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="salePrice">$ Sales Price</label>
-                                    <textarea className="form-control" id="salePrice" value={this.state.salePrice} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="salePrice" value={this.state.salePrice} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="costPrice">$ Cost Price</label>
-                                    <textarea className="form-control" id="costPrice" type="number" value={this.state.costPrice} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="costPrice" type="number" value={this.state.costPrice} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="features">Product Features</label>
-                                    <textarea className="form-control" id="features" value={this.state.features} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="features" value={this.state.features} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="productPatent">Product Patent Established</label>
@@ -245,7 +245,7 @@ class ProductStart extends Component {
                                      </div>
                                     <div className="form-group">
                                     <label htmlFor="other">Other Pertinent Information</label>
-                                    <textarea className="form-control" id="other" value={this.state.other} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <input className="form-control" id="other" value={this.state.other} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
                                 </div>
                             </div>
