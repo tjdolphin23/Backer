@@ -1,7 +1,7 @@
 import React from 'react';
 import Axios from 'axios';
 
-const ProjectTable = ({product}) =>
+const ProductTable = ({product}) =>
     <div>
         <table className="table table-dark">
           <thead>
@@ -21,4 +21,4 @@ const ProjectTable = ({product}) =>
         </table>
     </div>
 
-export default ProjectTable;
+export default ProductTable;

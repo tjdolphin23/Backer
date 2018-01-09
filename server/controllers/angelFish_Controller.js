@@ -66,7 +66,7 @@ router.post("/founderDash/create", function (req, res) {
     companyName: req.body.companyName,
     investmentNeeded: req.body.investmentNeeded,
     percentGiving: req.body.percentGiving,
-    productName: req.body.productName,
+    productTitle: req.body.productTitle,
     productSummary: req.body.productSummary,
     problemSolution: req.body.problemSolution,
     industry: req.body.industry,

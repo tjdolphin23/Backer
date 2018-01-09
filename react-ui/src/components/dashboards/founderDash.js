@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import ProjectForm from '../forms/projectForm.js';
-import ProjectTable from '../tables/projectTable.js';
+import ProductStart from '../forms/productStart.js';
+import ProductTable from '../tables/productTable.js';
 
 class FounderDash extends Component {
 
 	state = {
 		boxVisibility: "",
-		projectFormVisibility: "d-none",
-		projectTableVisibility: "d-none"
+		productFormVisibility: "d-none",
+		productTableVisibility: "d-none"
 	}
 
-	handleProjectsClick = e => {
+	handleProductsClick = e => {
 		e.preventDefault();
 		this.setState({
 			boxVisibility: "d-none",
-			projectTableVisibility: ""
+			productTableVisibility: ""
 		})
 	}
 
@@ -22,7 +22,7 @@ class FounderDash extends Component {
 		e.preventDefault();
 		this.setState({
 			boxVisibility: "d-none",
-			projectFormVisibility: ""
+			productFormVisibility: ""
 		})
 	}
 
@@ -32,22 +32,22 @@ class FounderDash extends Component {
 				<div className={`innerDashBox ${this.state.boxVisibility}`}>
 					<div className="card col-4 mx-auto">
 					  <div className="card-body">
-					    <h5 className="card-title">Create Project</h5>
-					    <a href="#" className="btn btn-primary" onClick={this.handleCreateClick}>Create</a>
+					    <h5 className="card-title">Start Product</h5>
+					    <a href="#" className="btn btn-primary" onClick={this.handleCreateClick}>Start</a>
 					  </div>
 					</div>
 					<div className="card col-4 mx-auto">
 					  <div className="card-body">
-					    <h5 className="card-title">View Projects</h5>
-					    <a href="#" className="btn btn-primary" onClick={this.handleProjectsClick}>Projects</a>
+					    <h5 className="card-title">View Products</h5>
+					    <a href="#" className="btn btn-primary" onClick={this.handleProductsClick}>Products</a>
 					  </div>
 					</div>
 				</div>
-				<div className={this.state.projectFormVisibility}>
-					<ProjectForm/>
+				<div className={this.state.productFormVisibility}>
+					<ProductStart/>
 				</div>
-				<div className={this.state.projectTableVisibility}>
-					<ProjectTable product="poopoo"/>
+				<div className={this.state.productTableVisibility}>
+					<ProductTable product="poopoo"/>
 				</div>
 			</div>
 		)

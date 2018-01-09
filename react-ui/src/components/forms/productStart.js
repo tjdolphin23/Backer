@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
 
-class ProjectForm extends Component {
+class ProductStart extends Component {
 	// Setting the component's initial state
 	state = {
-        productName: "",
+        productTitle: "",
         companyName: "",
         investmentNeeded: "",
         percentGiving: "",
@@ -39,9 +39,9 @@ class ProjectForm extends Component {
 	handleFormSubmit = event => {
 		// Preventing the default behavior of the form submit (which is to refresh the page)
 		event.preventDefault();
-		const {productName, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, marketSize, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other, image} = this.state;
+		const {productTitle, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, marketSize, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other, image} = this.state;
 		this.setState({
-            productName: "",
+            productTitle: "",
             companyName: "",
             investmentNeeded: "",
             percentGiving: "",
@@ -66,7 +66,7 @@ class ProjectForm extends Component {
             image: ""
 		});
 
-		console.log(productName+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
+		console.log(productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
 		//Axios Request
 		Axios({
 		  method: 'post',
@@ -76,7 +76,7 @@ class ProjectForm extends Component {
             "companyName": companyName,
             "investmentNeeded": investmentNeeded,
             "percentGiving": percentGiving,
-            "productName": productName,
+            "productTitle": productTitle,
             "productSummary": productSummary,
             "problemSolution": problemSolution,
             "industry": industry,
@@ -106,7 +106,7 @@ class ProjectForm extends Component {
 			<div className="startBox col-12 col-12">
 				<div className="row justify-content-center">
 					<div className="col-12 mt-2">
-						<p>Create A Product</p>
+						<p>Start A Product</p>
 						<hr></hr>
 					</div>
 				</div>
@@ -117,7 +117,7 @@ class ProjectForm extends Component {
                                 <div className="col-6">
         							<div className="form-group">
         							  <label htmlFor="product">Product Title</label>
-        							  <textarea className="form-control" id="product" value={this.state.product} onChange={this.handleInputChange} rows="1"></textarea>
+        							  <textarea className="form-control" id="product" value={this.state.productName} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="companyName">Company Name</label>
@@ -258,4 +258,4 @@ class ProjectForm extends Component {
 	};
 };
 
-export default ProjectForm;
+export default ProductStart;
