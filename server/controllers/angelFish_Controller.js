@@ -58,47 +58,47 @@ router.post("/start/signin", function(req, res) {
   });
 });
 
-//route to create a project
+//route to create a product
 router.post("/founderDash/create", function (req, res) {
-  //creating new project to database
-  db.projects.create({
+  //creating new product to database
+  db.products.create({
     userName: req.body.userName,
     companyName: req.body.companyName,
-    investmentNeeded: req.body.amount,
-    percentGiving: req.body.giving,
+    investmentNeeded: req.body.investmentNeeded,
+    percentGiving: req.body.percentGiving,
     productName: req.body.productName,
-    productSummary: req.body.summary,
+    productSummary: req.body.productSummary,
     problemSolution: req.body.problemSolution,
-    industry: req.body.industy,
+    industry: req.body.industry,
     competition: req.body.competition,
     marketSize: req.body.marketSize,
     marketTrends: req.body.marketTrends,
     differentiators: req.body.differentiators,
     grossSales: req.body.grossSales,
-    grossCosts: req.body.costs,
-    netProfits: req.body.profit,
+    grossCosts: req.body.grossCosts,
+    netProfits: req.body.netProfits,
     otherInvestors: req.body.otherInvestors,
-    employeeCount: req.body.employees,
+    employeeCount: req.body.numberEmployees,
     targetMarket: req.body.targetMarket,
-    salePrice: req.body.price,
+    salePrice: req.body.salePrice,
     costPrice: req.body.cost,
     features: req.body.features,
     productPatent: req.body.patent,
     other: req.body.other
   })
-  .then(function(project) {
+  .then(function(product) {
     // log the result to our terminal/bash window
     console.log("Project Created");
     //set packet header for http
     res.set('Content-Type', 'application/json');
     //return userId and userName
-    return res.json({"project": project});
+    return res.json({"product": product});
 
   });
 });
 
 
-//search/view project route
+//search/view product route
 router.post("/dashboard", function(req, res) {
   //search angels database in find all
   db.angels.FindAll({
@@ -106,7 +106,7 @@ router.post("/dashboard", function(req, res) {
     where: {
       //keyword of product summary
       keyword: "%" + keyword + "%",
-      //amount founders need for project
+      //amount founders need for product
       amount: "gte" + amount,
       //product industry
       industry: "%" + industry + "%"

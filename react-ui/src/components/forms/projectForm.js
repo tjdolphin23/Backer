@@ -76,7 +76,7 @@ class ProjectForm extends Component {
             "companyName": companyName,
             "investmentNeeded": investmentNeeded,
             "percentGiving": percentGiving,
-            "product": productName,
+            "productName": productName,
             "productSummary": productSummary,
             "problemSolution": problemSolution,
             "industry": industry,
@@ -106,7 +106,7 @@ class ProjectForm extends Component {
 			<div className="startBox col-12 col-12">
 				<div className="row justify-content-center">
 					<div className="col-12 mt-2">
-						<p>Create A Project</p>
+						<p>Create A Product</p>
 						<hr></hr>
 					</div>
 				</div>
