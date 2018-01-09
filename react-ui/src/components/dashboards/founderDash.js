@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Axios  from 'axios';
 import ProductStart from '../forms/productStart.js';
 import ProductTable from '../tables/productTable.js';
 
@@ -7,15 +8,33 @@ class FounderDash extends Component {
 	state = {
 		boxVisibility: "",
 		productFormVisibility: "d-none",
-		productTableVisibility: "d-none"
+		productTableVisibility: "d-none",
+		productTable: ""
 	}
 
 	handleProductsClick = e => {
 		e.preventDefault();
-		this.setState({
-			boxVisibility: "d-none",
-			productTableVisibility: ""
-		})
+		const self=this;
+		const userName = sessionStorage.getItem("userName");
+		Axios({
+		  method: 'post',
+		  url: '/api/founderDash/products',
+		  data: {
+		    "userName": userName
+		  }
+		}).then(function (response) {
+			console.log(response);
+			const products = response.data.products;
+			self.setState({
+				productTable: <ProductTable products={products}/>,
+				boxVisibility: "d-none",
+				productTableVisibility: ""
+			})
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		    alert(`There seems to be a problem. Please try again. If the problem persists, please contact your local IT administrator.`);
+		  });
 	}
 
 	handleCreateClick = e => {
@@ -47,7 +66,7 @@ class FounderDash extends Component {
 					<ProductStart/>
 				</div>
 				<div className={this.state.productTableVisibility}>
-					<ProductTable product="poopoo"/>
+					{this.state.productTable}
 				</div>
 			</div>
 		)

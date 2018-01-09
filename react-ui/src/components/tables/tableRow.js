@@ -4,19 +4,15 @@ import Axios from 'axios';
 class TableRow extends Component {
   constructor (props){
     super(props);
+    console.log(props);
+    const products = props.products;
   }
 
-  render (props) {
-    for (let i=0;i<this.props.product.length;i++) {
-      const x = i;
-    }
+  render (products) {
     return(
-      <tr>
-        <th scope="row">{this.props.x}</th>
-        <td><button>STATUS</button></td>
-        <td><button>EDIT</button></td>
-        <td><button>DELETE</button></td>
-      </tr>
+      <tbody>
+        
+      </tbody>
     )
   }
 }

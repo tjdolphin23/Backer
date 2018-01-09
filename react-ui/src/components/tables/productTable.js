@@ -1,7 +1,7 @@
 import React from 'react';
 import TableRow from './tableRow.js'
 
-const ProductTable = ({product}) =>
+const ProductTable = ({products}) =>
     <div>
         <table className="table table-dark">
           <thead>
@@ -12,9 +12,7 @@ const ProductTable = ({product}) =>
               <th scope="col">Delete</th>
             </tr>
           </thead>
-          <tbody>
-            <TableRow product={["poopyDiaper", "sloppy"]}/>
-          </tbody>
+          <TableRow products={products}/>
         </table>
     </div>
 

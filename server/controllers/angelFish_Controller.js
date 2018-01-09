@@ -11,17 +11,16 @@ const router = express.Router();
 const db = require(path.resolve(__dirname, "../models"));
 
 // get route -> test for about
-router.get('/about', function (req, res) {
+/*router.get('/about', function (req, res) {
   res.set('Content-Type', 'application/json');
   // res.status(200).json({ "Server Source Name": 'Tobi' });
   db.users.findAll({}).then(function(users){
     return res.json({"users": users});
   })
-});
+});*/
 
 // post route to create user
 router.post("/start/signup", function(req, res) {
-  // edited sign up to add user credentials
   db.users.create({
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -32,28 +31,19 @@ router.post("/start/signup", function(req, res) {
     founder: req.body.founder,
     angel: req.body.angel
   })
-  // pass the result of our call
   .then(function(user) {
-    // log the result to our terminal/bash window
     console.log("User Created");
-    //set packet header for http
     res.set('Content-Type', 'application/json');
-    //return user
     return res.json({"user": user});
   });
 });
 
 // post route to find existing user
 router.post("/start/signin", function(req, res) {
-  // console.log(req.body.email+" "+req.body.password);
-  // edited sign up to find user credentials
   db.users.findOne({where: {email: req.body.email, password: req.body.password}})
-  // pass the result of our call
   .then(function(user) {
     console.log("User Logged In");
-    //set packet header for http
     res.set('Content-Type', 'application/json');
-    //return userId and userName
     return res.json({"userId": user.id, "userName": user.userName});
   });
 });
@@ -72,7 +62,6 @@ router.post("/founderDash/create", function (req, res) {
     } else {
       otherInvestors = false;
     };
-  //creating new product to database
   db.products.create({
     userName: req.body.userName,
     companyName: req.body.companyName,
@@ -99,34 +88,27 @@ router.post("/founderDash/create", function (req, res) {
     other: req.body.other
   })
   .then(function(product) {
-    // log the result to our terminal/bash window
     console.log("Project Created");
-    //set packet header for http
     res.set('Content-Type', 'application/json');
-    //return userId and userName
     return res.json({"product": product});
 
   });
 });
 
-
-//search/view product route
-router.post("/dashboard", function(req, res) {
+//get founder products
+router.post("/founderDash/products", function(req, res) {
   //search angels database in find all
-  db.angels.FindAll({
+  db.products.findAll({
     //search parameters
     where: {
       //keyword of product summary
-      keyword: "%" + keyword + "%",
-      //amount founders need for product
-      amount: "gte" + amount,
-      //product industry
-      industry: "%" + industry + "%"
+      userName: req.body.userName,
     }
   })
-  .then(function(angels) {
-    //log search results
-    console.log("Return search");
+  .then(function(products) {
+    console.log("Founder has viewed their Products");
+    res.set('Content-Type', 'application/json');
+    return res.json({"products": products});
   })
 });
 
