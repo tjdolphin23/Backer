@@ -7,9 +7,9 @@ module.exports=function(sequelize, Datatypes) {
       // last name of users (a string)
       lastName: Sequelize.STRING,
       // the user's username (a string)
-      userName: Sequelize.STRING,
+      userName: {type: Sequelize.STRING, unique: true},
       // user's email address (a string)
-      email: Sequelize.STRING,
+      email: {type:Sequelize.STRING, unique: true},
       // user's password (a string)
       password: Sequelize.STRING,
       // is a founder (a boolean)

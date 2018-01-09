@@ -34,7 +34,12 @@ router.post("/start/signup", function(req, res) {
   .then(function(user) {
     console.log("User Created");
     res.set('Content-Type', 'application/json');
-    return res.json({"user": user});
+    return res.json({"user": user})
+  })
+  .catch(error=>{
+    console.log(error);
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error.errors[0].message});
   });
 });
 
@@ -58,7 +63,7 @@ router.post("/start/signin", function(req, res) {
   .catch(error=>{
     res.set('Content-Type', 'application/json');
     return res.json({"error": error});
-  })
+  });
 });
 
 //route to create a product
@@ -104,7 +109,10 @@ router.post("/founderDash/create", function (req, res) {
     console.log("Project Created");
     res.set('Content-Type', 'application/json');
     return res.json({"product": product});
-
+  })
+  .catch(error=>{
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error});
   });
 });
 
@@ -123,6 +131,10 @@ router.post("/founderDash/products", function(req, res) {
     res.set('Content-Type', 'application/json');
     return res.json({"products": products});
   })
+  .catch(error=>{
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error});
+  });
 });
 
 //search for angels 
@@ -141,7 +153,11 @@ db.founders.findAll({
 }).then(function(founders){
   //log search results
   console.log("Results found");
-})
+  })
+  .catch(error=>{
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error});
+  });
 });
 
 module.exports = router;
