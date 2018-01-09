@@ -188,15 +188,15 @@ class ProductStart extends Component {
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="grossSales">$ Current Gross Sales</label>
-                                    <textarea className="form-control" id="grossSales" value={this.state.grossSales} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <textarea className="form-control" id="grossSales" type="number" value={this.state.grossSales} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="grossCosts">$ Gross Cost of Product</label>
-                                    <textarea className="form-control" id="grossCosts" value={this.state.grossCosts} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <textarea className="form-control" id="grossCosts" type="number" value={this.state.grossCosts} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="netProfits">$ Current Net Profit</label>
-                                    <textarea className="form-control" id="netProfits" value={this.state.netProfits} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <textarea className="form-control" id="netProfits" type="number" value={this.state.netProfits} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="otherInvestors">Other Investors</label>
@@ -229,7 +229,7 @@ class ProductStart extends Component {
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="costPrice">$ Cost Price</label>
-                                    <textarea className="form-control" id="costPrice" value={this.state.costPrice} onChange={this.handleInputChange} rows="1"></textarea>
+                                    <textarea className="form-control" id="costPrice" type="number" value={this.state.costPrice} onChange={this.handleInputChange} rows="1"></textarea>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="features">Product Features</label>
