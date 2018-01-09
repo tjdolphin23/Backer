@@ -19,7 +19,7 @@ class ProductStart extends Component {
         grossCosts: "",
         netProfits: "",
         otherInvestors: "",
-        numberEmployees: "",
+        employeeCount: "",
         targetMarket: "",
         salePrice: "",
         costPrice: "",
@@ -40,8 +40,8 @@ class ProductStart extends Component {
 		// Preventing the default behavior of the form submit (which is to refresh the page)
 		event.preventDefault();
         const userName = sessionStorage.getItem("userName");
-		const {productTitle, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, marketSize, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, numberEmployees, targetMarket, salePrice, costPrice, features, productPatent, other, image} = this.state;
-		this.setState({
+		const {productTitle, companyName, investmentNeeded, percentGiving, productSummary, problemSolution, industry, competition, marketSize, marketTrends, differentiators, grossSales, grossCosts, netProfits, otherInvestors, employeeCount, targetMarket, salePrice, costPrice, features, productPatent, other, image} = this.state;
+        this.setState({
             productTitle: "",
             companyName: "",
             investmentNeeded: "",
@@ -57,7 +57,7 @@ class ProductStart extends Component {
             grossCosts: "",
             netProfits: "",
             otherInvestors: "",
-            numberEmployees: "",
+            employeeCount: "",
             targetMarket: "",
             salePrice: "",
             costPrice: "",
@@ -66,14 +66,13 @@ class ProductStart extends Component {
             other: "",
             image: ""
 		});
-
-		console.log(userName +" "+productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
+		console.log(userName +" "+productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+employeeCount+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
 		//Axios Request
 		Axios({
 		  method: 'post',
 		  url: '/api/founderDash/create',
 		  data: {
-            "username": userName,
+            "userName": userName,
             "companyName": companyName,
             "investmentNeeded": investmentNeeded,
             "percentGiving": percentGiving,
@@ -89,7 +88,7 @@ class ProductStart extends Component {
             "grossCosts": grossCosts,
             "netProfits": netProfits,
             "otherInvestors": otherInvestors,
-            "numberEmployees": numberEmployees,
+            "employeeCount": employeeCount,
             "targetMarket": targetMarket,
             "salePrice": salePrice,
             "costPrice": costPrice,
@@ -208,8 +207,8 @@ class ProductStart extends Component {
                                         </select>
                                      </div>
         							<div className="form-group">
-                                    <label htmlFor="numberEmployees">Number of Employees</label>
-                                        <select className="form-control" id="numberEmployees" value={this.state.numberEmployees} onChange={this.handleInputChange}>
+                                    <label htmlFor="employeeCount">Number of Employees</label>
+                                        <select className="form-control" id="employeeCount" value={this.state.employeeCount} onChange={this.handleInputChange}>
                                             <option></option>
                                             <option>1-2</option>
                                             <option>3-5</option>

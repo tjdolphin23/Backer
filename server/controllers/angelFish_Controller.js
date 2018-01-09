@@ -79,12 +79,12 @@ router.post("/founderDash/create", function (req, res) {
     grossCosts: req.body.grossCosts,
     netProfits: req.body.netProfits,
     otherInvestors: req.body.otherInvestors,
-    employeeCount: req.body.numberEmployees,
+    employeeCount: req.body.employeeCount,
     targetMarket: req.body.targetMarket,
     salePrice: req.body.salePrice,
-    costPrice: req.body.cost,
+    costPrice: req.body.costPrice,
     features: req.body.features,
-    productPatent: req.body.patent,
+    productPatent: req.body.productPatent,
     other: req.body.other
   })
   .then(function(product) {
