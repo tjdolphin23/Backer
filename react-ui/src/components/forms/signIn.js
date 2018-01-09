@@ -30,9 +30,14 @@ class SignIn extends Component {
 	  	    "password": signInPassword
 	  	  }
 	  	}).then(function (response) {
-	  	    sessionStorage.setItem('userId', response.data.userId);
-	  	    sessionStorage.setItem('userName', response.data.userName);
-	  	    window.location = ('/dashboard');
+	  		if(response.data.userReject){
+	  			alert("User Credentials Incorrect");
+	  		}
+	  		else{
+	  			sessionStorage.setItem('userId', response.data.userId);
+	  			sessionStorage.setItem('userName', response.data.userName);
+	  			window.location = ('/dashboard');
+	  		}
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);

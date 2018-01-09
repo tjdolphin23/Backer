@@ -38,14 +38,27 @@ router.post("/start/signup", function(req, res) {
   });
 });
 
-// post route to find existing user
+// post route to sign in
 router.post("/start/signin", function(req, res) {
   db.users.findOne({where: {email: req.body.email, password: req.body.password}})
   .then(function(user) {
-    console.log("User Logged In");
+    console.log(user);
+    if(user === null) {
+      console.log("User Rejected");
+      res.set('Content-Type', 'application/json');
+      return res.json({"userReject": "User information not found"});
+    }
+    else {
+      console.log("User Logged In");
+      res.set('Content-Type', 'application/json');
+      return res.json({"userId": user.id, "userName": user.userName});
+    }
+    
+  })
+  .catch(error=>{
     res.set('Content-Type', 'application/json');
-    return res.json({"userId": user.id, "userName": user.userName});
-  });
+    return res.json({"error": error});
+  })
 });
 
 //route to create a product
