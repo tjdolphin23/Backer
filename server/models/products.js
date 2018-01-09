@@ -33,7 +33,7 @@ module.exports = function (sequelize, DataTypes) {
 	    // the product's net profits (an int)
 	    netProfits: Sequelize.INTEGER,
 	    // the product's other investors (a string)
-	    otherInvestors: Sequelize.STRING,
+	    otherInvestors: Sequelize.BOOLEAN,
 	    // the number of employees (an int)
 	    employeeCount: Sequelize.STRING,
 	    // the product's target market (a string)
