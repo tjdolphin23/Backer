@@ -67,7 +67,7 @@ class ProductStart extends Component {
             image: ""
 		});
 
-		console.log(productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
+		console.log(userName +" "+productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+numberEmployees+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
 		//Axios Request
 		Axios({
 		  method: 'post',
