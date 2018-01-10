@@ -47,7 +47,6 @@ router.post("/start/signup", function(req, res) {
 router.post("/start/signin", function(req, res) {
   db.users.findOne({where: {email: req.body.email, password: req.body.password}})
   .then(function(user) {
-    console.log(user);
     if(user === null) {
       console.log("User Rejected");
       res.set('Content-Type', 'application/json');
