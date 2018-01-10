@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import InnerDashBox from '../innerDashBox.js';
+import InnerDashBox from '../containers/innerDashBox.js';
 import DashCard from '../cards/dashCard.js';
 import SearchBar from '../search/searchBar.js';
 
