@@ -51,13 +51,13 @@ class FounderDash extends Component {
 		return (
 			<div>
 				<div className={`innerDashBox ${this.state.boxVisibility}`}>
-					<div className="card col-4 mx-auto">
+					<div className="card col-12 col-md-4 mx-auto">
 					  <div className="card-body">
 					    <h5 className="card-title">Start Product</h5>
 					    <a href="#" className="btn btn-primary" onClick={this.handleCreateClick}>Start</a>
 					  </div>
 					</div>
-					<div className="card col-4 mx-auto">
+					<div className="card col-12 col-md-4 mx-auto">
 					  <div className="card-body">
 					    <h5 className="card-title">View Products</h5>
 					    <a href="#" className="btn btn-primary" onClick={this.handleProductsClick}>Products</a>
