@@ -117,11 +117,9 @@ router.post("/founderDash/create", function (req, res) {
 
 //get founder products
 router.post("/founderDash/products", function(req, res) {
-  //search angels database in find all
   db.products.findAll({
     //search parameters
     where: {
-      //keyword of product summary
       userName: req.body.userName,
     }
   })
@@ -152,6 +150,27 @@ db.founders.findAll({
 }).then(function(founders){
   //log search results
   console.log("Results found");
+  })
+  .catch(error=>{
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error});
+  });
+});
+
+//Search for products from the angel dashboard
+router.post("/angelDash/searchProducts", function(req, res) {
+  //search products table
+  db.products.findAll({
+    //search parameters
+    where: {
+      //keyword of product summary
+      productSummary: req.body.search
+    }
+  })
+  .then(function(products) {
+    console.log("Founder has viewed their Products");
+    res.set('Content-Type', 'application/json');
+    return res.json({"products": products});
   })
   .catch(error=>{
     res.set('Content-Type', 'application/json');

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Axios from 'axios';
 
 class SearchBar extends Component {
 
@@ -16,11 +17,24 @@ class SearchBar extends Component {
 		});
 	};
 
-	handleClick = (e) => {
-		e.preventDefault();
-		this.setState ({
-			visibility: "d-none"
-		});
+	formSubmit = (event) => {
+		event.preventDefault();
+		const {search} = this.state;
+		console.log(search);
+		//Axios Request
+	  	Axios({
+	  	  method: 'post',
+	  	  url: this.props.url,
+	  	  data: {
+	  	    "search": search
+	  	  }
+	  	}).then(function (response) {
+	  		console.log(response)
+	  	  })
+	  	  .catch(function (error) {
+	  	    console.log(error);
+	  	    alert("There seems to be a problem. Please try again.");
+	  	  });
 	}
 
 	render(props) {
@@ -28,7 +42,7 @@ class SearchBar extends Component {
 			<div className="input-group mb-3">
 			  <input type="text" className="form-control" id="search" placeholder="Find a product..." aria-label="Recipient's username" aria-describedby="basic-addon2" value={this.state.search} onChange={this.changeHandler}></input>
 			  <div className="input-group-append">
-			    <button className="btn btn-secondary" type="button" onClick={this.props.clickAction}>Search</button>
+			    <button className="btn btn-secondary" type="button" onClick={this.formSubmit}>Search</button>
 			  </div>
 			</div>
 		)
