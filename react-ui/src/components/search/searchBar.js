@@ -20,13 +20,14 @@ class SearchBar extends Component {
 	formSubmit = (event) => {
 		event.preventDefault();
 		const {search} = this.state;
-		console.log(search);
+		const wildSearch = "%"+search+"%";
+		console.log(wildSearch);
 		//Axios Request
 	  	Axios({
 	  	  method: 'post',
 	  	  url: this.props.url,
 	  	  data: {
-	  	    "search": search
+	  	    "search": wildSearch
 	  	  }
 	  	}).then(function (response) {
 	  		console.log(response)

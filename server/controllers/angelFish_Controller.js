@@ -9,6 +9,9 @@ const router = express.Router();
 
 // grabbing our models
 const db = require(path.resolve(__dirname, "../models"));
+// allows use of special mysql search filters
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 // get route -> test for about
 /*router.get('/about', function (req, res) {
@@ -164,7 +167,9 @@ router.post("/angelDash/searchProducts", function(req, res) {
     //search parameters
     where: {
       //keyword of product summary
-      productSummary: req.body.search
+      productSummary: {
+        [Op.like]: req.body.search
+      }
     }
   })
   .then(function(products) {
