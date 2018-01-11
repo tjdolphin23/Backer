@@ -1,6 +1,9 @@
 .colBtn {
 	background-color: #DCC7AA;
 }
+.dashTitle {
+	font-family: 'Lobster', cursive;
+}
 .testimonial {
 /*	margin-top: 2%;*/
 	font-weight: bold;
@@ -133,10 +136,10 @@
 	border: 2px solid red;
 }
 .borderRight {
-	border-right: 2px solid black;
+	border-right: 2px ridge #FFFDF7;
 }
 .borderLeft {
-	border-left: 2px solid black;
+	border-left: 2px ridge #2a2d2c;
 }
 .img-thumbnail {
 	width: 65px;

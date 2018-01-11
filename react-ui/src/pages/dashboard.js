@@ -64,7 +64,7 @@ class Dashboard extends Component {
 				<div className="container-fluid">
 				<div className="row align-items-center dashSpace">
 					<div className={`${this.state.columnsFounder} ${this.state.founderDisplay} borderRight`} id="fSection">
-						<div className="row justify-content-center"><h1>Founder</h1></div>
+						<div className="row dashTitle justify-content-center mt-2"><h1>Founder</h1></div>
 						<hr></hr>
 						<FounderDash/>
 						<hr></hr>
@@ -73,7 +73,7 @@ class Dashboard extends Component {
 						</div>
 					</div>
 					<div className={`${this.state.columnsAngel} ${this.state.angelDisplay} borderLeft`} id="aSection">
-						<div className="row justify-content-center"><h1>Angel</h1></div>
+						<div className="row dashTitle justify-content-center mt-2"><h1>Angel</h1></div>
 						<hr></hr>
 						<AngelDash/>
 						<hr></hr>
