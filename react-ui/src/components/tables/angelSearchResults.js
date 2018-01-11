@@ -19,7 +19,6 @@ class ProductTable extends Component {
             </thead>
             <TableRow products={this.props.products}/>
           </table>
-          <button className="btn btn-danger" onClick={this.props.returnAction}>Return</button>
       </div>
     )
   }

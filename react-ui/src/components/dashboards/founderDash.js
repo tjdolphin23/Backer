@@ -18,7 +18,6 @@ class FounderDash extends Component {
 
 	handleProductsClick = e => {
 		e.preventDefault();
-		const self=this;
 		const userName = sessionStorage.getItem("userName");
 		Axios({
 		  method: 'post',
@@ -26,11 +25,11 @@ class FounderDash extends Component {
 		  data: {
 		    "userName": userName
 		  }
-		}).then(function (response) {
+		}).then((response) => {
 			console.log(response);
 			const products = response.data.products;
-			self.setState({
-				productTable: <ProductTable products={products}/>,
+			this.setState({
+				productTable: <ProductTable products={products} returnAction={this.handleReturn}/>,
 				boxVisibility: "d-none",
 				productTableVisibility: ""
 			})
@@ -57,6 +56,13 @@ class FounderDash extends Component {
 		})
 	}
 
+	handleReturn = () => {
+		this.setState({
+			boxVisibility: "",
+			productTableVisibility: "d-none"
+		})
+	}
+
 	render() {
 		return (
 			<div>
@@ -70,6 +76,7 @@ class FounderDash extends Component {
 				</div>
 				<div className={`row justify-content-center ${this.state.productFormVisibility}`}>
 					{this.state.productForm}
+					<div className="dashVertRightBorder"></div>
 				</div>
 				<div className={`row justify-content-center ${this.state.productTableVisibility}`}>
 					{this.state.productTable}

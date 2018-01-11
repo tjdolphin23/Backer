@@ -17,7 +17,7 @@ class Dashboard extends Component {
 		columnsAngel: "col-6",
 		colexFounder: "collapse-left",
 		colexAngel: "collapse-right",
-		angelNavLabel: " Hide My Investments",
+		angelNavLabel: "Hide My Investments ",
 		founderNavLabel: " Hide My Projects"
 	}
 
@@ -26,7 +26,7 @@ class Dashboard extends Component {
 			this.setState ({
 				founderDisplay: "d-none",
 				columnsAngel: "col-12",
-				angelNavLabel: " View My Projects"
+				angelNavLabel: " View My Projects "
 			})
 		}
 		else{
@@ -34,7 +34,7 @@ class Dashboard extends Component {
 				founderDisplay: "d-block",
 				angelDisplay: "d-block",
 				columnsFounder: "col-6",
-				founderNavLabel: " Hide My Projects"
+				founderNavLabel: " Hide My Projects "
 			})
 		}
 	}
@@ -44,7 +44,7 @@ class Dashboard extends Component {
 			this.setState ({
 				angelDisplay: "d-none",
 				columnsFounder: "col-12",
-				founderNavLabel: " View My Investments"
+				founderNavLabel: " View My Investments "
 			})
 		}
 		else{
@@ -52,7 +52,7 @@ class Dashboard extends Component {
 				angelDisplay: "d-block",
 				founderDisplay: "d-block",
 				columnsAngel: "col-6",
-				angelNavLabel: " Hide My Investments"
+				angelNavLabel: " Hide My Investments "
 			})
 		}
 	}
@@ -61,15 +61,27 @@ class Dashboard extends Component {
 		return(
 			<div>
 				<DashNav/>
-				<div className="row align-items-center no-gutters dashSpace">
+				<div className="container-fluid">
+				<div className="row align-items-center dashSpace">
 					<div className={`${this.state.columnsFounder} ${this.state.founderDisplay}`} id="fSection">
+						<div className="row justify-content-center"><h1>Founder</h1></div>
+						<hr></hr>
 						<FounderDash/>
-						<span className={`oi oi-${this.state.colexFounder} nav-link`} onClick={this.handleCollapseFounder} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}
+						<hr></hr>
+						<div className="row justify-content-center">
+							<button className="btn colBtn" onClick={this.handleCollapseFounder}><span className={`oi oi-${this.state.colexFounder}`} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}</button>
+						</div>
 					</div>
 					<div className={`${this.state.columnsAngel} ${this.state.angelDisplay}`} id="aSection">
+						<div className="row justify-content-center"><h1>Angel</h1></div>
+						<hr></hr>
 						<AngelDash/>
-						{this.state.angelNavLabel}<span className={`oi oi-${this.state.colexAngel} nav-link`} onClick={this.handleCollapseAngel} title="colex right" aria-hidden="true"></span>
+						<hr></hr>
+						<div className="row justify-content-center">
+							<button className="btn colBtn" onClick={this.handleCollapseAngel}>{this.state.angelNavLabel}<span className={`oi oi-${this.state.colexAngel}`} title="colex right" aria-hidden="true"></span></button>
+						</div>
 					</div>
+				</div>
 				</div>
 				<ContainerFluid css="foot">
 					<Foot/>

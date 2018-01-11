@@ -7,10 +7,10 @@ class DashCard extends Component {
 
 	render (props) {
 		return (
-			<div className="card">
+			<div className="card testiCard text-center">
 			  <div className="card-body">
-			    <h5 className="card-title">{this.props.title}</h5>
-			    <a href="#" className="btn btn-primary" onClick={this.props.clickAction}>{this.props.button}</a>
+			    <h5 className="card-title dashCardText">{this.props.title}</h5>
+			    <a href="#" className="btn btn-warning" onClick={this.props.clickAction}>{this.props.button}</a>
 			  </div>
 			</div>
 		)

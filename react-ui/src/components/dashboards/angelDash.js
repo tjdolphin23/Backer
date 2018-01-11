@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import DashCard from '../cards/dashCard.js';
 import SearchBar from '../search/searchBar.js';
-import ProductTable from '../tables/productTable.js';
+import AngelSearchResults from '../tables/angelSearchResults.js';
 
 class AngelDash extends Component {
 
@@ -47,13 +47,13 @@ class AngelDash extends Component {
 						<DashCard title="Find Products" button="Search" clickAction={this.buttonsVisibleHandler}/>
 					</div>
 					<div className="col">
-						<DashCard title="Your Investments" button="View" clickAction={this.buttonsVisibleHandler}/>
+						<DashCard title="Your Investments" button="View"/>
 					</div>
 				</div>
 				<div className={`row justify-content-center ${this.state.searchVisible}`}>
 					<div className="col">
 						<SearchBar url="/api/angelDash/searchProducts" returnAction={this.handleReturn} searchResultAction={this.tablePrint}/>
-						<ProductTable products={this.state.products}/>
+						<AngelSearchResults products={this.state.products}/>
 					</div>
 				</div>
 			</div>
