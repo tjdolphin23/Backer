@@ -8,7 +8,7 @@ class AngelDash extends Component {
 	constructor (props) {
 		super(props);
 		this.state = {
-			buttonsVisible: "d-block",
+			buttonsVisible: "",
 			searchVisible: "d-none",
 			products: []
 		}

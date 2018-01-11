@@ -61,7 +61,7 @@ class Dashboard extends Component {
 		return(
 			<div>
 				<DashNav/>
-				<div className="row align-items-center dashSpace">
+				<div className="row align-items-center no-gutters dashSpace">
 					<div className={`${this.state.columnsFounder} ${this.state.founderDisplay}`} id="fSection">
 						<FounderDash/>
 						<span className={`oi oi-${this.state.colexFounder} nav-link`} onClick={this.handleCollapseFounder} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}
