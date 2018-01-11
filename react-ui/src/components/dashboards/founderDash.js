@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import Axios  from 'axios';
+import DashCard from '../cards/dashCard.js';
 import ProductStart from '../forms/productStart.js';
 import ProductTable from '../tables/productTable.js';
 
 class FounderDash extends Component {
 	constructor (props) {
 		super(props);
-		this.handleCancel = this.handleCancel.bind(this);
 		this.state = {
 			boxVisibility: "",
 			productFormVisibility: "d-none",
@@ -60,24 +60,14 @@ class FounderDash extends Component {
 	render() {
 		return (
 			<div>
-				<div className={`innerDashBox ${this.state.boxVisibility}`}>
-					<div className="card col-12 col-md-4 mx-auto">
-					  <div className="card-body">
-					    <h5 className="card-title">Start Product</h5>
-					    <a href="#" className="btn btn-primary" onClick={this.handleCreateClick}>Start</a>
-					  </div>
-					</div>
-					<div className="card col-12 col-md-4 mx-auto">
-					  <div className="card-body">
-					    <h5 className="card-title">View Products</h5>
-					    <a href="#" className="btn btn-primary" onClick={this.handleProductsClick}>Products</a>
-					  </div>
-					</div>
+				<div className={`row ${this.state.boxVisibility}`}>
+					<DashCard title="Launch Product" button="Found" clickAction={this.handleCreateClick}/>
+					<DashCard title="Your Products" button="View" clickAction={this.handleProductsClick}/>
 				</div>
-				<div className={this.state.productFormVisibility}>
+				<div className={`row ${this.state.productFormVisibility}`}>
 					{this.state.productForm}
 				</div>
-				<div className={this.state.productTableVisibility}>
+				<div className={`row ${this.state.productTableVisibility}`}>
 					{this.state.productTable}
 				</div>
 			</div>

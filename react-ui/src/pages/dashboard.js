@@ -61,18 +61,16 @@ class Dashboard extends Component {
 		return(
 			<div>
 				<DashNav/>
-				<ContainerFluid css="dashBox">
-					<div className="row">
-						<div className={`${this.state.columnsFounder} rightBorder text-center ${this.state.founderDisplay}`} id="fSection">
-							<FounderDash/>
-							<span className={`oi oi-${this.state.colexFounder} nav-link`} onClick={this.handleCollapseFounder} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}
-						</div>
-						<div className={`${this.state.columnsAngel} leftBorder text-center ${this.state.angelDisplay}`} id="aSection">
-							<AngelDash/>
-							{this.state.angelNavLabel}<span className={`oi oi-${this.state.colexAngel} nav-link`} onClick={this.handleCollapseAngel} title="colex right" aria-hidden="true"></span>
-						</div>
+				<div className="row align-items-center dashSpace">
+					<div className={`${this.state.columnsFounder} ${this.state.founderDisplay}`} id="fSection">
+						<FounderDash/>
+						<span className={`oi oi-${this.state.colexFounder} nav-link`} onClick={this.handleCollapseFounder} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}
 					</div>
-				</ContainerFluid>
+					<div className={`${this.state.columnsAngel} ${this.state.angelDisplay}`} id="aSection">
+						<AngelDash/>
+						{this.state.angelNavLabel}<span className={`oi oi-${this.state.colexAngel} nav-link`} onClick={this.handleCollapseAngel} title="colex right" aria-hidden="true"></span>
+					</div>
+				</div>
 				<ContainerFluid css="foot">
 					<Foot/>
 				</ContainerFluid>

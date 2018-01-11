@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import InnerDashBox from '../containers/innerDashBox.js';
 import DashCard from '../cards/dashCard.js';
 import SearchBar from '../search/searchBar.js';
 import ProductTable from '../tables/productTable.js';
@@ -38,15 +37,19 @@ class AngelDash extends Component {
 	render () {
 		return (
 			<div>
-				<div className={this.state.buttonsVisible}>
-					<InnerDashBox>
+				<div className={`row ${this.state.buttonsVisible}}`}>
+					<div className="col">
 						<DashCard title="Find Products" button="Search" clickAction={this.buttonsVisibleHandler}/>
-						<DashCard title="View Investments" button="Investments" clickAction={this.buttonsVisibleHandler}/>
-					</InnerDashBox>
+					</div>
+					<div className="col">
+						<DashCard title="Your Investments" button="View" clickAction={this.buttonsVisibleHandler}/>
+					</div>
 				</div>
-				<div className={this.state.searchVisible}>
-					<SearchBar url="/api/angelDash/searchProducts" searchResultAction={this.tablePrint}/>
-					<ProductTable products={this.state.products}/>
+				<div className={`row justify-content-center ${this.state.searchVisible}`}>
+					<div className="col">
+						<SearchBar url="/api/angelDash/searchProducts" searchResultAction={this.tablePrint}/>
+						<ProductTable products={this.state.products}/>
+					</div>
 				</div>
 			</div>
 		)
