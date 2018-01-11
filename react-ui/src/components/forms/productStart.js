@@ -121,7 +121,7 @@ class ProductStart extends Component {
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="companyName">Company Name</label>
-        							  <input type="text" className="form-control is-invalid" id="companyName" value={this.state.companyName} onChange={this.handleInputChange} rows="1"></input>
+        							  <input type="text" className="form-control" id="companyName" value={this.state.companyName} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="investmentNeeded">Investment Amount Needed</label>
@@ -133,11 +133,11 @@ class ProductStart extends Component {
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="productSummary">Summary of Product</label>
-                                        <input type="text" className="form-control is-invalid" id="productSummary" value={this.state.productSummary} onChange={this.handleInputChange} rows="5"></input>
+                                        <input type="text" className="form-control" id="productSummary" value={this.state.productSummary} onChange={this.handleInputChange} rows="5"></input>
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="problemSolution">What Problem Does Your Product Solve</label>
-                                        <input type="text" className="form-control is-invalid" id="problemSolution" value={this.state.problemSolution} onChange={this.handleInputChange} rows="5"></input>
+                                        <input type="text" className="form-control" id="problemSolution" value={this.state.problemSolution} onChange={this.handleInputChange} rows="5"></input>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="industry">Industry</label>
@@ -170,21 +170,21 @@ class ProductStart extends Component {
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="competition">Top Competitors</label>
-                                        <input type="text" className="form-control is-invalid" id="competition" value={this.state.competition} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="competition" value={this.state.competition} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
                                     <div className="form-group">
                                         <label htmlFor="marketSize">Market Size</label>
-                                        <input type="text" className="form-control is-invalid" id="marketSize" value={this.state.marketSize} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="marketSize" value={this.state.marketSize} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="marketTrends">Market Trends</label>
-                                        <input type="text" className="form-control is-invalid" id="marketTrends" value={this.state.marketTrends} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="marketTrends" value={this.state.marketTrends} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
                                     </div>
                                     <div className="col-6">
         							<div className="form-group">
                                         <label htmlFor="differentiators">Product Differentiators</label>
-                                        <input type="text" className="form-control is-invalid" id="differentiators" value={this.state.differentiators} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="differentiators" value={this.state.differentiators} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="grossSales">$ Current Gross Sales</label>
@@ -221,7 +221,7 @@ class ProductStart extends Component {
                                      </div>
         							<div className="form-group">
                                         <label htmlFor="targetMarket">Target Market For Your Product</label>
-                                        <input type="text" className="form-control is-invalid" id="targetMarket" value={this.state.targetMarket} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="targetMarket" value={this.state.targetMarket} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="salePrice">$ Sales Price</label>
@@ -233,7 +233,7 @@ class ProductStart extends Component {
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="features">Product Features</label>
-                                        <input type="text" className="form-control is-invalid" id="features" value={this.state.features} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="features" value={this.state.features} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                     <label htmlFor="productPatent">Product Patent Established</label>
@@ -245,7 +245,7 @@ class ProductStart extends Component {
                                      </div>
                                     <div className="form-group">
                                         <label htmlFor="other">Other Pertinent Information</label>
-                                        <input type="text" className="form-control  is-invalid" id="other" value={this.state.other} onChange={this.handleInputChange} rows="1"></input>
+                                        <input type="text" className="form-control" id="other" value={this.state.other} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
                                 </div>
                             </div>
