@@ -60,14 +60,18 @@ class FounderDash extends Component {
 	render() {
 		return (
 			<div>
-				<div className={`row ${this.state.boxVisibility}`}>
-					<DashCard title="Launch Product" button="Found" clickAction={this.handleCreateClick}/>
-					<DashCard title="Your Products" button="View" clickAction={this.handleProductsClick}/>
+				<div className={`row justify-content-center ${this.state.boxVisibility}`}>
+					<div className="col">
+						<DashCard title="Launch Product" button="Found" clickAction={this.handleCreateClick}/>
+					</div>
+					<div className="col">
+						<DashCard title="Your Products" button="View" clickAction={this.handleProductsClick}/>
+					</div>
 				</div>
-				<div className={`row ${this.state.productFormVisibility}`}>
+				<div className={`row justify-content-center ${this.state.productFormVisibility}`}>
 					{this.state.productForm}
 				</div>
-				<div className={`row ${this.state.productTableVisibility}`}>
+				<div className={`row justify-content-center ${this.state.productTableVisibility}`}>
 					{this.state.productTable}
 				</div>
 			</div>

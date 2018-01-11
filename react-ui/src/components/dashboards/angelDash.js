@@ -7,8 +7,6 @@ class AngelDash extends Component {
 
 	constructor (props) {
 		super(props);
-		this.buttonsVisibleHandler = this.buttonsVisibleHandler.bind(this);
-		this.tablePrint = this.tablePrint.bind(this);
 		this.state = {
 			buttonsVisible: "d-block",
 			searchVisible: "d-none",
@@ -34,10 +32,17 @@ class AngelDash extends Component {
 		console.log("inside table print function\n");
 	}
 
+	handleReturn = () => {
+		this.setState({
+			buttonsVisible: "",
+			searchVisible: "d-none"
+		})
+	}
+
 	render () {
 		return (
 			<div>
-				<div className={`row ${this.state.buttonsVisible}}`}>
+				<div className={`row justify-content-center ${this.state.buttonsVisible}`}>
 					<div className="col">
 						<DashCard title="Find Products" button="Search" clickAction={this.buttonsVisibleHandler}/>
 					</div>
@@ -47,7 +52,7 @@ class AngelDash extends Component {
 				</div>
 				<div className={`row justify-content-center ${this.state.searchVisible}`}>
 					<div className="col">
-						<SearchBar url="/api/angelDash/searchProducts" searchResultAction={this.tablePrint}/>
+						<SearchBar url="/api/angelDash/searchProducts" returnAction={this.handleReturn} searchResultAction={this.tablePrint}/>
 						<ProductTable products={this.state.products}/>
 					</div>
 				</div>

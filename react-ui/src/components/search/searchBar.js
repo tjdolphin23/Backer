@@ -45,7 +45,8 @@ class SearchBar extends Component {
 			<div className="input-group mb-3">
 			  <input type="text" className="form-control" id="search" placeholder="Find a product..." aria-label="Recipient's username" aria-describedby="basic-addon2" value={this.state.search} onChange={this.changeHandler}></input>
 			  <div className="input-group-append">
-			    <button className="btn btn-secondary" type="button" onClick={this.formSubmit}>Search</button>
+			    <button className="btn btn-warning" type="button" onClick={this.formSubmit}>Search</button>
+			    <button className="btn btn-danger" type="button" onClick={this.props.returnAction}>Return</button>
 			  </div>
 			</div>
 		)
