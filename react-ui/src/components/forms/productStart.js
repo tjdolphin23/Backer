@@ -117,7 +117,7 @@ class ProductStart extends Component {
                                 <div className="col-6">
         							<div className="form-group">
         							  <label htmlFor="product">Product Title</label>
-        							  <input type="text" className="form-control is-invalid" id="productTitle" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></input>
+        							  <input type="text" className="form-control" id="productTitle" value={this.state.productTitle} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="companyName">Company Name</label>
@@ -125,7 +125,7 @@ class ProductStart extends Component {
                                     </div>
         							<div className="form-group">
         							  <label htmlFor="investmentNeeded">Investment Amount Needed</label>
-        							  <input type="number" className="form-control is-invalid" id="investmentNeeded" placeholder="enter whole number" value={this.state.investmentNeeded} onChange={this.handleInputChange} rows="1"></input>
+        							  <input type="number" className="form-control" id="investmentNeeded" placeholder="enter whole number" value={this.state.investmentNeeded} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
         							<div className="form-group">
                                         <label htmlFor="percentGiving">Percentage of Company Giving Up</label>
