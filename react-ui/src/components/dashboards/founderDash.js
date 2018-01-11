@@ -76,7 +76,6 @@ class FounderDash extends Component {
 				</div>
 				<div className={`row justify-content-center ${this.state.productFormVisibility}`}>
 					{this.state.productForm}
-					<div className="dashVertRightBorder"></div>
 				</div>
 				<div className={`row justify-content-center ${this.state.productTableVisibility}`}>
 					{this.state.productTable}

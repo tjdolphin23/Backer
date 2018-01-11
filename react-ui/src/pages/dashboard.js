@@ -63,7 +63,7 @@ class Dashboard extends Component {
 				<DashNav/>
 				<div className="container-fluid">
 				<div className="row align-items-center dashSpace">
-					<div className={`${this.state.columnsFounder} ${this.state.founderDisplay}`} id="fSection">
+					<div className={`${this.state.columnsFounder} ${this.state.founderDisplay} borderRight`} id="fSection">
 						<div className="row justify-content-center"><h1>Founder</h1></div>
 						<hr></hr>
 						<FounderDash/>
@@ -72,7 +72,7 @@ class Dashboard extends Component {
 							<button className="btn colBtn" onClick={this.handleCollapseFounder}><span className={`oi oi-${this.state.colexFounder}`} title="colex left" aria-hidden="true"></span>{this.state.founderNavLabel}</button>
 						</div>
 					</div>
-					<div className={`${this.state.columnsAngel} ${this.state.angelDisplay}`} id="aSection">
+					<div className={`${this.state.columnsAngel} ${this.state.angelDisplay} borderLeft`} id="aSection">
 						<div className="row justify-content-center"><h1>Angel</h1></div>
 						<hr></hr>
 						<AngelDash/>
