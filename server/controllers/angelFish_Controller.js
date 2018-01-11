@@ -173,7 +173,7 @@ router.post("/angelDash/searchProducts", function(req, res) {
     }
   })
   .then(function(products) {
-    console.log("Founder has viewed their Products");
+    console.log("An angel has searched for products");
     res.set('Content-Type', 'application/json');
     return res.json({"products": products});
   })

@@ -2,15 +2,18 @@ import React, {Component} from 'react';
 import InnerDashBox from '../containers/innerDashBox.js';
 import DashCard from '../cards/dashCard.js';
 import SearchBar from '../search/searchBar.js';
+import ProductTable from '../tables/productTable.js';
 
 class AngelDash extends Component {
 
 	constructor (props) {
 		super(props);
 		this.buttonsVisibleHandler = this.buttonsVisibleHandler.bind(this);
+		this.tablePrint = this.tablePrint.bind(this);
 		this.state = {
 			buttonsVisible: "d-block",
-			searchVisible: "d-none"
+			searchVisible: "d-none",
+			table: ""
 		}
 	}
 
@@ -23,6 +26,16 @@ class AngelDash extends Component {
 		);
 	}
 
+	tablePrint = (products) => {
+		this.setState(
+			{
+				products: products,
+				table: <ProductTable products={products}/>
+			}
+		);
+		console.log("inside table print function\n");
+	}
+
 	render () {
 		return (
 			<div>
@@ -33,9 +46,8 @@ class AngelDash extends Component {
 					</InnerDashBox>
 				</div>
 				<div className={this.state.searchVisible}>
-					<InnerDashBox>
-						<SearchBar url="/api/angelDash/searchProducts"/>	
-					</InnerDashBox>
+					<SearchBar url="/api/angelDash/searchProducts" searchResultAction={this.tablePrint}/>
+					{this.state.table}	
 				</div>
 			</div>
 		)

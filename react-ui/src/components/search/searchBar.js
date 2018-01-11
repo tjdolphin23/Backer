@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
+let searchResultAction;
 
 class SearchBar extends Component {
 
@@ -17,7 +18,7 @@ class SearchBar extends Component {
 		});
 	};
 
-	formSubmit = (event) => {
+	formSubmit = (event, props) => {
 		event.preventDefault();
 		const {search} = this.state;
 		const wildSearch = "%"+search+"%";
@@ -29,8 +30,9 @@ class SearchBar extends Component {
 	  	  data: {
 	  	    "search": wildSearch
 	  	  }
-	  	}).then(function (response) {
-	  		console.log(response)
+	  	}).then((response) => {
+	  		console.log(response);
+	  		this.props.searchResultAction(response.data.products);
 	  	  })
 	  	  .catch(function (error) {
 	  	    console.log(error);
