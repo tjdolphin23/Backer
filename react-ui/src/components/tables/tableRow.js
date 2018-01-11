@@ -3,15 +3,12 @@ import React, {Component} from 'react';
 class TableRow extends Component {
   constructor (props){
     super(props);
-    this.state = {
-      products: props.products
-    };
   }
 
-  render () {
+  render (props) {
     return(
       <tbody>
-        {this.state.products.map((product) =>
+        {this.props.products.map((product) =>
           <tr key={product.productTitle}>
             <th scope="row">{product.productTitle}</th>
             <td>{product.investmentNeeded}</td>

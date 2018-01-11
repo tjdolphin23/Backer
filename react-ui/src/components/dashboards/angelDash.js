@@ -13,7 +13,7 @@ class AngelDash extends Component {
 		this.state = {
 			buttonsVisible: "d-block",
 			searchVisible: "d-none",
-			table: ""
+			products: []
 		}
 	}
 
@@ -29,8 +29,7 @@ class AngelDash extends Component {
 	tablePrint = (products) => {
 		this.setState(
 			{
-				products: products,
-				table: <ProductTable products={products}/>
+				products: products
 			}
 		);
 		console.log("inside table print function\n");
@@ -47,7 +46,7 @@ class AngelDash extends Component {
 				</div>
 				<div className={this.state.searchVisible}>
 					<SearchBar url="/api/angelDash/searchProducts" searchResultAction={this.tablePrint}/>
-					{this.state.table}	
+					<ProductTable products={this.state.products}/>
 				</div>
 			</div>
 		)
