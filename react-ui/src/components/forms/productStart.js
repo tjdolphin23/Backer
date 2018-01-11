@@ -2,31 +2,34 @@ import React, {Component} from 'react';
 import Axios from 'axios';
 
 class ProductStart extends Component {
-	// Setting the component's initial state
-	state = {
-        productTitle: "",
-        companyName: "",
-        investmentNeeded: "",
-        percentGiving: "",
-        productSummary: "",
-        problemSolution: "",
-        industry: "",
-        competition: "",
-        marketSize: "",
-        marketTrends: "",
-        differentiators: "",
-        grossSales: "",
-        grossCosts: "",
-        netProfits: "",
-        otherInvestors: "",
-        employeeCount: "",
-        targetMarket: "",
-        salePrice: "",
-        costPrice: "",
-        features: "",
-        productPatent: "",
-        other: "",
-        image: ""
+    constructor (props) {
+        super(props);
+        // Setting the component's initial state
+        this.state = {
+            productTitle: "",
+            companyName: "",
+            investmentNeeded: "",
+            percentGiving: "",
+            productSummary: "",
+            problemSolution: "",
+            industry: "",
+            competition: "",
+            marketSize: "",
+            marketTrends: "",
+            differentiators: "",
+            grossSales: "",
+            grossCosts: "",
+            netProfits: "",
+            otherInvestors: "",
+            employeeCount: "",
+            targetMarket: "",
+            salePrice: "",
+            costPrice: "",
+            features: "",
+            productPatent: "",
+            other: "",
+            image: ""
+        };
     };
 
     handleInputChange = event => {
@@ -66,8 +69,7 @@ class ProductStart extends Component {
             other: "",
             image: ""
 		});
-		console.log(userName +" "+productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+employeeCount+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);
-		//Axios Request
+/*		console.log(userName +" "+productTitle+" "+companyName+" "+investmentNeeded+" "+percentGiving+" "+productSummary+" "+problemSolution+" "+industry+" "+competition+" "+marketSize+" "+marketTrends+" "+differentiators+" "+grossSales+" "+grossCosts+" "+netProfits+" "+otherInvestors+" "+employeeCount+" "+targetMarket+" "+salePrice+" "+costPrice+" "+features+" "+productPatent+" "+other+" "+image);*/		//Axios Request
 		Axios({
 		  method: 'post',
 		  url: '/api/founderDash/create',
@@ -96,8 +98,8 @@ class ProductStart extends Component {
             "productPatent": productPatent,
             "other": other
 		  }
-		}).then(function (response) {
-		    window.load=("/dashboard");
+		}).then((response) => {
+		    this.props.handleCancel;
 		  })
 	};
 	//RenderTime
@@ -180,12 +182,12 @@ class ProductStart extends Component {
                                         <label htmlFor="marketTrends">Market Trends</label>
                                         <input type="text" className="form-control" id="marketTrends" value={this.state.marketTrends} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
-                                    </div>
-                                    <div className="col-6">
         							<div className="form-group">
                                         <label htmlFor="differentiators">Product Differentiators</label>
                                         <input type="text" className="form-control" id="differentiators" value={this.state.differentiators} onChange={this.handleInputChange} rows="1"></input>
                                     </div>
+                                </div>
+                                <div className="col-6">
         							<div className="form-group">
                                         <label htmlFor="grossSales">$ Current Gross Sales</label>
                                         <input type="number" className="form-control is-invalid" id="grossSales" type="number" value={this.state.grossSales} onChange={this.handleInputChange} rows="1"></input>
@@ -249,7 +251,14 @@ class ProductStart extends Component {
                                     </div>
                                 </div>
                             </div>
-							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Submit Project</button>
+                            <div className="row justify-content-center">
+                                <div className="col-3">
+        							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Submit Project</button>
+                                </div>
+                                <div className="col-3">
+                                    <button className="btn btn-danger" onClick={this.props.handleCancel}>Cancel</button>
+                                </div>
+                            </div>
 						</form>
 					</div>
 				</div>

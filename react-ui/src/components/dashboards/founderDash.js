@@ -4,13 +4,16 @@ import ProductStart from '../forms/productStart.js';
 import ProductTable from '../tables/productTable.js';
 
 class FounderDash extends Component {
-
-	state = {
-		boxVisibility: "",
-		productFormVisibility: "d-none",
-		productTableVisibility: "d-none",
-		productTable: "",
-		productForm: ""
+	constructor (props) {
+		super(props);
+		this.handleCancel = this.handleCancel.bind(this);
+		this.state = {
+			boxVisibility: "",
+			productFormVisibility: "d-none",
+			productTableVisibility: "d-none",
+			productTable: "",
+			productForm: ""
+		}
 	}
 
 	handleProductsClick = e => {
@@ -43,7 +46,14 @@ class FounderDash extends Component {
 		this.setState({
 			boxVisibility: "d-none",
 			productFormVisibility: "",
-			productForm: <ProductStart/>
+			productForm: <ProductStart handleCancel={this.handleCancel}/>
+		})
+	}
+
+	handleCancel = () => {
+		this.setState({
+			boxVisibility: "",
+			productFormVisibility: "d-none"
 		})
 	}
 
