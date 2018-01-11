@@ -14,6 +14,9 @@ class DashNav extends Component {
 				<span className="navbar-brand">
 					<a href="/"><img src="assets/images/angelFish.png" width="30" height="40" className="d-inline-block align-top" alt="angelFish logo"></img></a> angel fish
 				</span>
+				<span className="nav-item">
+					<a className="ourNavLinks" href="/dashboard"><h3>Dashboard</h3></a>
+				</span>
 				<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				  <span className="navbar-toggler-icon"></span>
 				</button>
