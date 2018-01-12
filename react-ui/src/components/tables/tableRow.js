@@ -13,7 +13,7 @@ class TableRow extends Component {
             <th scope="row">{product.productTitle}</th>
             <td>{product.investmentNeeded}</td>
             <td>{product.percentGiving}</td>
-            <td><button>Details</button></td>
+            <td><button value={product.id} onClick={this.props.detailHandler}>Details</button></td>
           </tr>
         )}
       </tbody>

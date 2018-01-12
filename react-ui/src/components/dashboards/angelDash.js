@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import DashCard from '../cards/dashCard.js';
 import SearchBar from '../search/searchBar.js';
 import AngelSearchResults from '../tables/angelSearchResults.js';
+import DetailView from '../tables/detailView.js'
 
 class AngelDash extends Component {
 
@@ -10,6 +11,8 @@ class AngelDash extends Component {
 		this.state = {
 			buttonsVisible: "",
 			searchVisible: "d-none",
+			detailVisibility: "d-none",
+			detailView: "",
 			products: []
 		}
 	}
@@ -21,6 +24,10 @@ class AngelDash extends Component {
 				searchVisible: "d-block"
 			}
 		);
+	}
+
+	detailHandler = () => {
+		
 	}
 
 	tablePrint = (products) => {
@@ -35,7 +42,17 @@ class AngelDash extends Component {
 	handleReturn = () => {
 		this.setState({
 			buttonsVisible: "",
-			searchVisible: "d-none"
+			searchVisible: "d-none",
+			detailVisibility: "d-none"
+		})
+	}
+
+	detailHandler = (e) => {
+		e.preventDefault();
+		this.setState({
+			detailVisibility: "",
+			searchVisible: "d-none",
+			detailView: <DetailView returnAction={this.handleReturn} id={e.target.value}/>
 		})
 	}
 
@@ -53,7 +70,12 @@ class AngelDash extends Component {
 				<div className={`row justify-content-center ${this.state.searchVisible}`}>
 					<div className="col">
 						<SearchBar url="/api/angelDash/searchProducts" returnAction={this.handleReturn} searchResultAction={this.tablePrint}/>
-						<AngelSearchResults products={this.state.products}/>
+						<AngelSearchResults detailHandler={this.detailHandler} products={this.state.products}/>
+					</div>
+				</div>
+				<div className={`row justify-content-center ${this.state.detailVisibility}`}>
+					<div className="col">
+						{this.state.detailView}
 					</div>
 				</div>
 			</div>

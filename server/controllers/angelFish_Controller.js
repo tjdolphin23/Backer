@@ -137,6 +137,25 @@ router.post("/founderDash/products", function(req, res) {
   });
 });
 
+//get a single product - accessible by either founder or angel
+router.post("/productDetails", function(req, res) {
+  db.products.findOne({
+    //search parameters
+    where: {
+      id: req.body.id,
+    }
+  })
+  .then(function(product) {
+    console.log("Details of a product have been accessed");
+    res.set('Content-Type', 'application/json');
+    return res.json({"product": product});
+  })
+  .catch(error=>{
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error});
+  });
+});
+
 //search for angels 
 router.post("/dashboard", function(req, res) {
 //search angels in dashboard with findAll
@@ -174,6 +193,23 @@ router.post("/angelDash/searchProducts", function(req, res) {
   })
   .then(function(products) {
     console.log("An angel has searched for products");
+    res.set('Content-Type', 'application/json');
+    return res.json({"products": products});
+  })
+  .catch(error=>{
+    res.set('Content-Type', 'application/json');
+    return res.json({"error": error});
+  });
+});
+
+//Delete founder products
+router.post("/founderDash/delete", function(req, res) {
+  db.products.destroy({
+    where: {
+      id: req.body.id
+    }
+  }).then(function(products) {
+    console.log("A founder has attempted to delete a product");
     res.set('Content-Type', 'application/json');
     return res.json({"products": products});
   })

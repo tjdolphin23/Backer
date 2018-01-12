@@ -27,8 +27,7 @@ class ProductStart extends Component {
             costPrice: "",
             features: "",
             productPatent: "",
-            other: "",
-            image: ""
+            other: ""
         };
     };
 
@@ -99,6 +98,7 @@ class ProductStart extends Component {
             "other": other
 		  }
 		}).then((response) => {
+            //Using cancel to return to previous page
 		    this.props.handleCancel;
 		  })
 	};

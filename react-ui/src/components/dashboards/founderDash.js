@@ -3,6 +3,7 @@ import Axios  from 'axios';
 import DashCard from '../cards/dashCard.js';
 import ProductStart from '../forms/productStart.js';
 import ProductTable from '../tables/productTable.js';
+import DetailView from '../tables/detailView.js'
 
 class FounderDash extends Component {
 	constructor (props) {
@@ -12,7 +13,8 @@ class FounderDash extends Component {
 			productFormVisibility: "d-none",
 			productTableVisibility: "d-none",
 			productTable: "",
-			productForm: ""
+			productForm: "",
+			detailVisibility: "d-none"
 		}
 	}
 
@@ -29,7 +31,7 @@ class FounderDash extends Component {
 			console.log(response);
 			const products = response.data.products;
 			this.setState({
-				productTable: <ProductTable products={products} returnAction={this.handleReturn}/>,
+				productTable: <ProductTable products={products} returnAction={this.handleReturn} detailHandler={this.detailHandler}/>,
 				boxVisibility: "d-none",
 				productTableVisibility: ""
 			})
@@ -59,7 +61,17 @@ class FounderDash extends Component {
 	handleReturn = () => {
 		this.setState({
 			boxVisibility: "",
-			productTableVisibility: "d-none"
+			productTableVisibility: "d-none",
+			detailVisibility: "d-none"
+		})
+	}
+
+	detailHandler = (e) => {
+		e.preventDefault();
+		this.setState({
+			detailVisibility: "",
+			productTableVisibility: "d-none",
+			detailView: <DetailView returnAction={this.handleReturn} id={e.target.value}/>
 		})
 	}
 
@@ -79,6 +91,9 @@ class FounderDash extends Component {
 				</div>
 				<div className={`row justify-content-center ${this.state.productTableVisibility}`}>
 					{this.state.productTable}
+				</div>
+				<div className={`row justify-content-center ${this.state.detailVisibility}`}>
+					{this.state.detailView}
 				</div>
 			</div>
 		)

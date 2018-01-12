@@ -14,10 +14,10 @@ class ProductTable extends Component {
                 <th scope="col">Product</th>
                 <th scope="col">$ Cash Goal</th>
                 <th scope="col">% Offering</th>
-                <th scope="col">View/Edit</th>
+                <th scope="col">View</th>
               </tr>
             </thead>
-            <TableRow products={this.props.products}/>
+            <TableRow detailHandler={this.props.detailHandler} products={this.props.products}/>
           </table>
       </div>
     )
