@@ -21,13 +21,9 @@ class AngelDash extends Component {
 		this.setState(
 			{
 				buttonsVisible: "d-none",
-				searchVisible: "d-block"
+				searchVisible: ""
 			}
 		);
-	}
-
-	detailHandler = () => {
-		
 	}
 
 	tablePrint = (products) => {
@@ -60,21 +56,21 @@ class AngelDash extends Component {
 		return (
 			<div>
 				<div className={`row justify-content-center ${this.state.buttonsVisible}`}>
-					<div className="col">
+					<div className="col-4 mx-auto">
 						<DashCard title="Find Products" button="Search" clickAction={this.buttonsVisibleHandler}/>
 					</div>
-					<div className="col">
+					<div className="col-4 mx-auto">
 						<DashCard title="Your Investments" button="View"/>
 					</div>
 				</div>
 				<div className={`row justify-content-center ${this.state.searchVisible}`}>
-					<div className="col">
+					<div className="col-10">
 						<SearchBar url="/api/angelDash/searchProducts" returnAction={this.handleReturn} searchResultAction={this.tablePrint}/>
 						<AngelSearchResults detailHandler={this.detailHandler} products={this.state.products}/>
 					</div>
 				</div>
 				<div className={`row justify-content-center ${this.state.detailVisibility}`}>
-					<div className="col">
+					<div className="col-10">
 						{this.state.detailView}
 					</div>
 				</div>

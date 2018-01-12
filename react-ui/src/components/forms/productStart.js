@@ -105,7 +105,7 @@ class ProductStart extends Component {
 	//RenderTime
 	render () {
 		return (
-			<div className="startBox col-12 col-12">
+			<div className="startBox col-10">
 				<div className="row justify-content-center">
 					<div className="col-12 mt-2">
 						<p>Start A Product</p>
@@ -252,10 +252,10 @@ class ProductStart extends Component {
                                 </div>
                             </div>
                             <div className="row justify-content-center">
-                                <div className="col-3">
+                                <div className="col-3 mx-auto">
         							<button type="submit" className="btn btn-warning" onClick={this.handleFormSubmit}>Submit Project</button>
                                 </div>
-                                <div className="col-3">
+                                <div className="col-3 mx-auto">
                                     <button className="btn btn-danger" onClick={this.props.handleCancel}>Cancel</button>
                                 </div>
                             </div>

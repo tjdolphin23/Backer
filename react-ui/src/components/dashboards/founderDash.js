@@ -51,14 +51,16 @@ class FounderDash extends Component {
 		})
 	}
 
-	handleCancel = () => {
+	handleCancel = (e) => {
+		e.preventDefault();
 		this.setState({
 			boxVisibility: "",
 			productFormVisibility: "d-none"
 		})
 	}
 
-	handleReturn = () => {
+	handleReturn = (e) => {
+		e.preventDefault();
 		this.setState({
 			boxVisibility: "",
 			productTableVisibility: "d-none",
@@ -100,10 +102,10 @@ class FounderDash extends Component {
 		return (
 			<div>
 				<div className={`row justify-content-center ${this.state.boxVisibility}`}>
-					<div className="col">
+					<div className="col-4 mx-auto">
 						<DashCard title="Launch Product" button="Found" clickAction={this.handleCreateClick}/>
 					</div>
-					<div className="col">
+					<div className="col-4 mx-auto">
 						<DashCard title="Your Products" button="View" clickAction={this.handleProductsClick}/>
 					</div>
 				</div>

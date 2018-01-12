@@ -173,11 +173,13 @@ class ProductTable extends Component {
               (this.state.userName===sessionStorage.getItem("userName")) ?
                 <div>
                   <div className="col mx-auto">
-                    <button className="btn btn-warning mr-5" onClick={this.props.returnAction}>EDIT</button>
+                    <button className="btn btn-warning mr-5">EDIT</button>
                     <button className="btn btn-danger ml-5" value={this.state.id} onClick={this.props.deleteProduct}>Delete</button>
                   </div>
                 </div>
-              : <div></div>
+              : <div className="col mx-auto">
+                  <button className="btn btn-success">Become {this.state.productTitle}'s Angel</button>
+                </div>
             }
           </div>
       </div>
