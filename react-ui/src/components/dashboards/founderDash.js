@@ -71,8 +71,29 @@ class FounderDash extends Component {
 		this.setState({
 			detailVisibility: "",
 			productTableVisibility: "d-none",
-			detailView: <DetailView returnAction={this.handleReturn} id={e.target.value}/>
+			detailView: <DetailView returnAction={this.handleReturn} id={e.target.value} deleteProduct={this.deleteProduct}/>
 		})
+	}
+
+	deleteProduct = (e) => {
+		e.preventDefault();
+		Axios({
+		  method: 'post',
+		  url: '/api/founderDash/deleteProduct',
+		  data: {
+		    "id": e.target.value
+		  }
+		}).then((response) => {
+			console.log(response);
+			this.setState({
+				detailVisibility: "d-none",
+				boxVisibility: "",
+			})
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		    alert(`There seems to be a problem. Please try again. If the problem persists, please contact your local IT administrator.`);
+		  });
 	}
 
 	render() {

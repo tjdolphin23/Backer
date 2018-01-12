@@ -203,7 +203,7 @@ router.post("/angelDash/searchProducts", function(req, res) {
 });
 
 //Delete founder products
-router.post("/founderDash/delete", function(req, res) {
+router.post("/founderDash/deleteProduct", function(req, res) {
   db.products.destroy({
     where: {
       id: req.body.id

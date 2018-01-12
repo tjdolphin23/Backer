@@ -6,6 +6,7 @@ class ProductTable extends Component {
     super(props);
     this.state = {
         userName: "",
+        id: "",
         productTitle: "",
         companyName: "",
         investmentNeeded: "",
@@ -42,6 +43,7 @@ class ProductTable extends Component {
         console.log(response);
         this.setState({
           userName: response.data.product.userName,
+          id: response.data.product.id,
           companyName: response.data.product.companyName,
           investmentNeeded: response.data.product.investmentNeeded,
           percentGiving: response.data.product.percentGiving,
@@ -163,7 +165,9 @@ class ProductTable extends Component {
               </tr>
             </tbody>
           </table>
-          <button className="btn btn-danger" onClick={this.props.returnAction}>Return</button>
+          <button className="btn btn-secondary" onClick={this.props.returnAction}>Return</button>
+          <button className="btn btn-warning" onClick={this.props.returnAction}>EDIT</button>
+          <button className="btn btn-danger" value={this.state.id} onClick={this.props.deleteProduct}>Delete</button>
       </div>
     )
   }
