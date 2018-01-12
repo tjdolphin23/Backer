@@ -165,9 +165,21 @@ class ProductTable extends Component {
               </tr>
             </tbody>
           </table>
-          <button className="btn btn-secondary" onClick={this.props.returnAction}>Return</button>
-          <button className="btn btn-warning" onClick={this.props.returnAction}>EDIT</button>
-          <button className="btn btn-danger" value={this.state.id} onClick={this.props.deleteProduct}>Delete</button>
+          <div className="row">
+            <div className="col">
+              <button className="btn btn-secondary" onClick={this.props.returnAction}>Return</button>
+            </div>
+            {
+              (this.state.userName===sessionStorage.getItem("userName")) ?
+                <div>
+                  <div className="col mx-auto">
+                    <button className="btn btn-warning mr-5" onClick={this.props.returnAction}>EDIT</button>
+                    <button className="btn btn-danger ml-5" value={this.state.id} onClick={this.props.deleteProduct}>Delete</button>
+                  </div>
+                </div>
+              : <div></div>
+            }
+          </div>
       </div>
     )
   }
