@@ -13,7 +13,7 @@ const Home = () =>
 <div>
 	<JumbotronFluid css="head">
 		<ContainerFluid>
-		    <NavBar t1="Founders" l1="/founders" t2="Angels" l2="/angels" t3="About" l3="/wip" t4="Start Now" l4="/start"/>
+		    <NavBar t1="Founders" l1="/founders" t2="Angels" l2="/angels" t3="About" l3="/about" t4="Start Now" l4="/start"/>
 		    <Title text1="angel fish" text2="Where Entrepenuers Go To Cast Their Lines"/>
 		</ContainerFluid>
 	</JumbotronFluid>

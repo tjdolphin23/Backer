@@ -50,7 +50,7 @@ class SignIn extends Component {
 			<div className="startBox col-10 col-lg-5">
 				<div className="row justify-content-center">
 					<div className="col-12 mt-2">
-						<p>Sign In</p>
+						<h4>Sign In</h4>
 						<hr></hr>
 					</div>
 				</div>

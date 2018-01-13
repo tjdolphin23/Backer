@@ -16,7 +16,7 @@ const Foot = () =>
 					<a href="/angels" alt="Investors"><h5 className="footLinks">Angels</h5></a>
 				</div>
 				<div className="mx-auto">
-					<a href="/wip" alt="About"><h5 className="footLinks">About Us</h5></a>
+					<a href="/about" alt="About"><h5 className="footLinks">About Us</h5></a>
 				</div>
 			</div>
 		</div>

@@ -107,7 +107,7 @@ class SignUp extends Component {
 			<div className="startBox col-10 col-lg-5">
 				<div className="row justify-content-center">
 					<div className="col-12 mt-2">
-						<p>Sign Up</p>
+						<h4>Sign Up</h4>
 						<hr></hr>
 					</div>
 				</div>
@@ -139,7 +139,7 @@ class SignUp extends Component {
 							<div className="form-group">
 							  <label htmlFor="country">Country</label>
 							  <select className="form-control" id="country" value={this.state.country} onChange={this.handleInputChange}>
-							  	<option></option>
+							  	<option selected>Please Choose One</option>
 							  	<option>Australia</option>
 							  	<option>Canada</option>
 							  	<option>Netherlands</option>
@@ -150,7 +150,7 @@ class SignUp extends Component {
 							<div className="form-group">
 							  <label htmlFor="role">Are You a Founder, Angel, or Both?</label>
 							  <select className="form-control" id="role" value={this.state.role} onChange={this.handleInputChange}>
-							  	<option></option>
+							  	<option selected>Please Choose One</option>
 							  	<option>Founder</option>
 							  	<option>Angel</option>
 							  	<option>Both</option>	    
