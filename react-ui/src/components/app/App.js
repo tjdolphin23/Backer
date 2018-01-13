@@ -9,6 +9,7 @@ import Home from '../../pages/home.js';
 import Founders from '../../pages/founders.js';
 import Angels from '../../pages/angels.js';
 import About from '../../pages/about.js';
+import AboutUs from '../../pages/aboutUs.js';
 import Start from '../../pages/start.js';
 import Dashboard from '../../pages/dashboard.js';
 import WIP from '../../pages/wip.js';
@@ -23,6 +24,7 @@ const App = () =>
 			<Route exact path="/about" component={About}/>
 			<Route exact path="/start" component={Start}/>
 			<Route exact path="/dashboard" component={Dashboard}/>
+			<Route exact path="/aboutUs" component={AboutUs}/>
 			<Route exact path="/wip" component={WIP}/>
 		</Switch>
 	</Router>
