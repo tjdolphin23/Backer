@@ -99,8 +99,10 @@ class ProductStart extends Component {
 		  }
 		}).then((response) => {
             //Using cancel to return to previous page
-		    this.props.handleCancel;
-		  })
+		    if(response){this.props.handleCancel};
+		  }).catch((error) => {
+            this.props.handleCancel;    
+        })
 	};
 	//RenderTime
 	render () {

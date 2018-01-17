@@ -113,6 +113,7 @@ router.post("/founderDash/create", function (req, res) {
     return res.json({"product": product});
   })
   .catch(error=>{
+    console.log(error);
     res.set('Content-Type', 'application/json');
     return res.json({"error": error});
   });
