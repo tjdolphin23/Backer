@@ -97,9 +97,9 @@ class ProductStart extends Component {
             "productPatent": productPatent,
             "other": other
 		  }
-		}).then((response) => {
-            //Using cancel to return to previous page
-		    if(response){this.props.handleCancel};
+		}).then(response => {
+            //Using cancel to return to previous view
+		    this.props.handleCancel;
 		  }).catch((error) => {
             this.props.handleCancel;    
         })

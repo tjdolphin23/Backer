@@ -52,7 +52,7 @@ class FounderDash extends Component {
 	}
 
 	handleCancel = (e) => {
-		e.preventDefault();
+		if(e)e.preventDefault();
 		this.setState({
 			boxVisibility: "",
 			productFormVisibility: "d-none"
